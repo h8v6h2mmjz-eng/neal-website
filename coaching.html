@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js')</script>
+<title>Vector Endurance — Triatloncoaching door Neal Van Vaerenbergh</title>
+<meta name="description" content="Triatlon-, zwem-, fiets- en loopcoaching door elite-triatleet Neal Van Vaerenbergh: Foundation, Progress of Peak, voor elk niveau. Vraag je gratis intake aan.">
+<link rel="canonical" href="https://nealvanvaerenbergh.com/coaching">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nealvanvaerenbergh.com/coaching">
+<meta property="og:site_name" content="Vector Endurance">
+<meta property="og:title" content="Vector Endurance — Triatloncoaching door Neal Van Vaerenbergh">
+<meta property="og:description" content="Triatlon-, zwem-, fiets- en loopcoaching door elite-triatleet Neal Van Vaerenbergh: Foundation, Progress of Peak, voor elk niveau. Vraag je gratis intake aan.">
+<meta property="og:image" content="https://nealvanvaerenbergh.com/photos/coaching/hero.jpg">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="1333">
+<meta property="og:image:alt" content="Zwemstart op het strand: triatleten in wetsuit sprinten de zee in">
+<meta property="og:locale" content="nl_BE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0b0c">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="logos.css?v=6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://nealvanvaerenbergh.com/coaching#service",
+  "name": "Vector Endurance",
+  "url": "https://nealvanvaerenbergh.com/coaching",
+  "image": "https://nealvanvaerenbergh.com/photos/coaching/hero.jpg",
+  "description": "Triatlon-, zwem-, fiets- en loopcoaching op maat door elite-triatleet Neal Van Vaerenbergh, met begeleiding op drie niveaus: Foundation, Progress en Peak.",
+  "serviceType": "Triatloncoaching",
+  "areaServed": { "@type": "Country", "name": "België" },
+  "inLanguage": "nl",
+  "email": "neal@nealvanvaerenbergh.com",
+  "founder": { "@id": "https://nealvanvaerenbergh.com/#neal", "@type": "Person", "name": "Neal Van Vaerenbergh" },
+  "sameAs": ["https://www.instagram.com/neal.vv/"]
+}
+</script>
+<style>
+  :root {
+    --bg: #0a0b0c;
+    --bg-2: #111416;
+    --ink: #f2f6f7;
+    --muted: #9aa6ab;
+    --line: rgba(255,255,255,.12);
+    --glass: rgba(255,255,255,.08);
+    --accent: #19d3ff;
+    --accent-ink: #03141b;
+    --radius: 22px;
+    --display: 'Unbounded', system-ui, sans-serif;
+    --body: 'Inter', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .skip { position: absolute; left: 16px; top: -60px; z-index: 100; padding: .6rem 1rem; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+  .skip:focus { top: 16px; }
+  .wrap { width: min(1240px, 100% - 32px); margin-inline: auto; }
+  .label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .accent { color: var(--accent); }
+  .glass { background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%); border-radius: var(--radius); }
+  .pill { display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1.2rem; border-radius: 999px; font-weight: 600; font-size: .9rem; transition: transform .2s, background .2s; }
+  .pill:hover { transform: translateY(-2px); }
+  .pill-accent { background: var(--accent); color: var(--accent-ink); }
+  .pill-ghost { border: 1px solid var(--line); background: rgba(255,255,255,.06); }
+  .pill-ghost:hover { background: rgba(255,255,255,.14); }
+  h2 { font-family: var(--display); font-weight: 800; font-size: min(clamp(1.8rem, 5vw, 3.6rem), (100vw - 2rem) / 11.8); line-height: 1.02; text-transform: uppercase; letter-spacing: -.02em; }
+  section { padding: clamp(80px, 12vw, 140px) 0; }
+
+  /* ---------- Header ---------- */
+  header { position: fixed; inset: 0 0 auto; z-index: 50; padding: 16px 0; transition: background .3s; background: linear-gradient(rgba(10,11,12,.8), rgba(10,11,12,0)); }
+  header.scrolled { background: rgba(10,11,12,.75); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  /* Logo-stijlen staan in logos.css */
+  .logo-preview { position: fixed; z-index: 60; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; padding: 6px; border-radius: 999px; max-width: calc(100% - 24px); }
+  .logo-preview span { padding: .4rem .7rem; font-size: .72rem; color: var(--muted); }
+  .logo-preview button { border: 0; cursor: pointer; padding: .4rem .8rem; border-radius: 999px; font: 600 .75rem var(--body); color: var(--ink); background: rgba(255,255,255,.08); }
+  .logo-preview button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+  .nav-links { display: none; gap: .4rem; }
+  .nav-links a { padding: .55rem 1rem; border-radius: 999px; font-size: .85rem; background: rgba(255,255,255,.07); border: 1px solid var(--line); transition: background .2s; }
+  .nav-links a:hover { background: rgba(255,255,255,.16); }
+  .nav-cta { display: none; }
+  .nav > * { min-width: 0; }
+  .brand { min-height: 44px; }
+  .burger { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,.07); color: var(--ink); display: grid; place-items: center; cursor: pointer; }
+  .mobile-menu { display: none; position: fixed; inset: 74px 16px auto; max-height: calc(100vh - 90px); max-height: calc(100svh - 90px); overflow-y: auto; padding: 1rem; flex-direction: column; gap: .3rem; z-index: 49; background: rgba(15,17,19,.92); }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { padding: .8rem 1rem; border-radius: 14px; }
+  .mobile-menu a:hover { background: rgba(255,255,255,.08); }
+  @media (min-width: 960px) {
+    .nav-links, .nav-cta { display: flex; }
+    .burger, .mobile-menu, .mobile-menu.open { display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: flex-end; padding: 130px 0 48px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: -2; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); animation: slowzoom 18s ease-out forwards; filter: saturate(.8) contrast(1.1); }
+  @keyframes slowzoom { to { transform: scale(1); } }
+  .hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(10,11,12,.55) 0%, rgba(10,11,12,.15) 40%, rgba(10,11,12,.92) 100%), radial-gradient(ellipse at 20% 60%, rgba(25,211,255,.08), transparent 60%); }
+  .hero-grid { display: grid; gap: 28px; }
+  .hero-grid > *, .how-grid > *, .contact-grid > *, .programs > *, .quotes > *, .steps > *, .form-row > * { min-width: 0; }
+  /* "PERFORMANCE." is ±10,4× de letterhoogte breed: op kleine schermen krimpt de titel mee met de breedte */
+  .hero h1 { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: .92; letter-spacing: -.035em; font-size: min(clamp(2.6rem, 8vw, 6.6rem), (100vw - 2rem) / 10.8); }
+  .hero h1 span { display: block; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 2rem; }
+
+  .section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.5rem; margin-bottom: 48px; }
+  .section-head p { max-width: 420px; color: var(--muted); }
+
+  /* ---------- Filosofie: drie principes ---------- */
+  .steps { display: grid; gap: 1px; background: var(--line); border-radius: var(--radius); overflow: hidden; }
+  .step { background: var(--bg); padding: 30px 26px 34px; transition: background .3s; }
+  .step:hover { background: var(--bg-2); }
+  .philo-tag { display: inline-flex; align-items: center; gap: .7rem; font-size: .9rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  .philo-tag::before { content: ''; width: 32px; height: 2px; background: var(--accent); }
+  .philo { display: grid; gap: 36px; }
+  @media (min-width: 900px) { .philo { grid-template-columns: 1fr 1.1fr; gap: 70px; align-items: center; } .philo > * { min-width: 0; } .philo h2 { font-size: min(3.6rem, (min(100vw - 32px, 1240px) - 70px) / 2.1 / 10.6); } }
+  .principles { border-top: 1px solid var(--line); }
+  .pr { position: relative; border-bottom: 1px solid var(--line); }
+  .pr button { width: 100%; border: 0; background: none; cursor: pointer; text-align: left; padding: 1.1rem 0; font: 800 clamp(1.15rem, 2.4vw, 1.75rem)/1.05 var(--display); text-transform: uppercase; letter-spacing: -.02em; color: rgba(242,246,247,.62); transition: color .3s; }
+  .pr button:hover, .pr button:focus-visible { color: var(--ink); }
+  .pr button[aria-expanded="true"] { color: var(--accent); }
+  .pr-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .4s cubic-bezier(.2,.8,.2,1); }
+  .pr-body > div { overflow: hidden; }
+  .pr-body p { overflow: hidden; color: #c7d0d3; max-width: 460px; }
+  .pr-body p + p { margin-top: .2rem; }
+  .philo-sub { margin-top: 1rem; font-family: var(--display); font-weight: 700; font-size: clamp(.9rem, 1.5vw, 1.1rem); letter-spacing: .03em; text-transform: uppercase; color: var(--accent); }
+  .philo-intro { margin-top: 1.2rem; color: #c7d0d3; max-width: 460px; }
+  .philo-close { margin-top: 1.4rem; font-family: var(--display); font-weight: 800; font-size: 1.05rem; text-transform: uppercase; color: var(--ink); }
+  .pr-toggle { margin-top: .9rem; border: 1px solid var(--line); background: none; color: var(--muted); font: 600 .75rem var(--body); padding: .45rem .9rem; border-radius: 999px; cursor: pointer; min-height: 36px; }
+  .pr-toggle:hover { color: var(--ink); }
+  .pr button[aria-expanded="false"] + .pr-body { visibility: hidden; transition: grid-template-rows .4s cubic-bezier(.2,.8,.2,1), visibility 0s .4s; }
+  .pr button[aria-expanded="true"] + .pr-body { grid-template-rows: 1fr; }
+  .pr button[aria-expanded="true"] + .pr-body p { padding-bottom: 1.2rem; }
+  /* Voortgangslijn onder het open principe zolang ze vanzelf wisselen */
+  .principles.auto .pr:has([aria-expanded="true"])::after { content: ''; position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; background: var(--accent); transform-origin: left; animation: prog 5s linear forwards; }
+  @keyframes prog { from { transform: scaleX(0); } }
+  .step p { color: var(--muted); font-size: .92rem; }
+
+  /* ---------- Reviews ---------- */
+  .quotes { display: grid; gap: 16px; }
+  .quote { padding: 28px; display: flex; flex-direction: column; justify-content: space-between; gap: 1.6rem; }
+  .quote blockquote { font-size: 1.05rem; color: #e4eaec; }
+  .quote .who { display: flex; justify-content: space-between; align-items: end; gap: 1rem; }
+  .quote .who b { display: block; }
+  .quote .who small { color: var(--muted); }
+  .quote .result { font-family: var(--display); font-weight: 700; color: var(--accent); font-size: 1rem; white-space: nowrap; }
+  @media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, 1fr); } }
+
+  /* ---------- Zo werkt het + veelgestelde vragen ---------- */
+  .how-grid { display: grid; gap: 32px; }
+  @media (min-width: 900px) { .how-grid { grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; } }
+  .how { list-style: none; display: grid; gap: 1px; margin-top: 1rem; background: var(--line); border-radius: var(--radius); overflow: hidden; }
+  .how li { display: grid; grid-template-columns: auto 1fr; gap: 0 1rem; align-items: baseline; padding: 16px 22px; background: var(--bg); }
+  .how i { grid-row: span 2; font: normal 800 1.1rem var(--display); color: var(--accent); }
+  .how span, .faq p { color: var(--muted); font-size: .92rem; }
+  .faq { margin-top: 1rem; border-top: 1px solid var(--line); }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary { display: flex; justify-content: space-between; gap: 1rem; padding: .9rem 0; font-weight: 600; cursor: pointer; list-style: none; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: '+'; font: 700 1.1rem/1.4 var(--display); color: var(--accent); }
+  .faq details[open] summary::after { content: '–'; }
+  .faq p { padding-bottom: 1rem; max-width: 520px; }
+
+  /* ---------- Programma's: fotokaarten, prijs op aanvraag ---------- */
+  .programs { display: grid; gap: 16px; }
+  .program { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 380px; padding: 22px; border-radius: var(--radius); overflow: hidden; isolation: isolate; border: 1px solid var(--line); transition: border-color .3s; }
+  .program > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: saturate(.85); transition: transform .8s; }
+  .program:hover > img { transform: scale(1.06); }
+  .program::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(10,11,12,.35), rgba(10,11,12,.15) 18%, rgba(10,11,12,.9) 58%); }
+  .program:hover { border-color: rgba(25,211,255,.55); }
+  .philo { margin-bottom: clamp(48px, 7vw, 80px); }
+  .program h3 { font-family: var(--display); font-size: min(2rem, (100vw - 5rem) / 7.6); line-height: 1; text-transform: uppercase; letter-spacing: -.02em; }
+  .program p { color: #d4dde0; font-size: .92rem; margin: .6rem 0 1rem; max-width: 460px; }
+  .program .sub { font-size: .74rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: .5rem 0 0; }
+  .program ul { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .program li { font-size: .74rem; padding: .3rem .7rem; border-radius: 999px; background: rgba(255,255,255,.12); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .program .go { display: inline-flex; gap: .5rem; margin-top: 1.2rem; font-weight: 600; font-size: .9rem; color: var(--accent); transition: gap .3s; }
+  .program:hover .go { gap: .9rem; }
+  /* Multisport: zelfde kaart als de andere, de foto vult het hele blok */
+  .program-multi > img { object-position: 50% 30%; }
+  .program-multi h3 { font-size: min(clamp(2.4rem, 6vw, 4.4rem), (100vw - 5rem) / 8.6); }
+  .programs-sub { margin-top: 18px; }
+  @media (min-width: 900px) {
+    .programs { grid-template-columns: repeat(3, 1fr); }
+    .program-multi, .programs-sub { grid-column: 1 / -1; }
+  }
+  .levels-head { margin: 64px 0 18px; }
+  .levels-head h2 { font-family: var(--display); line-height: 1.1; font-size: clamp(1.3rem, 3vw, 1.8rem); text-transform: uppercase; margin-top: .6rem; }
+  .levels .step h3 { font-family: var(--display); font-size: 1.15rem; margin-bottom: .5rem; text-transform: uppercase; color: var(--accent); }
+  .levels .step .tag { color: var(--ink); font-size: .95rem; margin-bottom: .9rem; }
+  @media (min-width: 700px) { .steps.levels { grid-template-columns: repeat(3, 1fr); } }
+  .levels ul { list-style: none; display: grid; gap: .45rem; font-size: .9rem; color: var(--muted); }
+  .levels li { display: flex; gap: .6rem; }
+  .levels li::before { content: ''; flex: none; width: 6px; height: 6px; margin-top: .55em; border-radius: 50%; background: var(--accent); }
+  .ask { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2rem; margin-top: 16px; padding: 24px 26px; }
+  .ask b { font-family: var(--display); font-size: 1.1rem; text-transform: uppercase; display: block; }
+  .muted { color: var(--muted); }
+  .credit { margin-top: .4rem; font-size: .72rem; color: var(--muted); }
+  .credit a { text-decoration: underline; }
+  .trust { margin-top: 14px; padding-inline: 4px; font-size: .9rem; color: var(--muted); }
+  .trust b { color: var(--ink); font-weight: 600; }
+  .trust a { color: var(--accent); font-weight: 600; white-space: nowrap; }
+
+  /* ---------- Naar racing (zelfde blauwe blok als "Naar coaching" op racing.html) ---------- */
+  .to-race { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; padding: clamp(26px, 4vw, 44px); border-radius: 28px; background: linear-gradient(110deg, #0b2731, #0e6f86 55%, #19d3ff); color: #fff; }
+  .to-race h2 { font-size: clamp(1.6rem, 4vw, 2.8rem); line-height: 1.05; }
+  .to-race p { color: rgba(255,255,255,.85); max-width: 440px; margin-top: .6rem; }
+  .to-race .pill { background: #fff; color: var(--accent-ink); padding: .75rem 1.25rem; }
+
+  /* ---------- Contact ---------- */
+  .contact { position: relative; overflow: hidden; isolation: isolate; }
+  .contact > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .contact::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(10,11,12,.95) 0%, rgba(10,11,12,.7) 55%, rgba(10,11,12,.4)); }
+  .contact-grid { display: grid; gap: 40px; align-items: center; }
+  .contact h2 { font-size: min(clamp(2.4rem, 7vw, 5.4rem), (100vw - 2rem) / 7.9); }
+  @media (min-width: 900px) { .contact h2 { font-size: min(5.4rem, (min(100vw - 32px, 1240px) - 40px) * .55 / 7.9); } }
+  .contact-info { margin-top: 2rem; display: flex; flex-direction: column; gap: .6rem; color: #c7d0d3; overflow-wrap: break-word; overflow-wrap: anywhere; }
+  .contact-info a:hover { color: var(--accent); }
+  form { padding: 26px; display: grid; gap: 14px; }
+  form.glass { background: rgba(15,17,19,.85); }
+  form h3 { font-family: var(--display); font-size: 1.2rem; text-transform: uppercase; }
+  label { font-size: .78rem; color: #c7d0d3; display: grid; gap: .4rem; }
+  input, select, textarea { font: inherit; color: var(--ink); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.4); border-radius: 14px; padding: .85rem 1rem; transition: border-color .2s; min-width: 0; }
+  input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+  select option { background: var(--bg-2); }
+  textarea { min-height: 170px; resize: vertical; }
+  .form-row { display: grid; gap: 14px; }
+  .form-row label[hidden] { display: none; }
+  @media (min-width: 560px) { .form-row { grid-template-columns: 1fr 1fr; } }
+  .opt { opacity: .7; }
+  form .pill { justify-content: center; border: 0; cursor: pointer; font-size: 1rem; padding: 1rem; }
+  form .pill:disabled { opacity: .6; cursor: wait; transform: none; }
+  .form-note { font-size: .78rem; color: var(--muted); text-align: center; }
+  .form-note a { text-decoration: underline; }
+  .form-err { font-size: .85rem; color: #ff8a8a; }
+  .form-err:empty { margin: 0; }
+  .form-ok { font-size: .85rem; color: #c7d0d3; }
+  @media (min-width: 900px) { .contact-grid { grid-template-columns: 1.1fr .9fr; } }
+
+  /* ---------- Footer ---------- */
+  footer { border-top: 1px solid var(--line); padding: 50px 0 30px; }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+  .foot nav { display: flex; flex-wrap: wrap; gap: 1.4rem; color: var(--muted); font-size: .9rem; }
+  .foot nav a:hover { color: var(--accent); }
+  .foot-big { font-family: var(--display); font-weight: 800; font-size: min(11vw, (min(100vw, 1272px) - 2rem) / 9.8); line-height: .9; letter-spacing: -.04em; color: rgba(255,255,255,.06); margin-top: 40px; text-transform: uppercase; white-space: nowrap; overflow: hidden; }
+  .copy { color: var(--muted); font-size: .8rem; margin-top: 20px; }
+
+  /* ---------- Raakvlakken: links minstens ±40px hoog ---------- */
+  .trust a, .form-note a { padding: .8rem 0; }
+  .contact-info { gap: 0; }
+  .contact-info a { padding: .5rem 0; }
+  .foot nav { gap: 0 1.4rem; }
+  .foot nav a { padding: .55rem 0; }
+
+  /* ---------- Kleine telefoons ---------- */
+  @media (max-width: 359px) {
+    .nav { gap: .6rem; }
+    .philo-tag { font-size: .78rem; letter-spacing: .1em; gap: .5rem; }
+    .philo-tag::before { width: 20px; }
+    .brand { gap: .5rem; }
+    .brand .logo-mark { width: 36px; height: 36px; }
+    .brand .lw { font-size: .8rem; }
+    .brand .lw small { font-size: .62rem; }
+    .step { padding: 26px 20px 30px; }
+    .quote, form { padding: 22px 18px; }
+    .ask { padding: 22px 20px; }
+    .how li { padding: 14px 18px; }
+    .program { padding: 18px; }
+  }
+
+  /* ---------- Reveal (enkel verborgen als JS draait) ---------- */
+  .reveal { transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+  .js .reveal { opacity: 0; transform: translateY(36px); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#inhoud" class="skip">Naar inhoud</a>
+<header id="top">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" data-logo aria-label="Vector Endurance, naar de homepagina">
+      <span class="lw lw-route">Vector Endurance<small>door Neal Van Vaerenbergh</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Hoofdmenu">
+      <a href="#programmas">Programma's</a>
+      <a href="#filosofie">Filosofie</a>
+      <a href="#werkwijze">Werkwijze</a>
+    </nav>
+    <a href="#contact" class="pill pill-accent nav-cta">Gratis intake →</a>
+    <button class="burger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 7h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="mobile-menu glass" id="mobileMenu" aria-label="Mobiel menu">
+  <a href="#programmas">Programma's</a>
+  <a href="#filosofie">Filosofie</a>
+  <a href="#werkwijze">Werkwijze</a>
+  <a href="#contact" class="pill pill-accent" style="justify-content:center;margin-top:.4rem">Gratis intake →</a>
+</nav>
+
+<main id="inhoud">
+  <!-- ===== HERO (zonder reveal: meteen zichtbaar) ===== -->
+  <section class="hero" aria-label="Intro">
+    <div class="hero-bg">
+      <!-- FOTO: photos/coaching/hero.jpg — zwemstart op het strand -->
+      <img src="photos/coaching/hero.jpg" width="2000" height="1333" fetchpriority="high" alt="Zwemstart op het strand: triatleten in wetsuit sprinten de zee in">
+    </div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="label" style="margin-bottom:1rem;color:#c7d0d3">Triatlon-, zwem-, fiets- en loopcoaching · elk niveau</p>
+          <h1>
+            <span>Beyond</span>
+            <span class="accent">Performance.</span>
+          </h1>
+          <div class="hero-actions">
+            <a href="#contact" class="pill pill-accent">Plan je gratis intake →</a>
+            <a href="#programmas" class="pill pill-ghost">Bekijk programma's</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. PROGRAMMA'S: de filosofie als intro, dan de kaarten ===== -->
+  <section id="programmas">
+    <div class="wrap">
+      <div class="philo" id="filosofie">
+        <div>
+          <p class="philo-tag reveal">De coachingfilosofie</p>
+          <h2 class="reveal" style="margin-top:1rem">Beyond<br><span class="accent">Performance.</span></h2>
+          <p class="philo-sub reveal">Purposeful coaching. Lasting impact.</p>
+          <p class="philo-intro reveal">Sport is meer dan alleen presteren. Het is een manier om jezelf uit te dagen, grenzen te verleggen en te groeien, zowel als atleet als persoon. Met Beyond Performance wil ik atleten begeleiden om hun potentieel te blijven ontwikkelen, met aandacht voor duurzame progressie en een positieve impact die verder reikt dan de sport zelf.</p>
+        </div>
+        <!-- Standaard alles dicht; zodra de sectie in beeld is gaan ze één voor één vanzelf open, tot je er zelf op klikt. Tekst: e-mail van Neal, 3 nov 2026 -->
+        <div class="principles reveal" id="principles">
+          <div class="pr"><button type="button" aria-controls="pr-1" aria-expanded="false">Iedere atleet is uniek. Iedere training heeft een doel.</button><div class="pr-body" id="pr-1"><div><p>Iedere atleet heeft zijn eigen ambities, mogelijkheden en uitdagingen. Daarom geloof ik in een persoonlijke aanpak, waarbij elke training een duidelijk doel heeft binnen een doordacht langetermijnplan.</p><p>Door rekening te houden met individuele capaciteiten, herstel en omstandigheden buiten de sport, streven we naar een optimale balans tussen belasting en belastbaarheid. Zo bouwen we op een efficiënte en verantwoorde manier aan consistente vooruitgang, ongeacht je niveau of beschikbare tijd.</p></div></div></div>
+          <div class="pr"><button type="button" aria-controls="pr-2" aria-expanded="false">Je potentieel kent geen vast eindpunt.</button><div class="pr-body" id="pr-2"><div><p>Ik geloof dat potentieel niet iets vaststaands is, maar iets wat je voortdurend kan ontwikkelen. Wat vandaag je grens lijkt, hoeft dat morgen niet meer te zijn.</p><p>Als atleet en coach probeer ik zelf voortdurend de lat hoger te leggen. Niet door simpelweg meer of harder te werken, maar door kritisch te blijven, bij te leren en steeds te zoeken naar manieren om beter te worden. Diezelfde ingesteldheid vormt de basis van mijn coaching.</p></div></div></div>
+          <div class="pr"><button type="button" aria-controls="pr-3" aria-expanded="false">Meer dan prestaties alleen.</button><div class="pr-body" id="pr-3"><div><p>Sport biedt kansen om niet alleen fysiek, maar ook persoonlijk te groeien. Door doelen na te streven, uitdagingen aan te gaan en met tegenslagen om te leren gaan, ontwikkelen we kwaliteiten die ook buiten de sport waardevol zijn.</p><p>Mijn doel is om samen met mijn atleten verder te kijken dan het volgende resultaat en te bouwen aan maximale ontwikkeling, duurzame progressie en persoonlijke groei.</p></div></div></div>
+          <p class="philo-close">Dat is Beyond Performance.</p>
+          <button type="button" class="pr-toggle" aria-pressed="false" hidden>Automatisch wisselen pauzeren</button>
+        </div>
+      </div>
+      <!-- Eigen foto's uit photos/coaching/ (multisport: stockfoto). Teksten: e-mail van Neal, 3 nov 2026 -->
+      <div class="levels-head reveal" style="margin-top:0"><p class="label">Programma's</p><h2>Kies jouw discipline</h2></div>
+      <div class="programs">
+        <a class="program program-multi reveal" href="#contact" data-program="Multisport">
+          <!-- Foto: World Triathlon Cup Brasília 2023, elite mannen verlaten de wisselzone. Agência Brasília, CC BY 2.0 (https://commons.wikimedia.org/wiki/File:2023-10-15_Etapa_de_Bras%C3%ADlia-DF_da_Copa_do_Mundo_de_Triathlon_44.jpg). Vorige foto (Neal, © A. Lallout): photos/coaching/multisport-eliteman.jpg -->
+          <img src="photos/coaching/multisport.jpg" width="1800" height="1200" loading="lazy" alt="Elite-triatleten verlaten met hun fiets de wisselzone tijdens de World Triathlon Cup in Brasília">
+          <div>
+            <h3>Multisport</h3>
+            <p class="sub">Triatlon &amp; duatlon</p>
+            <span class="go">Vraag je programma aan <i>→</i></span>
+          </div>
+        </a>
+        <p class="label programs-sub reveal">Of focus op één sport</p>
+        <a class="program reveal" href="#contact" data-program="Zwemmen">
+          <img src="photos/coaching/zwemmen.jpg" width="1200" height="800" loading="lazy" alt="Neal Van Vaerenbergh in het zwembad, met badmuts en zwembril">
+          <div>
+            <h3>Zwemmen</h3>
+            <p class="sub">Techniek &amp; prestatieontwikkeling</p>
+            <span class="go">Vraag je programma aan <i>→</i></span>
+          </div>
+        </a>
+        <a class="program reveal" href="#contact" data-program="Fietsen">
+          <img src="photos/coaching/fietsen.jpg" width="1200" height="800" loading="lazy" alt="Neal Van Vaerenbergh stuurt zijn fiets door een bocht tijdens een wedstrijd">
+          <div>
+            <h3>Fietsen</h3>
+            <p class="sub">Doelgericht sterker worden</p>
+            <span class="go">Vraag je programma aan <i>→</i></span>
+          </div>
+        </a>
+        <a class="program reveal" href="#contact" data-program="Lopen">
+          <img src="photos/coaching/lopen.jpg" width="1200" height="800" loading="lazy" alt="Neal Van Vaerenbergh loopt zij aan zij met een concurrent">
+          <div>
+            <h3>Lopen</h3>
+            <p class="sub">Efficiënt &amp; duurzaam ontwikkelen</p>
+            <span class="go">Vraag je programma aan <i>→</i></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Begeleidingsniveaus Foundation / Progress / Peak, zonder prijs: die volgt na de intake. Teksten: e-mail van Neal, 3 nov 2026 -->
+      <div class="levels-head reveal"><p class="label">Begeleiding</p><h2>Ontdek de begeleidingsmogelijkheden</h2></div>
+      <div class="steps levels reveal">
+        <div class="step"><h3>Foundation</h3><p class="tag">Gerichte begeleiding op afstand.</p><ul><li>Persoonlijk trainingsschema via TrainingPeaks</li><li>Wekelijkse online opvolging en bijsturing</li><li>Analyse van trainingsdata</li><li>Testmomenten op afstand, geïntegreerd in de trainingen</li></ul></div>
+        <div class="step"><h3>Progress</h3><p class="tag">Nauwere opvolging. Meer persoonlijke afstemming.</p><ul><li>Alles uit Foundation</li><li>Persoonlijk contact en opvolging, indien nodig meerdere keren per week</li><li>Frequentere evaluatie en bijsturing</li><li>Minstens één fysieke inspanningstest per jaar</li><li>Kracht- en mobiliteitsschema's optioneel</li></ul></div>
+        <div class="step"><h3>Peak</h3><p class="tag">Intensieve begeleiding, tot in de praktijk.</p><ul><li>Alles uit Progress</li><li>Nauwe, persoonlijke samenwerking</li><li>Minstens één begeleide trainingssessie per week in persoon</li><li>Individuele kracht- en mobiliteitsschema's inbegrepen</li><li>Inspanningstesten op maat, wanneer nodig</li><li>Voortdurende afstemming van training, herstel en prestaties</li></ul></div>
+      </div>
+      <div class="ask glass reveal">
+        <div><b>Ontdek welke aanpak bij jou past.</b><span class="muted">Tijdens een gratis en vrijblijvend intakegesprek bespreken we jouw doelen, verwachtingen en gewenste ondersteuning. Op basis daarvan ontvang je een persoonlijk voorstel met bijhorende prijs.</span></div>
+        <a href="#contact" class="pill pill-accent">Vraag je gratis intake aan →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. REVIEWS ===== -->
+  <!-- VERBORGEN: de drie reviews hieronder zijn voorbeelden, niet echt. Zet "hidden" pas weg met echte reviews (met toestemming), en voeg dan de menulink "Reviews" terug toe. -->
+  <section id="reviews" style="padding-top:0" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="label reveal">Reviews</p><h2 class="reveal" style="margin-top:.8rem">Wat atleten <span class="accent">zeggen.</span></h2></div>
+      </div>
+      <!-- PLACEHOLDER: vervang door echte reviews (met toestemming) -->
+      <div class="quotes">
+        <figure class="quote glass reveal"><blockquote>"Ik kon amper 400 meter crawlen. Tien maanden later stond ik aan de start van mijn eerste halve Ironman, en ik finishte met een glimlach."</blockquote><figcaption class="who"><div><b>Sarah D.</b><small>Multisport · eerste 70.3</small></div><span class="result">5:48:12</span></figcaption></figure>
+        <figure class="quote glass reveal"><blockquote>"Neal snapt dat ik een job en twee kinderen heb. Minder uren dan vroeger, maar ik ben sneller dan ooit."</blockquote><figcaption class="who"><div><b>Tom V.</b><small>Multisport · olympische afstand</small></div><span class="result">-14 min PR</span></figcaption></figure>
+        <figure class="quote glass reveal"><blockquote>"Ik wilde enkel beter leren lopen. Na een half jaar liep ik mijn eerste marathon, zonder één blessure."</blockquote><figcaption class="who"><div><b>Pieter M.</b><small>Single sport · lopen</small></div><span class="result">3:29:50</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. ZO WERKT HET + VRAGEN (compact) ===== -->
+  <section id="werkwijze" style="padding-top:0" aria-label="Zo werkt het en veelgestelde vragen">
+    <div class="wrap how-grid">
+      <div class="reveal">
+        <p class="label">Zo werkt het</p>
+        <ol class="how">
+          <li><i>1</i><b>Gratis intake</b><span>We bespreken je doel en je situatie.</span></li>
+          <li><i>2</i><b>Je plan</b><span>Een persoonlijk schema via TrainingPeaks.</span></li>
+          <li><i>3</i><b>Samen bijsturen</b><span>We passen aan waar nodig.</span></li>
+        </ol>
+      </div>
+      <div class="reveal">
+        <p class="label">Vragen</p>
+        <div class="faq">
+          <details><summary>Wanneer is Vector Endurance geschikt voor mij?</summary><p>Als je gericht wil groeien in triatlon, zwemmen, fietsen of lopen, en daarbij een plan wil dat rekening houdt met je werk, gezin en herstel. Of je nu naar je eerste wedstrijd toewerkt of een persoonlijk record wil verbreken: wil je bewust trainen en eerlijk bijsturen, dan past deze aanpak bij jou.</p></details>
+          <details><summary>Hoe lang duurt een traject?</summary><p>Dat hangt af van je doel. Om echt vooruitgang te boeken, raad ik minstens drie maanden aan. Werk je naar een specifieke wedstrijd toe, dan stemmen we het traject daarop af. Veel atleten blijven daarna gewoon verder doorgroeien.</p></details>
+          <details><summary>Is dit iets voor mijn niveau?</summary><p>Ja. Van je eerste wedstrijd tot elite: het plan vertrekt van waar jij nu staat.</p></details>
+          <details><summary>Hoeveel uur per week moet ik trainen?</summary><p>Dat hangt af van je doel en wat voor jou haalbaar is. We bekijken het samen tijdens de intake.</p></details>
+          <details><summary>Coach je online of live?</summary><p>Foundation is volledig online. In Progress plan ik minstens één fysieke inspanningstest per jaar, en in Peak trainen we minstens één keer per week samen. Techniektraining kan altijd live, in overleg.</p></details>
+          <details><summary>Kan ik stoppen wanneer ik wil?</summary><p>Ja. Hoe en wanneer je kan stoppen, staat duidelijk in je persoonlijke voorstel.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <img src="photos/coaching/contact.jpg" width="1400" height="933" loading="lazy" alt="Peloton fietsers in beweging door een stad">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="label reveal">Klaar om te starten?</p>
+        <h2 class="reveal" style="margin-top:.8rem">Jouw finish<br>begint <span class="accent">hier.</span></h2>
+        <!-- PLACEHOLDER: dit adres op het domein moet nog aangemaakt worden -->
+        <div class="contact-info reveal">
+          <a href="mailto:neal@nealvanvaerenbergh.com">✉ neal@nealvanvaerenbergh.com</a>
+          <a href="https://nealvanvaerenbergh.com">⌂ nealvanvaerenbergh.com</a>
+        </div>
+      </div>
+      <form class="glass reveal" id="contactForm" method="post" action="mailto:neal@nealvanvaerenbergh.com" enctype="text/plain">
+        <h3>Vraag je gratis intake aan</h3>
+        <div class="form-row">
+          <label>Naam<input name="naam" required autocomplete="name"></label>
+          <label>E-mailadres<input type="email" name="email" required autocomplete="email"></label>
+        </div>
+        <!-- Alles hieronder is optioneel. De keuzes schrijven samen het bericht (opties en zinnen in het script onderaan). -->
+        <div class="form-row">
+          <label>Type aanvraag<select name="type"><option value="">Kies</option></select></label>
+          <label>Leeftijd<input type="number" name="leeftijd" min="6" max="99" inputmode="numeric" placeholder="in jaren"></label>
+        </div>
+        <div class="form-row">
+          <label>Discipline<select name="discipline"><option value="">Kies je sport</option></select></label>
+          <label hidden>Focus of afstand<select name="focus"><option value="">Kies</option></select></label>
+        </div>
+        <div class="form-row">
+          <label>Sportief niveau<select name="niveau"><option value="">Kies</option></select></label>
+          <label>Ervaring<select name="ervaring"><option value="">Kies</option></select></label>
+        </div>
+        <div class="form-row">
+          <label>Trainingsuren per week<select name="uren"><option value="">Kies</option></select></label>
+          <label>Gewenste begeleiding<select name="begeleiding"><option value="">Kies</option></select></label>
+        </div>
+        <label><span>Extra informatie <span class="opt">(optioneel)</span></span><textarea name="extra" rows="2" placeholder="Wat moet ik zeker weten?"></textarea></label>
+        <label><span>Bericht <span class="opt">(wordt automatisch ingevuld, pas gerust aan)</span></span><textarea name="bericht" placeholder="Vul je naam in en maak je keuzes: je bericht schrijft zichzelf."></textarea></label>
+        <p class="form-err" role="alert"></p>
+        <p class="form-ok" role="status"></p>
+        <button type="submit" class="pill pill-accent">Verstuur je aanvraag</button>
+        <p class="form-note">Alleen naam en e-mailadres zijn verplicht. Ik antwoord binnen 48 uur en gebruik je gegevens enkel om je te contacteren. <a href="privacy.html">Privacy</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== NAAR RACING ===== -->
+  <section style="padding:clamp(60px, 8vw, 100px) 0" aria-label="Naar racing">
+    <div class="wrap">
+      <div class="to-race reveal">
+        <div><h2>Benieuwd naar mijn races?</h2><p>Sinds 2013 in de triatlon: mijn verhaal, al mijn internationale uitslagen en wat ik zoek in partners.</p></div>
+        <a href="racing.html" class="pill">Bekijk racing →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="index.html" class="brand" data-logo aria-label="Vector Endurance, naar de homepagina"><span class="lw lw-route">Vector Endurance<small>door Neal Van Vaerenbergh</small></span></a>
+      <nav aria-label="Footer"><a href="racing.html">Racing</a><a href="#programmas">Programma's</a><a href="#filosofie">Filosofie</a><a href="#contact">Contact</a><a href="https://www.instagram.com/neal.vv/" target="_blank" rel="noopener" class="ig"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>@neal.vv</a></nav>
+    </div>
+    <div class="foot-big" aria-hidden="true">Swim Bike Run</div>
+    <p class="copy">© <span id="year"></span> Vector Endurance · nealvanvaerenbergh.com. Alle rechten voorbehouden.</p>
+    <p class="credit">Foto Multisport: <a href="https://commons.wikimedia.org/wiki/File:2023-10-15_Etapa_de_Bras%C3%ADlia-DF_da_Copa_do_Mundo_de_Triathlon_44.jpg" target="_blank" rel="noopener">Agência Brasília</a>, <a href="https://creativecommons.org/licenses/by/2.0/deed.nl" target="_blank" rel="noopener">CC BY 2.0</a>, verkleind en kleur licht aangepast.</p>
+  </div>
+</footer>
+
+<script src="logos.js?v=6"></script>
+<script>
+  // Header achtergrond bij scrollen
+  const header = document.querySelector('header');
+  const updHeader = () => header.classList.toggle('scrolled', scrollY > 40);
+  addEventListener('scroll', updHeader, { passive: true }); updHeader();
+
+  // Mobiel menu
+  const burger = document.querySelector('.burger'), menu = document.getElementById('mobileMenu');
+  const zetMenu = (open, focusBurger) => {
+    menu.classList.toggle('open', open); burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+    if (!open && focusBurger) burger.focus();
+  };
+  burger.addEventListener('click', () => zetMenu(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => zetMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) zetMenu(false, true); });
+  document.addEventListener('click', e => { if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) zetMenu(false); });
+  menu.addEventListener('focusout', e => { if (e.relatedTarget && !menu.contains(e.relatedTarget) && e.relatedTarget !== burger) zetMenu(false); });
+
+  // Reveal zodra iets in beeld komt (zonder IntersectionObserver: meteen alles tonen)
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+
+  // Filosofie: standaard alles dicht, daarna één principe tegelijk open. Ze wisselen elke 5s zolang de sectie in beeld is,
+  // pauzeren zolang muis of focus erin zit, en klikken stopt het automatisch wisselen definitief.
+  const principles = document.getElementById('principles'), prBtns = [...principles.querySelectorAll('button')];
+  let prIdx = -1, prTimer = null, prStart = null, prSeen = false, prHover = false, prFocus = false, prStopped = false;
+  const openPr = i => { prIdx = i; prBtns.forEach((b, k) => b.setAttribute('aria-expanded', k === i)); };
+  const autoPr = () => {
+    const on = prSeen && !prHover && !prFocus && !prStopped;
+    clearInterval(prTimer); clearTimeout(prStart); principles.classList.toggle('auto', on);
+    if (!on) return;
+    const loop = () => prTimer = setInterval(() => openPr((prIdx + 1) % prBtns.length), 5000);
+    // Nog niets open: eerst kort alles dicht laten, dan het eerste principe openen
+    if (prIdx < 0) prStart = setTimeout(() => { openPr(0); loop(); }, 1500); else loop();
+  };
+  const prToggle = principles.parentElement.querySelector('.pr-toggle');
+  const stopPr = () => { if (prStopped) return; prStopped = true; autoPr(); prToggle.setAttribute('aria-pressed', 'true'); prToggle.textContent = 'Automatisch wisselen hervatten'; };
+  prToggle.addEventListener('click', () => {
+    if (prStopped) { prStopped = false; prToggle.setAttribute('aria-pressed', 'false'); prToggle.textContent = 'Automatisch wisselen pauzeren'; autoPr(); }
+    else stopPr();
+  });
+  prBtns.forEach((b, i) => b.addEventListener('click', () => { stopPr(); openPr(i); }));
+  // Aanraken of het toetsenbord gebruiken stopt het wisselen definitief (wie leest, mag niet onderbroken worden)
+  principles.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') stopPr(); });
+  principles.addEventListener('keydown', stopPr);
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    prToggle.hidden = false;
+    new IntersectionObserver(([e]) => { prSeen = e.isIntersecting; autoPr(); }, { threshold: .4 }).observe(principles);
+    principles.addEventListener('pointerenter', () => { prHover = true; autoPr(); });
+    principles.addEventListener('pointerleave', () => { prHover = false; autoPr(); });
+    principles.addEventListener('focusin', () => { prFocus = true; autoPr(); });
+    principles.addEventListener('focusout', e => { if (!principles.contains(e.relatedTarget)) { prFocus = false; autoPr(); } });
+  }
+
+  // Aanvraagformulier (opties: e-mail van Neal, 3 nov 2026). Alleen naam en e-mail zijn verplicht; elke keuze schrijft een zin in het bericht, lege velden worden overgeslagen.
+  const OPT = {
+    type: ['Gratis kennismaking', 'Coaching aanvragen', 'Losse techniekles', 'Andere vraag'],
+    discipline: { triatlon: 'Triatlon', duatlon: 'Duatlon', zwemmen: 'Zwemmen', fietsen: 'Fietsen', lopen: 'Lopen' },
+    // Focus of afstand: alleen tonen als het relevant is, met opties per discipline
+    focus: {
+      triatlon: ['Sprint', 'Olympisch', 'Middellange afstand', 'Lange afstand', 'Nog niet bepaald'],
+      duatlon: ['Sprint', 'Olympisch', 'Middellange afstand', 'Lange afstand', 'Nog niet bepaald'],
+      zwemmen: ['Techniekverbetering', 'Zwemtraining', 'Beide'],
+      lopen: ['5 km', '10 km', 'Halve marathon', 'Marathon', 'Nog niet bepaald']
+    },
+    niveau: ['Beginner', 'Recreatief', 'Competitief', 'Elite'],
+    ervaring: ['Minder dan 1 jaar', '1–3 jaar', '3–5 jaar', 'Meer dan 5 jaar'],
+    uren: ['Minder dan 3 uur', '3–5 uur', '5–10 uur', '10–15 uur', '15–20 uur', 'Meer dan 20 uur'],
+    begeleiding: ['Foundation', 'Progress', 'Peak', 'Op maat', 'Nog niet zeker']
+  };
+  const COACHING = { triatlon: 'triatloncoaching', duatlon: 'duatloncoaching', zwemmen: 'zwemcoaching', fietsen: 'fietscoaching', lopen: 'loopcoaching' };
+  const LES = { zwemmen: 'een losse zwemtechniekles', fietsen: 'een losse fietstechniekles', lopen: 'een losse looptechnieksessie' };
+  const ERVARING = { 'Minder dan 1 jaar': 'Ik sport nog geen jaar', '1–3 jaar': 'Ik sport 1 tot 3 jaar', '3–5 jaar': 'Ik sport 3 tot 5 jaar', 'Meer dan 5 jaar': 'Ik sport al meer dan 5 jaar' };
+  const UREN = { 'Minder dan 3 uur': 'minder dan 3 uur', '3–5 uur': '3 tot 5 uur', '5–10 uur': '5 tot 10 uur', '10–15 uur': '10 tot 15 uur', '15–20 uur': '15 tot 20 uur', 'Meer dan 20 uur': 'meer dan 20 uur' };
+  const NIVEAU = { Beginner: 'Ik ben een beginner.', Recreatief: 'Ik sport recreatief.', Competitief: 'Ik sport competitief.', Elite: 'Ik sport op eliteniveau.' };
+  const FOCUS_ZIN = { Techniekverbetering: 'Ik wil vooral mijn techniek verbeteren.', Zwemtraining: 'Ik zoek vooral zwemtraining.', Beide: 'Ik wil zowel mijn techniek verbeteren als zwemtraining volgen.', 'Nog niet bepaald': '' };
+  const form = document.getElementById('contactForm'), f = form.elements, msg = f.bericht, formErr = form.querySelector('.form-err');
+  const vul = (sel, opts) => sel.insertAdjacentHTML('beforeend', opts.map(o => Array.isArray(o) ? `<option value="${o[0]}">${o[1]}</option>` : `<option value="${o}">${o}</option>`).join(''));
+  vul(f.type, OPT.type); vul(f.discipline, Object.entries(OPT.discipline)); vul(f.niveau, OPT.niveau); vul(f.ervaring, OPT.ervaring); vul(f.uren, OPT.uren); vul(f.begeleiding, OPT.begeleiding);
+  const focusLabel = f.focus.closest('label');
+  function toonFocus() {
+    const opts = OPT.focus[f.discipline.value];
+    focusLabel.hidden = !opts;
+    f.focus.replaceChildren(new Option('Kies', ''));
+    if (opts) vul(f.focus, opts);
+  }
+  let eigenTekst = false;
+  function schrijfBericht() {
+    if (eigenTekst) return;
+    const naam = f.naam.value.trim(), d = f.discipline.value, type = f.type.value, focus = f.focus.value, leeftijd = f.leeftijd.value.trim();
+    if (!naam && !d && !type) { msg.value = ''; return; }
+    const wie = `Ik ben ${naam || '[je naam]'}${leeftijd ? `, ${leeftijd} jaar,` : ''}`;
+    const intro = type === 'Losse techniekles' ? `${wie} en ik ben op zoek naar ${LES[d] || 'een losse techniekles'}.`
+      : type === 'Andere vraag' ? `${wie} en ik heb een vraag${d ? ` over ${COACHING[d]}` : ''}.`
+      : `${wie} en ik ben geïnteresseerd in ${COACHING[d] || 'coaching'}.`;
+    const profiel = [];
+    const AFSTAND = { Sprint: 'de sprintafstand', Olympisch: 'de olympische afstand', 'Middellange afstand': 'de middellange afstand', 'Lange afstand': 'de lange afstand' };
+    if (focus && d !== 'zwemmen' && focus !== 'Nog niet bepaald') profiel.push(`Mijn focus ligt op ${AFSTAND[focus] || 'de ' + focus.toLowerCase()}.`);
+    if (focus && d === 'zwemmen' && FOCUS_ZIN[focus]) profiel.push(FOCUS_ZIN[focus]);
+    if (f.niveau.value) profiel.push(NIVEAU[f.niveau.value]);
+    if (f.ervaring.value || f.uren.value) profiel.push(`${f.ervaring.value ? ERVARING[f.ervaring.value] : 'Ik train'}${f.uren.value ? `${f.ervaring.value ? ' en train' : ''} momenteel ${UREN[f.uren.value]} per week` : ''}.`);
+    const b = f.begeleiding.value;
+    const begeleiding = b === 'Op maat' ? 'Ik ben op zoek naar een voorstel op maat.'
+      : b === 'Nog niet zeker' ? 'Welke begeleiding het best bij mij past, bekijk ik graag samen met jou.'
+      : b ? `Ik heb interesse in ${b}, maar sta open voor een voorstel op maat.` : '';
+    const vraag = type === 'Gratis kennismaking' ? 'Ik zou graag een gratis kennismakingsgesprek aanvragen.'
+      : type === 'Coaching aanvragen' ? 'Ik zou graag coaching aanvragen. Ik hoor graag wat je voorstelt.'
+      : type === 'Losse techniekles' ? 'Wanneer zou een les mogelijk zijn?'
+      : type === 'Andere vraag' ? '' : 'Ik zou graag een gratis intakegesprek aanvragen.';
+    const extra = f.extra.value.trim();
+    msg.value = ['Hallo,', intro, profiel.join(' '), begeleiding, extra, vraag, `Groeten,\n${naam || '[je naam]'}`].filter(Boolean).join('\n\n');
+  }
+  form.addEventListener('input', e => { if (e.target === msg) eigenTekst = msg.value.trim() !== ''; else schrijfBericht(); });
+  form.addEventListener('change', e => { if (e.target === f.discipline) toonFocus(); if (e.target !== msg) schrijfBericht(); });
+  toonFocus();
+
+  // Programmakaart aanklikken = die discipline staat al klaar in het formulier
+  document.querySelectorAll('[data-program]').forEach(card => card.addEventListener('click', () => {
+    const p = card.dataset.program;
+    f.discipline.value = p === 'Multisport' ? 'triatlon' : p.toLowerCase();
+    if (!f.type.value) f.type.value = 'Coaching aanvragen';
+    toonFocus(); schrijfBericht();
+  }));
+
+  // Versturen: via Web3Forms als er een key is, anders opent het e-mailprogramma met alles al ingevuld
+  const WEB3FORMS_KEY = ''; // PLACEHOLDER: gratis key van web3forms.com (naar neal@nealvanvaerenbergh.com)
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const naam = f.naam.value.trim();
+    const velden = [['Type aanvraag', f.type.value], ['Leeftijd', f.leeftijd.value], ['Discipline', OPT.discipline[f.discipline.value] || ''], ['Focus of afstand', focusLabel.hidden ? '' : f.focus.value], ['Sportief niveau', f.niveau.value], ['Ervaring', f.ervaring.value], ['Trainingsuren per week', f.uren.value], ['Gewenste begeleiding', f.begeleiding.value]].filter(v => v[1]);
+    const samenvatting = velden.map(v => `${v[0]}: ${v[1]}`).join('\n');
+    const subject = `${f.type.value || 'Aanvraag'} – ${naam}`;
+    if (!WEB3FORMS_KEY) {
+      let body = `${msg.value}\n\n---\nNaam: ${naam}\nE-mail: ${f.email.value}${samenvatting ? '\n' + samenvatting : ''}`;
+      if (body.length > 1800) body = body.slice(0, 1780) + '\n[…]';
+      location.href = `mailto:neal@nealvanvaerenbergh.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      form.querySelector('.form-ok').textContent = 'Je e-mailprogramma opent nu met je aanvraag klaar. Gebeurt er niets? Mail dan rechtstreeks naar neal@nealvanvaerenbergh.com.';
+      return;
+    }
+    const btn = form.querySelector('[type=submit]'), btnTekst = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Versturen…'; formErr.textContent = '';
+    try {
+      const r = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ access_key: WEB3FORMS_KEY, subject, from_name: 'Vector Endurance website', email: f.email.value, name: naam, ...Object.fromEntries(velden), message: msg.value })
+      });
+      const res = await r.json().catch(() => ({}));
+      if (!r.ok || !res.success) throw new Error(res.message || r.status);
+      // Succes: formulier vervangen door een bedankje
+      const h = document.createElement('h3'), p = document.createElement('p');
+      h.textContent = `Bedankt, ${naam}!`; h.tabIndex = -1;
+      p.className = 'muted'; p.textContent = 'Ik antwoord binnen 48 uur.';
+      form.setAttribute('role', 'status'); form.replaceChildren(h, p); h.focus();
+    } catch {
+      formErr.textContent = 'Versturen lukte niet. Probeer het opnieuw of mail naar neal@nealvanvaerenbergh.com.';
+      btn.disabled = false; btn.textContent = btnTekst; btn.focus();
+    }
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Logo: standaard "arrow" (het eigen logo van Neal). Met ?logo=… (vanuit logos.html) verschijnt een balk om te wisselen.
+  const logoParam = new URLSearchParams(location.search).get('logo');
+  let logoKey = applyLogo(logoParam || 'arrow');
+  if (logoParam) {
+    const bar = document.createElement('div');
+    bar.className = 'logo-preview glass';
+    bar.innerHTML = '<span>Logo:</span>' + Object.entries(NVV_LOGOS).map(([k, l]) => `<button data-k="${k}" aria-pressed="${k === logoKey}">${l.name}</button>`).join('');
+    bar.addEventListener('click', e => {
+      const b = e.target.closest('button'); if (!b) return;
+      logoKey = applyLogo(b.dataset.k);
+      bar.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x.dataset.k === logoKey));
+      history.replaceState(null, '', '?logo=' + logoKey);
+    });
+    document.body.appendChild(bar);
+  }
+</script>
+</body>
+</html>

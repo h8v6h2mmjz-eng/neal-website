@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Racing — Neal Van Vaerenbergh, triatleet</title>
+<meta name="description" content="Neal Van Vaerenbergh, Belgisch elite-triatleet sinds 2013: 27 internationale starts en alle internationale uitslagen sinds 2015. Bekijk de racekalender of word partner.">
+<link rel="canonical" href="https://nealvanvaerenbergh.com/racing">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://nealvanvaerenbergh.com/racing">
+<meta property="og:site_name" content="Neal Van Vaerenbergh">
+<meta property="og:title" content="Racing — Neal Van Vaerenbergh">
+<meta property="og:description" content="Belgisch elite-triatleet op het Europe Triathlon Cup-circuit. Triatleet sinds 2013, internationale uitslagen sinds 2015.">
+<meta property="og:image" content="https://nealvanvaerenbergh.com/photos/home/racing.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1067">
+<meta property="og:image:alt" content="Neal Van Vaerenbergh loopt in de Belgische trisuit naar de finish">
+<meta property="og:locale" content="nl_BE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0b0c">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://nealvanvaerenbergh.com/#neal",
+  "name": "Neal Van Vaerenbergh",
+  "jobTitle": "Elite-triatleet",
+  "nationality": { "@type": "Country", "name": "Belgium" },
+  "url": "https://nealvanvaerenbergh.com/",
+  "image": "https://nealvanvaerenbergh.com/photos/racing/portret.jpg",
+  "birthDate": "1996",
+  "sameAs": [
+    "https://www.instagram.com/neal.vv/",
+    "https://www.triathlon.org/athletes/profile/96552/neal-van-vaerenbergh"
+  ]
+}
+</script>
+<link rel="stylesheet" href="logos.css?v=6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0b0c;
+    --bg-2: #111416;
+    --ink: #f2f6f7;
+    --muted: #9aa6ab;
+    --line: rgba(255,255,255,.12);
+    --glass: rgba(255,255,255,.08);
+    --accent: #19d3ff;
+    --teal: #0e6f86;
+    --accent-ink: #03141b;
+    --radius: 22px;
+    --display: 'Unbounded', system-ui, sans-serif;
+    --body: 'Inter', system-ui, sans-serif;
+    --ease: cubic-bezier(.2,.8,.2,1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  .skip { position: absolute; left: 16px; top: -60px; z-index: 100; padding: .6rem 1rem; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+  .skip:focus { top: 16px; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { width: min(1240px, 100% - 32px); margin-inline: auto; }
+  .narrow { width: min(920px, 100% - 32px); margin-inline: auto; }
+  .label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .grad { background: linear-gradient(90deg, var(--teal), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .pill { display: inline-flex; align-items: center; gap: .5rem; padding: .75rem 1.25rem; border-radius: 999px; font-weight: 600; font-size: .9rem; transition: transform .2s, background .2s; }
+  .pill:hover { transform: translateY(-2px); }
+  .pill-accent { background: var(--accent); color: var(--accent-ink); }
+  .link { color: var(--accent); font-weight: 600; font-size: .9rem; border-bottom: 1px solid transparent; transition: border-color .2s; }
+  .link:hover { border-color: var(--accent); }
+  /* groter klikvlak (40px) zonder dat de onderlijn verschuift */
+  .link { position: relative; }
+  .link::after { content: ''; position: absolute; inset: -11px 0; }
+  h2 { font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 4.4vw, 3rem); line-height: 1.05; text-transform: uppercase; letter-spacing: -.02em; }
+  section { padding: clamp(70px, 10vw, 120px) 0; position: relative; }
+
+  /* ---------- Header ---------- */
+  header { position: fixed; inset: 0 0 auto; z-index: 50; padding: 16px 0; transition: background .3s; }
+  header.scrolled { background: rgba(10,11,12,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .nav-links { display: flex; gap: .35rem; }
+  .nav-links a { padding: .5rem .95rem; border-radius: 999px; font-size: .84rem; background: rgba(255,255,255,.07); border: 1px solid var(--line); transition: background .2s; }
+  .nav-links a:hover { background: rgba(255,255,255,.16); }
+  @media (max-width: 760px) { .nav-links a:not(.keep) { display: none; } header .brand .lw small { display: none; } }
+  /* Smalle telefoons: logo en menuknoppen iets compacter */
+  @media (max-width: 480px) { .nav { gap: .6rem; } .brand { gap: .5rem; } .brand .logo-mark { width: 34px; height: 34px; } .brand .lw { font-size: .74rem; } .nav-links a { padding: .45rem .8rem; } }
+  /* Klikvlakken minstens 40px hoog (logo, menuknoppen) */
+  .brand { min-height: 40px; }
+  .nav-links a { display: inline-flex; align-items: center; min-height: 40px; }
+  /* Telefoons tot 420px: naam op twee regels ("Neal Van / Vaerenbergh"), zodat Races en Partners ernaast passen */
+  @media (max-width: 420px) { .nav { gap: .5rem; } .brand { min-width: 0; } .brand .lw { white-space: normal; max-width: 8.4em; } .nav-links { flex: none; } .nav-links a { padding: .45rem .7rem; } }
+
+  /* ---------- Foto's uit photos/racing/ ---------- */
+  .ph { background: linear-gradient(160deg, #10272f, var(--bg-2) 60%); }
+  .ph img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(.25) contrast(1.08); }
+
+  /* ---------- Bio (start van de pagina, onder de vaste header) ---------- */
+  .bio { padding-top: clamp(120px, 15vw, 170px); }
+  .intro { display: grid; gap: 40px; align-items: center; }
+  .intro > * { min-width: 0; }
+  /* "VAERENBERGH" is ±9,4× de lettergrootte breed: nooit groter dan de beschikbare breedte / 9,6 */
+  .intro h1 { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: .92; letter-spacing: -.035em; font-size: clamp(1.1rem, min(max(7vw, 2.1rem), (100vw - 36px) / 9.6), 5.2rem); margin-top: .9rem; }
+  .intro h1 > span { display: block; }
+  /* AE en EA grijpen in elkaar, zoals in het woordmerk op de homepagina (nvvLigatures in logos.js) */
+  .intro h1 .ch { display: inline-block; position: relative; }
+  .intro h1 .ch.sp { width: .2em; }
+  .intro h1 .lig-top { z-index: 2; text-shadow: .035em 0 var(--bg), .035em -.02em var(--bg), .035em .02em var(--bg), .05em 0 var(--bg); }
+  .intro h1 .lig-under { z-index: 1; margin-left: -.24em; }
+  .intro h1 .lig-over { z-index: 2; margin-left: -.24em; text-shadow: -.035em 0 var(--bg), -.035em -.02em var(--bg), -.035em .02em var(--bg), -.05em 0 var(--bg); }
+  .tagline { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: clamp(1rem, 2vw, 1.3rem); letter-spacing: -.01em; margin-top: 1.6rem; }
+  .tagline .grad { background-image: linear-gradient(90deg, #1389a3, var(--accent)); }
+  .intro p.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: #c7d0d3; max-width: 540px; margin-top: .7rem; }
+  .portret { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; max-width: 440px; }
+  @media (min-width: 900px) { .intro { grid-template-columns: 1.2fr .8fr; gap: 70px; } .portret { justify-self: end; width: 100%; }
+    /* naam past volledig in de linkerkolom (verloop wordt anders afgeknipt), zodat het portret niet krimpt */
+    .intro h1 { font-size: min(5.2rem, (min(100vw - 32px, 1240px) - 70px) * .6 / 9.6); } }
+
+  /* ---------- Brede actiefoto ---------- */
+  .band { width: 100%; aspect-ratio: 21 / 9; min-height: 220px; border-radius: var(--radius); overflow: hidden; }
+
+  /* ---------- Galerij ---------- */
+  .galerij { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 40px; }
+  .galerij figure { margin: 0; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; }
+  /* --z = vaste inzoom per foto, --o = rond welk punt; hover zoomt daar nog 5% bovenop */
+  .galerij img { transform: scale(var(--z, 1)); transform-origin: var(--o, 50% 50%); transition: transform .8s var(--ease), filter .4s; }
+  .galerij figure:hover img { transform: scale(calc(var(--z, 1) * 1.05)); filter: none; }
+  @media (min-width: 720px) { .galerij { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+
+  /* ---------- Mijn verhaal (tekst van Neal, e-mail 3 nov 2026) ---------- */
+  .story-grid { display: grid; gap: 40px; }
+  .story-sub { color: #c7d0d3; margin-top: 1rem; max-width: 420px; }
+  .story-nav { display: flex; flex-direction: column; gap: .2rem; margin-top: 1.6rem; }
+  .story-nav a { color: var(--muted); font-size: .85rem; font-weight: 600; padding: .35rem 0 .35rem .9rem; border-left: 2px solid var(--line); transition: color .2s, border-color .2s; }
+  .story-nav a:hover { color: var(--ink); border-color: var(--accent); }
+  .story-body { max-width: 640px; }
+  .chapter { scroll-margin-top: 110px; }
+  .chapter + .chapter { margin-top: clamp(36px, 5vw, 56px); }
+  .chapter h3 { font-family: var(--display); font-weight: 700; font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.2; letter-spacing: -.01em; margin-bottom: .9rem; }
+  .chapter p { color: #c7d0d3; font-size: 1.02rem; }
+  .chapter p + p { margin-top: 1rem; }
+  .story-quote { margin-top: clamp(36px, 5vw, 56px); font-family: var(--display); font-weight: 700; font-size: clamp(1.2rem, 2.6vw, 1.8rem); line-height: 1.2; letter-spacing: -.02em; }
+  .lead-more { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.4rem; color: var(--accent); font-weight: 600; min-height: 40px; }
+  .lead-more:hover { text-decoration: underline; text-underline-offset: 4px; }
+  @media (min-width: 900px) { .story-grid { grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; } .story-head { position: sticky; top: 110px; max-height: calc(100vh - 120px); overflow-y: auto; } }
+
+  /* ---------- Racekalender ---------- */
+  .cal-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.4rem 2rem; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+  .stats { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; gap: 14px 28px; }
+  @media (min-width: 480px) { .stats { grid-template-columns: repeat(4, auto); } }
+  .stats b { display: block; font-family: var(--display); font-size: 1.35rem; line-height: 1.1; }
+  .stats span { font-size: .75rem; color: var(--muted); }
+  .src { margin-top: .9rem; font-size: .75rem; color: var(--muted); }
+
+  .season { padding: 34px 0 6px; }
+  .s-head { margin-bottom: 14px; }
+  .s-yr { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1; letter-spacing: -.03em; }
+  .s-yr small { display: block; font-family: var(--body); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-top: .4rem; }
+  .s-sum { font-size: .82rem; color: var(--muted); margin-top: .5rem; }
+  .s-sum em { font-style: normal; color: var(--accent); }
+
+  .agenda { list-style: none; }
+  .race { display: grid; grid-template-columns: 52px 1fr auto; gap: 14px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); position: relative; }
+  .race:last-child { border-bottom: 0; }
+  .dt { text-align: center; line-height: 1; }
+  .dt b { display: block; font-family: var(--display); font-weight: 700; font-size: 1.45rem; }
+  .dt span { display: block; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: .3rem; }
+  .ev { min-width: 0; overflow-wrap: break-word; overflow-wrap: anywhere; }
+  .tag { display: block; font-size: .64rem; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .ev h3 { font-size: .98rem; font-weight: 600; line-height: 1.3; margin-top: .15rem; }
+  .ev p { font-size: .8rem; color: var(--muted); }
+  .rs { text-align: right; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .rs b { display: block; font-family: var(--display); font-weight: 700; font-size: 1.25rem; color: #c7d0d3; }
+  .rs span { display: block; font-size: .78rem; color: var(--muted); margin-top: .35rem; }
+  .top .rs b { color: var(--ink); font-size: 1.45rem; }
+  .pod .rs b { color: var(--accent); font-size: 1.6rem; }
+  .pod .tag { color: var(--accent); }
+  .pod .tag::after { content: ' · podium'; }
+  .dnf .rs b { color: var(--muted); font-size: 1rem; font-weight: 500; }
+  .dnf h3, .dnf .dt b { color: var(--muted); }
+
+  /* Tijdlijn: verticale lijn met stippen, enkel op grotere schermen */
+  @media (min-width: 720px) {
+    .season { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 0 30px; padding-top: 44px; }
+    .s-head { position: sticky; top: 96px; align-self: start; margin: 0; }
+    .agenda { position: relative; padding-left: 34px; }
+    .agenda::before { content: ''; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+    .race { grid-template-columns: 64px 1fr auto; gap: 22px; padding: 16px 4px 16px 0; }
+    .race::before { content: ''; position: absolute; left: -34px; top: 50%; width: 11px; height: 11px; margin-top: -5.5px; border-radius: 50%; background: var(--bg); border: 1px solid rgba(255,255,255,.3); }
+    .top::before { border-color: var(--ink); }
+    .pod::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 5px rgba(25,211,255,.15); }
+    .dnf::before { border-style: dashed; }
+    .pod { background: linear-gradient(90deg, rgba(25,211,255,.07), transparent 70%); }
+    .ev h3 { font-size: 1.05rem; }
+  }
+  @media (max-width: 719px) { .pod { box-shadow: inset 2px 0 0 var(--accent); padding-left: 10px; } }
+  /* Mini-telefoons: smallere datumkolom en de uitslag onder de wedstrijd, zodat de naam leesbaar blijft */
+  @media (max-width: 350px) {
+    .race { grid-template-columns: 40px minmax(0, 1fr); gap: 6px 12px; }
+    .dt { grid-row: span 2; }
+    .dt b { font-size: 1.25rem; }
+    .rs { display: flex; align-items: baseline; gap: .6rem; text-align: left; }
+    .rs span { margin-top: 0; }
+  }
+
+  details.older { margin-top: 18px; }
+  details.older summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--accent); font-weight: 600; font-size: .92rem; }
+  details.older summary::-webkit-details-marker { display: none; }
+  details.older summary b { font-weight: inherit; }
+  details.older summary span { color: var(--muted); font-weight: 500; font-size: .8rem; white-space: nowrap; }
+  @media (max-width: 480px) { details.older summary span { display: none; } }
+  details.older summary::after { content: '↓'; margin-left: auto; transition: transform .3s var(--ease); }
+  details.older[open] summary::after { transform: rotate(180deg); }
+  details.older summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .older .hide { display: none; }
+  .older[open] .show { display: none; }
+  .older[open] .hide { display: inline; }
+  .cal-foot { margin-top: 30px; }
+
+  /* ---------- Partners ---------- */
+  .partners p { color: #c7d0d3; max-width: 440px; margin: 1rem 0 1.4rem; }
+
+  /* ---------- Naar coaching ---------- */
+  .to-coach { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; padding: clamp(26px, 4vw, 44px); border-radius: 28px; background: linear-gradient(110deg, #0b2731, #0e6f86 55%, #19d3ff); color: #fff; }
+  .to-coach h2 { font-size: clamp(1.6rem, 4vw, 2.8rem); line-height: 1.05; }
+  .to-coach p { color: rgba(255,255,255,.85); max-width: 440px; margin-top: .6rem; }
+  .to-coach .pill { background: #fff; color: var(--accent-ink); padding: .75rem 1.25rem; }
+
+  footer { border-top: 1px solid var(--line); padding: 34px 0 30px; color: var(--muted); font-size: .85rem; }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.4rem; }
+  .foot nav { display: flex; flex-wrap: wrap; gap: 0 1.3rem; }
+  .foot nav a { display: inline-flex; align-items: center; min-height: 40px; }
+  .foot nav a:hover { color: var(--accent); }
+
+  /* Verborgen startstand enkel met JS: zonder JS blijft alles gewoon zichtbaar */
+  .js .reveal { opacity: 0; transform: translateY(30px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .js .race.reveal { transform: translateY(12px); transition-duration: .6s; }
+  .js .race.reveal.in { transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+    .js .reveal, .js .race.reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<a href="#inhoud" class="skip">Naar inhoud</a>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" data-logo data-word="name" aria-label="Neal Van Vaerenbergh, naar de homepagina"><span class="lw lw-arrow">Neal Van Vaerenbergh<small>Triatleet · coach</small></span></a>
+    <nav class="nav-links" aria-label="Hoofdmenu">
+      <a href="#mijn-verhaal">Verhaal</a>
+      <a href="#races" class="keep">Races</a>
+      <a href="#beeld">Foto's</a>
+      <a href="#partners" class="keep">Partners</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Foto's staan in photos/racing/ (webversies van Neals eigen foto's, zonder EXIF/GPS) -->
+
+<main id="inhoud">
+  <!-- ===== BIO ===== -->
+  <section id="verhaal" class="bio">
+    <div class="wrap intro">
+      <div>
+        <p class="label">Racing · Elite Men · België</p>
+        <h1 id="naam" aria-label="Neal Van Vaerenbergh"><span>Neal Van</span> <span data-grad>Vaerenbergh</span></h1>
+        <p class="tagline">Sinds 2013 <span class="grad">aan de start.</span></p>
+        <p class="lead">Van karting en Formule 4 naar triatlon. Sinds 2013 zwem, fiets en loop ik, en na een lange weg terug sta ik vandaag opnieuw op het podium van het Belgisch kampioenschap.</p>
+        <a href="#mijn-verhaal" class="lead-more">Lees mijn verhaal <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="portret ph">
+        <!-- FOTO: photos/racing/portret.jpg — Neal al lopend in Belgische trisuit, staand 4:5 -->
+        <img src="photos/racing/portret.jpg" alt="Neal Van Vaerenbergh loopt in de Belgische trisuit tijdens een Europabeker" width="1200" height="1500" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACTIEFOTO 1 ===== -->
+  <div class="wrap">
+    <div class="band ph reveal">
+      <!-- FOTO: photos/racing/race-1.jpg — Neal op de fiets voor België, liggend 21:9 -->
+      <img src="photos/racing/race-1.jpg" alt="Neal Van Vaerenbergh fietst voor België, met concurrenten in zijn wiel" width="2100" height="900" loading="lazy">
+    </div>
+  </div>
+
+  <!-- ===== MIJN VERHAAL (tekst van Neal, e-mail "tekst: the story", 3 nov 2026; bijgewerkt via e-mail "storyyy", 4 nov 2026) ===== -->
+  <section id="mijn-verhaal" class="story" aria-labelledby="verhaal-titel">
+    <div class="wrap story-grid">
+      <div class="story-head">
+        <p class="label reveal">Mijn verhaal</p>
+        <h2 id="verhaal-titel" class="reveal" style="margin-top:.8rem">Ambitie, tegenslag en <span class="grad">blijven groeien.</span></h2>
+        <p class="story-sub reveal">Een parcours van ambitie, tegenslagen en voortdurende ontwikkeling.</p>
+        <nav class="story-nav reveal" aria-label="Hoofdstukken">
+          <a href="#autosport">Van autosport naar triatlon</a>
+          <a href="#doorbraak">Mijn eerste sportieve doorbraak</a>
+          <a href="#overtraining">Een moeilijke periode die mijn kijk op sport veranderde</a>
+          <a href="#comeback">De weg terug naar mijn beste niveau</a>
+          <a href="#ambities">Mijn ambities</a>
+        </nav>
+      </div>
+      <div class="story-body">
+        <article class="chapter reveal" id="autosport">
+          <h3>Van autosport naar triatlon</h3>
+          <p>Sport heeft altijd een belangrijke plaats ingenomen in mijn leven. Als kind begon ik met karate en voetbal, maar al snel volgde ik mijn vader in de autosport. Via karting werkte ik me op tot de Formule 4, met één grote droom: ooit Formule 1-coureur worden.</p>
+          <p>In 2013 ontdekte ik triatlon, aanvankelijk als aanvulling op mijn autosportcarrière. Ik fietste en liep al regelmatig om mijn conditie te onderhouden en zwom altijd graag. De combinatie van die drie disciplines sprak me meteen aan en ik kreeg al snel de smaak te pakken.</p>
+          <p>Toen in 2014 duidelijk werd dat een verdere carrière in de formulewagens financieel niet haalbaar was, besloot ik me volledig op triatlon te richten. Enkele maanden later won ik mijn eerste wedstrijd, de Jeugdcup in Zwevegem. Bij SP&amp;O Mechelen kreeg ik de kans om verder te groeien en in 2015 sloot ik aan bij het topteam.</p>
+          <p>In die periode ontstond ook mijn interesse in coaching. Vanaf 2014 begon ik trainingsschema's te maken voor vrienden en familie. Ik vond het boeiend om me in de opbouw van trainingen te verdiepen en anderen te helpen vooruitgang te boeken.</p>
+        </article>
+        <article class="chapter reveal" id="doorbraak">
+          <h3>Mijn eerste sportieve doorbraak</h3>
+          <p>In de jaren die volgden werkte ik me verder op in de Belgische triatlonwereld. Daarnaast deed ik wedstrijdervaring op in het wielrennen, onder andere tijdens de Ronde van Vlaams-Brabant.</p>
+          <p>2018 werd mijn eerste echte doorbraakjaar. Ik veroverde de Belgische beloftentitels op zowel de sprint- als de olympische afstand, won de Eredivisie in Amsterdam en schreef ook de Triatlon van Vlaanderen in Oudenaarde op mijn naam. Het was een seizoen waarin jarenlange inzet zich vertaalde naar mooie resultaten.</p>
+          <p>In 2019 maakte ik de overstap naar TriGT. Maar begin dat jaar kwam er abrupt een einde aan mijn sportieve vooruitgang.</p>
+        </article>
+        <article class="chapter reveal" id="overtraining">
+          <h3>Een moeilijke periode die mijn kijk op sport veranderde</h3>
+          <p>In februari 2019 werd bij mij het overtrainingssyndroom vastgesteld. Mijn lichaam werkte niet meer mee zoals voordien en zelfs eenvoudige inspanningen werden moeilijk. Wat jarenlang vanzelfsprekend was geweest, kon plots niet meer.</p>
+          <p>Het werd een zware periode, zowel fysiek als mentaal, die mijn kijk op sport fundamenteel veranderde. Ik leerde opnieuw waarderen hoe bijzonder het is om met een gezond lichaam te kunnen bewegen, trainen en wedstrijden te doen.</p>
+          <p>Tijdens mijn herstel werd ik opgevolgd door verschillende artsen en specialisten. Ik kreeg uiteenlopende adviezen over mijn situatie en mogelijke behandelmethoden. Door verschillende aanpakken te proberen, kritisch te blijven en beter naar mijn lichaam te leren luisteren, vond ik geleidelijk mijn weg naar herstel.</p>
+          <p>Omdat trainen nauwelijks mogelijk was, verdiepte ik me in inspanningsfysiologie en het menselijk lichaam. Ik volgde trainers- en coachingopleidingen en begon later ook kinesitherapie te studeren. Ondertussen ging ik meer atleten begeleiden, voornamelijk wielrenners, en begon ik zwemlessen te geven met een focus op techniekverbetering.</p>
+          <p>Mijn herstel verliep met vallen en opstaan. Tijdens mijn heropbouw wilde ik soms te snel vooruit, waardoor ik leerde hoe belangrijk geduld, voldoende herstel en een goede afstemming tussen voeding en trainingsbelasting zijn.</p>
+          <p>Die ervaringen hebben mijn relatie met mijn lichaam en de sport blijvend veranderd.</p>
+        </article>
+        <article class="chapter reveal" id="comeback">
+          <h3>De weg terug naar mijn beste niveau</h3>
+          <p>Eind 2022 maakte ik na bijna vier jaar mijn comeback in de internationale triatloncompetitie. Met een zesde plaats op het Afrikaans kampioenschap in Agadir kreeg ik opnieuw het vertrouwen dat ik op hoog niveau kon presteren.</p>
+          <p>De weg terug verliep niet zonder hindernissen. In 2023 beperkte een langdurige heupblessure mijn wedstrijdseizoen. In 2024 besloot ik van coach te veranderen en een nieuwe trainingsaanpak te volgen. Die omschakeling vroeg tijd en geduld, waardoor ik aanvankelijk een stap terug moest zetten op wedstrijdvlak. Op langere termijn legde dit echter de basis voor verdere progressie.</p>
+          <p>In 2025 volgde een tweede sportieve doorbraak. Zeven jaar na mijn eerste medaille behaalde ik opnieuw brons op het Belgisch kampioenschap olympische afstand. Dat resultaat betekende voor mij bijzonder veel. Het was de bevestiging dat ik, na alles wat ik had doorgemaakt, opnieuw kon meestrijden op het hoogste nationale niveau.</p>
+          <p>In 2026 trok ik die stijgende lijn door. Ik behaalde opnieuw brons op het BK, werd derde in het individuele eindklassement van de Belgische T3 Series en zette met onder meer een twaalfde plaats in de Europabeker van Derry en een dertiende plaats in Ceuta verdere stappen op internationaal niveau.</p>
+          <p>Wat me vandaag vooral motiveert, is hoeveel vooruitgang er nog mogelijk blijkt. De kennis en ervaringen die ik doorheen de jaren heb opgedaan, helpen me om bewuster met mijn sport om te gaan.</p>
+        </article>
+        <article class="chapter reveal" id="ambities">
+          <h3>Mijn ambities</h3>
+          <p>Momenteel ligt mijn focus op de korte afstand en het internationale triatloncircuit. Via de Europese bekers wil ik doorgroeien naar wereldbekers, met de ambitie om uiteindelijk op wereldniveau te kunnen presteren.</p>
+          <p>Op langere termijn wil ik ook de overstap maken naar de langere afstanden, maar eerst wil ik ontdekken hoe ver ik op de korte afstand kan geraken.</p>
+          <p>Mijn parcours heeft me geleerd dat vooruitgang zelden rechtlijnig verloopt en dat je potentieel geen vast eindpunt kent. Ik blijf nieuwsgierig naar mijn eigen mogelijkheden en wil mezelf blijven uitdagen om de lat hoger te leggen.</p>
+        </article>
+        <p class="story-quote reveal">Want wat vandaag je grens lijkt, hoeft dat morgen niet meer te zijn.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RACEKALENDER ===== -->
+  <!-- Bron cijfers: https://www.triathlon.org/athletes/profile/96552/neal-van-vaerenbergh (geraadpleegd 30 okt 2026):
+       27 starts, 23 finishes, 3 podiums, 0 overwinningen, wereldranking 307, Europese ranking 171, geboortejaar 1996. -->
+  <!-- Bron uitslagen: World Triathlon, export van profiel 96552:
+       https://www.triathlon.org/api/athletes/96552/results-export (geraadpleegd 30 okt 2026)
+       en https://www.triathlon.org/athletes/profile/96552/neal-van-vaerenbergh
+       Categorie Elite Men, behalve 2015 (Junior Men). Afstand "sprint" enkel waar World Triathlon die vermeldt.
+       PLACEHOLDER: afstand (sprint/standaard) van de overige races staat niet in de export — aanvullen indien gekend.
+       Klassen per race: pod = podium (cyaan), top = top 10, dnf = niet gefinisht (gedempt). -->
+  <section id="races">
+    <div class="narrow">
+      <div class="cal-head">
+        <div><p class="label reveal">Racekalender</p><h2 class="reveal" style="margin-top:.8rem">Mijn <span class="grad">races.</span></h2></div>
+        <div class="reveal">
+          <div class="stats">
+            <div><b>27</b><span>internationale starts</span></div>
+            <div><b class="grad">3</b><span>podiums op het BK</span></div>
+            <div><b>5e</b><span>beste internationaal</span></div>
+            <div><b>#307</b><span>wereldranking</span></div>
+          </div>
+          <p class="src">Bron: World Triathlon, oktober 2026 · Europese ranking #171</p>
+        </div>
+      </div>
+
+      <!-- 2026 -->
+      <div class="season">
+        <div class="s-head reveal"><p class="s-yr">2026</p><p class="s-sum">12 races · <em>4 podiums</em> · Belgisch kampioen ploegen + winst T3 Series met TriGT</p></div>
+        <ol class="agenda">
+          <li class="race reveal"><time class="dt" datetime="2026-10-11"><b>11</b><span>okt</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Tenerife</h3><p>Tenerife, Spanje · sprint</p></div><div class="rs"><b>22e</b><span>50:23</span></div></li>
+          <li class="race reveal"><time class="dt" datetime="2026-10-04"><b>4</b><span>okt</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Ceuta</h3><p>Ceuta, Spanje · sprint</p></div><div class="rs"><b>13e</b><span>52:48</span></div></li>
+          <li class="race reveal"><time class="dt" datetime="2026-09-05"><b>5</b><span>sep</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup City of Derry</h3><p>Derry, Ierland · sprint</p></div><div class="rs"><b>12e</b><span>49:30</span></div></li>
+          <!-- T3 Series finale Willebroek: bron 3athlon.be 14 sep 2026, supersprint Double Relay (zwemmen geschrapt), zo 13 sep.
+               Neal liep de slotaflossing voor TriGT: dag- en eindwinst in de eerste divisie. -->
+          <li class="race pod reveal"><time class="dt" datetime="2026-09-13"><b>13</b><span>sep</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series finale Willebroek</h3><p>Willebroek, België · double relay met TriGT · eindwinst T3 Series</p></div><div class="rs"><b>1e</b><span>ploeg</span></div></li>
+          <!-- T3 Series Deinze: bron 3athlon.be, 23 aug 2026. Zwemmen geschrapt (blauwalg), 3 km lopen / 20 km fietsen / 5 km lopen.
+               Winnaar Jens Smolders 51'10, Neal op 3 s → tijd 51:13 berekend. -->
+          <li class="race pod reveal"><time class="dt" datetime="2026-08-23"><b>23</b><span>aug</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Deinze</h3><p>Deinze, België · sprint, als duatlon</p></div><div class="rs"><b>2e</b><span>51:13</span></div></li>
+          <li class="race dnf reveal"><time class="dt" datetime="2026-07-04"><b>4</b><span>jul</span></time><div class="ev"><span class="tag">Premium Cup</span><h3>Europe Triathlon Premium Cup Holten</h3><p>Holten, Nederland</p></div><div class="rs"><b>DNF</b><span>—</span></div></li>
+          <li class="race dnf reveal"><time class="dt" datetime="2026-06-27"><b>27</b><span>jun</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Wels</h3><p>Wels, Oostenrijk</p></div><div class="rs"><b>DNF</b><span>—</span></div></li>
+          <li class="race reveal"><time class="dt" datetime="2026-06-19"><b>19</b><span>jun</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Kitzbühel</h3><p>Kitzbühel, Oostenrijk</p></div><div class="rs"><b>52e</b><span>37:00</span></div></li>
+          <li class="race top reveal"><time class="dt" datetime="2026-06-06"><b>6</b><span>jun</span></time><div class="ev"><span class="tag">Africa Cup</span><h3>Africa Triathlon Cup Yasmine Hammamet</h3><p>Hammamet, Tunesië</p></div><div class="rs"><b>5e</b><span>54:21</span></div></li>
+          <li class="race pod reveal"><time class="dt" datetime="2026-05-31"><b>31</b><span>mei</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap triatlon</h3><p>België</p></div><div class="rs"><b>3e</b><span>1:51:38</span></div></li>
+          <!-- T3 Series Viersel: bron 3athlon.be, 3 mei 2026 (race za 2 mei), eerste individuele manche T3 Team Triatlon Series.
+               750 m / 20 km / 5 km. PLACEHOLDER: eindtijd niet vermeld in het verslag — aanvullen indien gekend. -->
+          <li class="race top reveal"><time class="dt" datetime="2026-05-02"><b>2</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Viersel</h3><p>Viersel, België · sprint</p></div><div class="rs"><b>5e</b><span>—</span></div></li>
+          <!-- BK ploegentriatlon Doornik: bron 3athlon.be 26 apr 2026 (zo 26 apr). TRIGT: Erwin Vanderplancke, Dries Matthys,
+               Neal Van Vaerenbergh, Elie Combat, Gabriel Moreira. Tijd niet vermeld. Volgens Neal deel van de T3 Series. -->
+          <li class="race pod reveal"><time class="dt" datetime="2026-04-26"><b>26</b><span>apr</span></time><div class="ev"><span class="tag">BK ploegen · T3 Series</span><h3>Belgisch kampioenschap ploegentriatlon</h3><p>Doornik, België · met TriGT · Belgisch kampioen</p></div><div class="rs"><b>1e</b><span>ploeg</span></div></li>
+        </ol>
+      </div>
+
+      <!-- 2025 -->
+      <div class="season">
+        <div class="s-head reveal"><p class="s-yr">2025</p><p class="s-sum">4 races · <em>1 podium</em> · beste: 3e BK</p></div>
+        <ol class="agenda">
+          <li class="race reveal"><time class="dt" datetime="2025-10-12"><b>12</b><span>okt</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Tenerife – Santa Cruz</h3><p>Tenerife, Spanje</p></div><div class="rs"><b>44e</b><span>52:43</span></div></li>
+          <li class="race reveal"><time class="dt" datetime="2025-10-05"><b>5</b><span>okt</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Ceuta</h3><p>Ceuta, Spanje</p></div><div class="rs"><b>24e</b><span>55:35</span></div></li>
+          <li class="race pod reveal"><time class="dt" datetime="2025-09-21"><b>21</b><span>sep</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap triatlon</h3><p>België</p></div><div class="rs"><b>3e</b><span>2:00:55</span></div></li>
+          <li class="race reveal"><time class="dt" datetime="2025-07-06"><b>6</b><span>jul</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>België · sprint</p></div><div class="rs"><b>17e</b><span>53:34</span></div></li>
+        </ol>
+      </div>
+
+      <!-- Oudere seizoenen: ingeklapt -->
+      <details class="older">
+        <summary><b class="show">Toon oudere seizoenen</b><b class="hide">Verberg oudere seizoenen</b><span>2015–2024 · 31 races</span></summary>
+
+        <div class="season">
+          <div class="s-head"><p class="s-yr">2024</p><p class="s-sum">2 races · beste: 15e BK</p></div>
+          <ol class="agenda">
+            <li class="race reveal"><time class="dt" datetime="2024-10-27"><b>27</b><span>okt</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Alanya</h3><p>Alanya, Turkije</p></div><div class="rs"><b>58e</b><span>54:27</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2024-09-14"><b>14</b><span>sep</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap triatlon</h3><p>België</p></div><div class="rs"><b>15e</b><span>1:50:50</span></div></li>
+          </ol>
+        </div>
+
+        <div class="season">
+          <div class="s-head"><p class="s-yr">2023</p><p class="s-sum">4 races · beste: 5e Monastir</p></div>
+          <ol class="agenda">
+            <li class="race dnf reveal"><time class="dt" datetime="2023-11-19"><b>19</b><span>nov</span></time><div class="ev"><span class="tag">Africa Cup</span><h3>Africa Triathlon Cup Agadir</h3><p>Agadir, Marokko</p></div><div class="rs"><b>DNF</b><span>—</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2023-11-05"><b>5</b><span>nov</span></time><div class="ev"><span class="tag">Africa Cup</span><h3>Africa Triathlon Cup Les Berges du Lac</h3><p>Tunis, Tunesië</p></div><div class="rs"><b>12e</b><span>1:01:45</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2023-10-22"><b>22</b><span>okt</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Yenişehir</h3><p>Yenişehir, Turkije</p></div><div class="rs"><b>49e</b><span>57:46</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2023-09-03"><b>3</b><span>sep</span></time><div class="ev"><span class="tag">Africa Cup</span><h3>Africa Triathlon Cup Monastir</h3><p>Monastir, Tunesië</p></div><div class="rs"><b>5e</b><span>55:13</span></div></li>
+          </ol>
+        </div>
+
+        <div class="season">
+          <div class="s-head"><p class="s-yr">2022</p><p class="s-sum">2 races · beste: 6e Afrikaans kampioenschap</p></div>
+          <ol class="agenda">
+            <li class="race reveal"><time class="dt" datetime="2022-10-23"><b>23</b><span>okt</span></time><div class="ev"><span class="tag">Africa Cup</span><h3>Africa Triathlon Cup Tanger</h3><p>Tanger, Marokko</p></div><div class="rs"><b>36e</b><span>56:28</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2022-09-24"><b>24</b><span>sep</span></time><div class="ev"><span class="tag">Afrikaans kampioenschap</span><h3>Africa Triathlon Championships Agadir</h3><p>Agadir, Marokko</p></div><div class="rs"><b>6e</b><span>1:53:27</span></div></li>
+          </ol>
+        </div>
+
+        <div class="season">
+          <div class="s-head"><p class="s-yr">2018</p><p class="s-sum">11 races · <em>6 podiums</em> · <em>3 overwinningen</em></p></div>
+          <!-- Nationale races 2018 (opgegeven door Neal, 5 nov 2026). Datums en details uit Neals eigen nieuwsarchief
+               (nealvanvaerenbergh.be/NL/news.aspx via web.archive.org, snapshot 7 mrt 2022), aangevuld met:
+               - Cave Triathlon Kanne: 3athlon.be 1 jul 2018, 1/3 triatlon, 2:19:47
+               - Zwintriathlon: uitslag 1:51:06, 5e (1e belofte); datum 8 sep 2018 volgens triatlonwedstrijden.be
+                 (blogbericht gedateerd 5 sep zegt "gisteren": PLACEHOLDER datum nakijken)
+               - Eredivisie Amsterdam: 2e manche, individuele én ploegwinst met Squadra; 10 jun 2018 (Tritanium-uitslag)
+               - Eredivisie Klazienaveen: 3e manche, sprint, 2e individueel; zo 15 jul (Neal: week na Oudenaarde)
+               - Oudenaarde zo 8 jul (Neal: week na Cave), Amsterdam 10 jun (Neal: week na BK sprint Vilvoorde)
+               - BK sprint Vilvoorde zo 3 jun: 5e algemeen, 1e belofte (Belgisch kampioen beloften)
+               - T3: 20 mei 9e (eerste T3 van 2018, plaats niet vermeld), 19 aug Weiswampach 11e + ploegwinst SP&O, 26 aug Viersel 7e
+               - Tijden van Mechelen, Klazienaveen, Oudenaarde, Amsterdam en de T3-races niet gekend -->
+          <ol class="agenda">
+            <li class="race pod reveal"><time class="dt" datetime="2018-09-16"><b>16</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Kwarttriatlon Mechelen</h3><p>Mechelen, België · kwart</p></div><div class="rs"><b>3e</b><span>—</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2018-09-08"><b>8</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Zwintriathlon</h3><p>Knokke-Heist, België · kwart · 1e belofte</p></div><div class="rs"><b>5e</b><span>1:51:06</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2018-08-26"><b>26</b><span>aug</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Viersel</h3><p>Viersel, België · sprint</p></div><div class="rs"><b>7e</b><span>—</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2018-08-19"><b>19</b><span>aug</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Weiswampach</h3><p>Weiswampach, Luxemburg · sprintduatlon · ploegwinst met SP&amp;O</p></div><div class="rs"><b>11e</b><span>—</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2018-08-15"><b>15</b><span>aug</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap triatlon</h3><p>België</p></div><div class="rs"><b>3e</b><span>1:47:13</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2018-07-15"><b>15</b><span>jul</span></time><div class="ev"><span class="tag">Eredivisie</span><h3>Eredivisie Klazienaveen</h3><p>Klazienaveen, Nederland</p></div><div class="rs"><b>2e</b><span>—</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2018-07-08"><b>8</b><span>jul</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Triatlon van Vlaanderen</h3><p>Oudenaarde, België · kwart</p></div><div class="rs"><b>1e</b><span>—</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2018-07-01"><b>1</b><span>jul</span></time><div class="ev"><span class="tag">1/3 triatlon</span><h3>Cave Triathlon</h3><p>Kanne, België · 1/3</p></div><div class="rs"><b>1e</b><span>2:19:47</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2018-06-10"><b>10</b><span>jun</span></time><div class="ev"><span class="tag">Eredivisie</span><h3>Eredivisie Amsterdam</h3><p>Amsterdam, Nederland · ook ploegwinst met Squadra</p></div><div class="rs"><b>1e</b><span>—</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2018-06-03"><b>3</b><span>jun</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Vilvoorde, België · sprint · Belgisch kampioen beloften</p></div><div class="rs"><b>5e</b><span>—</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2018-05-20"><b>20</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series, eerste manche</h3><p>België</p></div><div class="rs"><b>9e</b><span>—</span></div></li>
+          </ol>
+        </div>
+
+        <div class="season">
+          <div class="s-head"><p class="s-yr">2017</p><p class="s-sum">4 races · beste: 9e T3 Geraardsbergen</p></div>
+          <!-- T3 Geraardsbergen 2017: 9e (opgegeven door Neal, 5 nov 2026). PLACEHOLDER: exacte dag in juni en tijd niet gekend. -->
+          <ol class="agenda">
+            <li class="race reveal"><time class="dt" datetime="2017-10-08"><b>8</b><span>okt</span></time><div class="ev"><span class="tag">European Cup</span><h3>ETU Triathlon European Cup Final Melilla</h3><p>Melilla, Spanje</p></div><div class="rs"><b>24e</b><span>2:00:46</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2017-06-11"><b>11</b><span>jun</span></time><div class="ev"><span class="tag">European Cup</span><h3>ETU Triathlon European Cup Weert</h3><p>Weert, Nederland</p></div><div class="rs"><b>47e</b><span>2:00:59</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2017-06"><b>—</b><span>jun</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Geraardsbergen</h3><p>Geraardsbergen, België</p></div><div class="rs"><b>9e</b><span>—</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2017-05-20"><b>20</b><span>mei</span></time><div class="ev"><span class="tag">African Cup</span><h3>ATU Sprint Triathlon African Cup Larache</h3><p>Larache, Marokko · sprint</p></div><div class="rs"><b>35e</b><span>59:48</span></div></li>
+          </ol>
+        </div>
+
+        <div class="season">
+          <div class="s-head"><p class="s-yr">2016</p><p class="s-sum">4 races · <em>2 podiums</em> · beste: 9e BK sprint</p></div>
+          <!-- BK sprint 2016 Gullegem: 9e algemeen, 3e belofte (opgegeven door Neal, 5 nov 2026; blog 31 jul 2016: een week na
+               de 1/8e van Roeselare, in juni). PLACEHOLDER: exacte dag en tijd niet gekend. -->
+          <!-- T3 2016 (ploegresultaten met SP&O-No Drugs, blog Neal 31 jul 2016): manche 1 Doornik (= BK ploegentriatlon) 3e, "de week na 1 mei";
+               manche 2 Zwevegem aflossing 3e, "een kleine twee weken" na 16 mei. PLACEHOLDER: exacte dagen niet gekend. -->
+          <ol class="agenda">
+            <li class="race reveal"><time class="dt" datetime="2016-08-15"><b>15</b><span>aug</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap triatlon</h3><p>België</p></div><div class="rs"><b>11e</b><span>1:54:11</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2016-06"><b>—</b><span>jun</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Gullegem, België · sprint · 3e belofte</p></div><div class="rs"><b>9e</b><span>—</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2016-05"><b>—</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Zwevegem, teamrelay</h3><p>Zwevegem, België · met SP&amp;O</p></div><div class="rs"><b>3e</b><span>ploeg</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2016-05"><b>—</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Doornik, BK ploegentriatlon</h3><p>Doornik, België · met SP&amp;O</p></div><div class="rs"><b>3e</b><span>ploeg</span></div></li>
+          </ol>
+        </div>
+
+        <div class="season">
+          <div class="s-head"><p class="s-yr">2015<small>junioren</small></p><p class="s-sum">4 races · <em>2 podiums</em> · beste: 3e T3 met de ploeg</p></div>
+          <!-- T3 2015 (ploegresultaten met SP&O-No Drugs): Doornik 26 apr 2015 brons (3athlon.be "T3 Series: Jelle Geens leidt SMO-Specialized naar zege");
+               Zwevegem 31 mei 2015 teamrelay 3e (blog Neal 1 jun 2015). -->
+          <ol class="agenda">
+            <li class="race top reveal"><time class="dt" datetime="2015-09-13"><b>13</b><span>sep</span></time><div class="ev"><span class="tag">BK junioren</span><h3>Belgisch kampioenschap triatlon junioren</h3><p>België · Junior Men</p></div><div class="rs"><b>4e</b><span>1:02:38</span></div></li>
+            <li class="race dnf reveal"><time class="dt" datetime="2015-07-04"><b>4</b><span>jul</span></time><div class="ev"><span class="tag">Junior European Cup</span><h3>ETU Triathlon Junior European Cup Holten</h3><p>Holten, Nederland · Junior Men</p></div><div class="rs"><b>DNF</b><span>blessure</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2015-05-31"><b>31</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Zwevegem, teamrelay</h3><p>Zwevegem, België · met SP&amp;O</p></div><div class="rs"><b>3e</b><span>ploeg</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2015-04-26"><b>26</b><span>apr</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Doornik, ploegentriatlon</h3><p>Doornik, België · met SP&amp;O</p></div><div class="rs"><b>3e</b><span>ploeg</span></div></li>
+          </ol>
+        </div>
+      </details>
+
+      <p class="cal-foot reveal"><a class="link" href="https://www.triathlon.org/athletes/profile/96552/neal-van-vaerenbergh" target="_blank" rel="noopener">Volledig World Triathlon-profiel ↗</a></p>
+    </div>
+  </section>
+
+  <!-- ===== ACTIEFOTO 2 ===== -->
+  <div class="wrap">
+    <div class="band ph reveal">
+      <!-- FOTO: photos/racing/race-2.jpg — fietsparcours op blauw tapijt in de zon, liggend 21:9 -->
+      <img src="photos/racing/race-2.jpg" alt="Het fietsparcours op blauw tapijt in de zon tijdens een Europabeker" width="2100" height="900" loading="lazy">
+    </div>
+  </div>
+
+  <!-- ===== GALERIJ ===== -->
+  <section id="beeld" aria-label="Foto's van Neal">
+    <div class="wrap">
+      <p class="label reveal">In beeld</p>
+      <h2 class="reveal" style="margin-top:.8rem">Van zwemstart tot <span class="grad">podium.</span></h2>
+      <div class="galerij">
+        <figure class="ph reveal"><img style="--z:1.22; --o:50% 35%" src="photos/racing/galerij-01.jpg" alt="Neal Van Vaerenbergh op het podium van Triatlon Turnhout, met medaille en bloemen" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-02.jpg" alt="Neal Van Vaerenbergh in aeropositie op zijn tijdritfiets" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-03.jpg" alt="Neal Van Vaerenbergh op de fiets, aangemoedigd door het publiek" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-04.jpg" alt="Neal Van Vaerenbergh loopt in Belgische trisuit door de finishstraat" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img style="--z:1.1" src="photos/racing/galerij-05.jpg" alt="Neal Van Vaerenbergh leidt het peloton op de fiets" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-06.jpg" alt="Neal Van Vaerenbergh viert met het Tri.GT Pro Team" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-07.jpg" alt="Close-up van Neal Van Vaerenbergh in volle inspanning tijdens het lopen" width="825" height="1032" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-08.jpg" alt="Neal Van Vaerenbergh op de fiets met blauwe helm" width="900" height="1126" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img style="--z:1.25; --o:100% 58%" src="photos/racing/galerij-09.jpg" alt="Neal Van Vaerenbergh loopt zij aan zij met een concurrent tussen de palmbomen" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS ===== -->
+  <section id="partners">
+    <div class="wrap partners">
+      <p class="label reveal">Partners &amp; sponsors</p>
+      <h2 class="reveal" style="margin-top:.8rem">Samen naar de <span class="grad">finish.</span></h2>
+      <!-- PLACEHOLDER: Neal moet nog bevestigen wat hij partners echt aanbiedt -->
+      <p class="reveal">Ik bied zichtbaarheid op wedstrijden, op mijn kledij en op mijn sociale media, en eerlijke content over je product tijdens mijn eigen trainingen.</p>
+      <a href="mailto:neal@nealvanvaerenbergh.com?subject=Partnership" class="pill pill-accent reveal">Word partner →</a>
+      <!-- PLACEHOLDER: partnerlogo's hier terugzetten zodra er echte partners zijn
+           (vervang "Jouw logo hier" door een <img> met het logo; CSS hieronder terug in <style> zetten)
+      <div class="slots reveal" aria-label="Partnerlogo's">
+        <div class="slot">Jouw logo hier</div><div class="slot">Jouw logo hier</div><div class="slot">Jouw logo hier</div>
+      </div>
+      CSS:
+      .slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 620px; margin-top: 40px; }
+      .slot { aspect-ratio: 16 / 9; border-radius: 14px; border: 1px solid rgba(255,255,255,.12); display: grid; place-items: center; padding: 6px; }
+      -->
+    </div>
+  </section>
+
+  <!-- ===== NAAR COACHING ===== -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="to-coach reveal">
+        <div><h2>Zelf sneller worden?</h2><p>Wat ik in mijn eigen races geleerd heb, zit in elk schema van Vector Endurance.</p></div>
+        <a href="coaching.html" class="pill">Ontdek coaching →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="index.html" class="brand" data-logo data-word="name" aria-label="Neal Van Vaerenbergh, naar de homepagina"><span class="lw lw-arrow">Neal Van Vaerenbergh<small>Triatleet · coach</small></span></a>
+    <nav aria-label="Footer"><a href="coaching.html">Coaching</a><a href="#top">Racing</a><a href="#partners">Partners</a><a href="https://www.instagram.com/neal.vv/" target="_blank" rel="noopener" class="ig"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>@neal.vv</a></nav>
+    <span>© <span id="year"></span> Neal Van Vaerenbergh · nealvanvaerenbergh.com</span>
+  </div>
+</footer>
+
+<script src="logos.js?v=6"></script>
+<script>
+  // Eerst de reveal: ook als logos.js niet laadt, blijft alles zichtbaar
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const header = document.querySelector('header');
+  const updHeader = () => header.classList.toggle('scrolled', scrollY > 40);
+  addEventListener('scroll', updHeader, { passive: true }); updHeader();
+
+  if (typeof applyLogo === 'function') applyLogo('arrow');
+  if (typeof nvvLigatures === 'function') nvvLigatures(document.getElementById('naam'), [[19, 137, 163], [25, 211, 255]]);
+</script>
+</body>
+</html>

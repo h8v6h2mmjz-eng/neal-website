@@ -1,0 +1,67 @@
+/* Vector Endurance — logo-varianten.
+   Kleuren via variabelen, zodat elk logo werkt op zwart, cyaan en wit:
+   --logo-fg (lijnen/tekst), --logo-accent (cyaan accent), --logo-ink (tekst óp het accent), --logo-bg (achtergrond) */
+:root { --logo-fg: #f2f6f7; --logo-accent: #19d3ff; --logo-ink: #03141b; --logo-bg: #0a0b0c; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--logo-fg); }
+.logo-mark { flex: none; width: 44px; height: 44px; display: grid; place-items: center; }
+.logo-mark svg { width: 100%; height: 100%; overflow: visible; }
+.logo-mark.wide { width: 62px; height: 34px; }
+/* Instagram-link met icoon (footer en contact) */
+.ig { display: inline-flex; align-items: center; gap: .45rem; }
+.ig svg { flex: none; }
+
+/* 00 N-pijl (het eigen logo) */
+.lw-arrow { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 700; letter-spacing: -.01em; }
+.lw-arrow small { font-family: 'Inter', system-ui, sans-serif; }
+.brand.draw .lg-arrow polygon { animation: lg-rise .7s .1s cubic-bezier(.3,1.5,.5,1) both; transform-box: fill-box; transform-origin: 0 100%; }
+@keyframes lg-rise { from { transform: translate(-6px, 6px) scale(.85); opacity: 0; } }
+/* Naam als woordmerk (header/footer): zelfde ontwerp als de grote naam op de homepagina.
+   lig-top/lig-over snijden met een rand in de achtergrondkleur (--logo-bg) in de letter ernaast */
+.lw-name .nm { display: block; font-weight: 800; text-transform: uppercase; letter-spacing: -.075em; line-height: 1.05; transform: skewX(-9deg); transform-origin: 0 100%; }
+.lw-name .ch { display: inline-block; position: relative; }
+.lw-name .ch.sp { width: .2em; }
+.lw-name .lig-top { z-index: 2; text-shadow: .035em 0 var(--logo-bg), .035em -.02em var(--logo-bg), .035em .02em var(--logo-bg), .05em 0 var(--logo-bg); }
+.lw-name .lig-under { z-index: 1; margin-left: -.24em; }
+.lw-name .lig-over { z-index: 2; margin-left: -.24em; text-shadow: -.035em 0 var(--logo-bg), -.035em -.02em var(--logo-bg), -.035em .02em var(--logo-bg), -.05em 0 var(--logo-bg); }
+.lw-name .lig-nudge { z-index: 2; margin-left: -.06em; text-shadow: -.025em 0 var(--logo-bg), -.025em -.015em var(--logo-bg), -.025em .015em var(--logo-bg); }
+.lw-name small { margin-top: 3px; }
+.lw { line-height: 1.12; font-size: .9rem; font-weight: 600; color: var(--logo-fg); white-space: nowrap; }
+.lw small { display: block; font-weight: 500; font-size: .7rem; opacity: .62; letter-spacing: .01em; }
+
+/* Contexten om de logo's op te tonen */
+.on-accent { --logo-fg: #03141b; --logo-accent: #03141b; --logo-ink: #19d3ff; --logo-bg: #19d3ff; }
+.on-white { --logo-fg: #0a0b0c; --logo-accent: #0e6f86; --logo-ink: #ffffff; --logo-bg: #ffffff; }
+
+/* 01 Route */
+.lw-route { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 700; letter-spacing: -.01em; }
+.lw-route small { font-family: 'Inter', system-ui, sans-serif; }
+.brand.draw .lg-route path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: lg-draw 1.6s .2s cubic-bezier(.6,0,.2,1) forwards; }
+.brand.draw .lg-route .fin { transform-origin: 44px 10px; animation: lg-pop .5s 1.6s cubic-bezier(.3,1.8,.5,1) both; }
+@keyframes lg-draw { to { stroke-dashoffset: 0; } }
+@keyframes lg-pop { from { transform: scale(0); } }
+
+/* 02 Slash */
+.lw-slash { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 800; font-size: .98rem; letter-spacing: -.01em; }
+.lw-slash b { color: var(--logo-accent); margin: 0 .08em; }
+
+/* 03 Tri */
+.lw-tri { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 800; font-size: 1.15rem; letter-spacing: -.02em; }
+.lw-tri small { font-family: 'Inter', system-ui, sans-serif; font-size: .62rem; font-weight: 600; letter-spacing: .22em; opacity: .7; }
+
+/* 04 Zone */
+.lw-zone { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 700; }
+.lw-zone small { font-family: 'Inter', system-ui, sans-serif; }
+
+/* 05 Bib */
+.lw-bib { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 700; font-size: .76rem; letter-spacing: .02em; }
+.lw-bib small { font-family: 'Inter', system-ui, sans-serif; font-size: .64rem; letter-spacing: .14em; }
+
+/* 06 Speed */
+.lw-speed { position: relative; font-family: 'Unbounded', system-ui, sans-serif; font-weight: 800; font-style: italic; font-size: 1.05rem; letter-spacing: -.02em; transform: skewX(-8deg); padding-left: 22px; }
+.lw-speed::before { content: ''; position: absolute; left: 0; top: 50%; width: 16px; height: 11px; transform: translateY(-50%); background: linear-gradient(var(--logo-accent), var(--logo-accent)) 4px 0 / 12px 2px no-repeat, linear-gradient(var(--logo-accent), var(--logo-accent)) 0 50% / 16px 2px no-repeat, linear-gradient(var(--logo-accent), var(--logo-accent)) 7px 100% / 9px 2px no-repeat; }
+.lw-speed em { font-style: italic; color: var(--logo-accent); font-weight: 500; }
+
+/* 07 Signature */
+.lw-sig { font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 1.35rem; letter-spacing: -.05em; line-height: 1; }
+.lw-sig b { color: var(--logo-accent); }
+.lw-sig small { font-size: .66rem; letter-spacing: .02em; font-weight: 500; margin-top: 2px; }

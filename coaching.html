@@ -165,6 +165,14 @@
   .quote.has-photo { justify-content: flex-start; }
   .quote .t-photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 50%; border-radius: calc(var(--radius) - 8px); filter: grayscale(.25) contrast(1.05); pointer-events: none; }
   .quote.has-photo .who { margin-top: auto; }
+  .t-track { align-items: start; }
+  /* Lange testimonial: eerst een stukje met een zachte fade, "Lees meer" klapt de volledige tekst open */
+  .t-text p + p { margin-top: .8em; }
+  .t-text.clamp { max-height: 8.2em; overflow: hidden; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+  .t-more { align-self: flex-start; margin-top: -1rem; padding: .35rem 0; border: 0; background: none; color: var(--accent); font: 600 .85rem var(--body); cursor: pointer; }
+  .t-more::after { content: ' ↓'; }
+  .t-more[aria-expanded="true"]::after { content: ' ↑'; }
+  .t-more:hover { text-decoration: underline; }
   .t-track.drag { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; }
   .t-track.drag > .quote { transform: scale(.985); }
   .t-track:focus-visible { outline-offset: 6px; }
@@ -444,8 +452,14 @@
         <div class="t-nav reveal"><button type="button" class="t-btn" data-dir="-1" aria-label="Vorige ervaringen">←</button><button type="button" class="t-btn" data-dir="1" aria-label="Volgende ervaringen">→</button></div>
       </div>
       <div class="t-track reveal" tabindex="0" aria-label="Ervaringen, sleep of swipe opzij voor meer">
-        <!-- Testimonial 1: tekst van de atleet (via Neal, 6 nov 2026), ingekort met "…" waar zinnen wegvielen. Atleet: Senna Verbiest. -->
-        <figure class="quote glass has-photo"><img class="t-photo" src="photos/coaching/testimonial-1.jpg?v=2" width="1000" height="625" loading="lazy" alt="Senna Verbiest op het podium als provinciaal kampioen Antwerpen bij de wielrenners" draggable="false"><blockquote>"Na een break van twee jaar moest ik van nul opbouwen. Na een paar maanden reed ik meteen een top 10 in mijn eerste wedstrijd… Ik zou Neal omschrijven als een totaalpakket: coretraining, voeding, mentale coaching. Als je op zoek bent naar een coach die het beste in je naar boven haalt, zou ik niet twijfelen."</blockquote><figcaption class="who"><div><b>Senna Verbiest</b><small>Wielrennen · comeback na 2 jaar</small></div><span class="result">Provinciaal kampioen</span></figcaption></figure>
+        <!-- Testimonial 1: volledige tekst van de atleet (via Neal, 6 nov 2026), uitklapbaar met "Lees meer". Atleet: Senna V. (achternaam bewust weggelaten). -->
+        <figure class="quote glass has-photo"><img class="t-photo" src="photos/coaching/testimonial-1.jpg?v=2" width="1000" height="625" loading="lazy" alt="Senna V. op het podium als provinciaal kampioen Antwerpen bij de wielrenners" draggable="false"><blockquote class="t-text" id="t-text-1">
+          <p>"Ik heb enkele jaren met Neal gewerkt toen ik na een break van twee jaar opnieuw wou gaan koersen. Het was geen makkelijke taak, omdat ik van nul moest opbouwen. Neal heeft toen sterk op mijn basis gefocust, omdat die heel zwak was. Veel rustige kilometers, maar toch met voldoende variatie in de trainingen.</p>
+          <p>Het resultaat mocht er zijn, want na een opbouw van een paar maanden wist ik meteen een top 10 te rijden in mijn eerste wedstrijd van het jaar. Ik reed de hele dag in de kopgroep met sterke renners. Andere uitschieters waren een elfde plaats op het BK gravel bij de profs en een provinciale titel op de weg bij de elite 2.</p>
+          <p>Neal speelde als trainer altijd kort op de bal. Als er een probleem was, merkte hij dat meteen op en deed hij de nodige aanpassingen. Ik zou Neal als trainer omschrijven als een totaalpakket. Daarmee bedoel ik dat hij met alles rekening houdt: coretraining, voeding, mentale coaching…</p>
+          <p>Neal is ook een heel rustig persoon met wie je alles kunt bespreken. Dat vind ik een heel belangrijke eigenschap voor een coach.</p>
+          <p>Als je op zoek bent naar een coach die het beste in je naar boven haalt, zou ik niet twijfelen."</p>
+        </blockquote><button type="button" class="t-more" aria-expanded="false" aria-controls="t-text-1">Lees meer</button><figcaption class="who"><div><b>Senna V.</b><small>Wielrennen · comeback na 2 jaar</small></div><span class="result">Provinciaal kampioen</span></figcaption></figure>
         <figure class="quote glass"><blockquote>"[Ervaring van atleet 2]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
         <figure class="quote glass"><blockquote>"[Ervaring van atleet 3]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
         <figure class="quote glass"><blockquote>"[Ervaring van atleet 4]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
@@ -756,8 +770,19 @@
     track.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; moved = false; startX = e.clientX; startL = track.scrollLeft; });
     window.addEventListener('pointermove', e => { if (!down) return; const dx = e.clientX - startX; if (Math.abs(dx) > 4) { moved = true; track.classList.add('drag'); } track.scrollLeft = startL - dx; });
     window.addEventListener('pointerup', () => { if (!down) return; down = false; track.classList.remove('drag'); if (moved) track.scrollTo({ left: Math.round(track.scrollLeft / step()) * step() }); });
-    track.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+    track.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
     track.addEventListener('dragstart', e => e.preventDefault());
+    // "Lees meer": tekst ingeklapt tot je erop klikt (zonder JS blijft de volledige tekst gewoon zichtbaar)
+    track.querySelectorAll('.t-more').forEach(btn => {
+      const text = document.getElementById(btn.getAttribute('aria-controls'));
+      text.classList.add('clamp');
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') !== 'true';
+        btn.setAttribute('aria-expanded', open);
+        text.classList.toggle('clamp', !open);
+        btn.textContent = open ? 'Lees minder' : 'Lees meer';
+      });
+    });
     track.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
     update();

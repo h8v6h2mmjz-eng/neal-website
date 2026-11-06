@@ -157,6 +157,23 @@
   .quote .who small { color: var(--muted); }
   .quote .result { font-family: var(--display); font-weight: 700; color: var(--accent); font-size: 1rem; white-space: nowrap; }
   @media (min-width: 900px) { .quotes { grid-template-columns: repeat(3, 1fr); } }
+  /* Testimonials-carrousel: 3 kaarten naast elkaar (1 op gsm, 2 op tablet), scroll-snap + slepen met de muis */
+  .t-track { --cols: 1; --gap: 16px; display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols)); gap: var(--gap); overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: none; cursor: grab; padding-bottom: 4px; }
+  .t-track::-webkit-scrollbar { display: none; }
+  .t-track > .quote { scroll-snap-align: start; min-height: 260px; user-select: none; transition: border-color .3s, transform .4s cubic-bezier(.2,.8,.2,1); }
+  .t-track > .quote:hover { border-color: rgba(25,211,255,.45); }
+  .t-track.drag { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; }
+  .t-track.drag > .quote { transform: scale(.985); }
+  .t-track:focus-visible { outline-offset: 6px; }
+  @media (min-width: 640px) { .t-track { --cols: 2; } }
+  @media (min-width: 900px) { .t-track { --cols: 3; } }
+  .t-nav { display: flex; gap: .5rem; }
+  .t-btn { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: var(--glass); color: var(--ink); font: 600 1.1rem var(--body); cursor: pointer; transition: background .25s, color .25s, border-color .25s, opacity .25s; }
+  .t-btn:hover:not(:disabled) { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .t-btn:disabled { opacity: .3; cursor: default; }
+  .t-dots { display: flex; justify-content: center; gap: 6px; margin-top: 22px; }
+  .t-dots i { width: 6px; height: 6px; border-radius: 3px; background: var(--line); transition: width .35s cubic-bezier(.2,.8,.2,1), background .35s; }
+  .t-dots i.on { width: 22px; background: var(--accent); }
 
   /* ---------- Zo werkt het + veelgestelde vragen ---------- */
   .how-grid { display: grid; gap: 32px; }
@@ -414,18 +431,23 @@
   </section>
 
   <!-- ===== 4. REVIEWS ===== -->
-  <!-- VERBORGEN: de drie reviews hieronder zijn voorbeelden, niet echt. Zet "hidden" pas weg met echte reviews (met toestemming), en voeg dan de menulink "Reviews" terug toe. -->
-  <section id="reviews" style="padding-top:0" hidden>
+  <!-- Testimonials: 3 kaarten zichtbaar (op gsm 1), de rest via slepen, swipen of de pijlen.
+       PLACEHOLDER: de 5 kaarten hieronder zijn sjablonen. Vervang ze door echte ervaringen van atleten (met hun toestemming).
+       Kaart toevoegen of weghalen = één <figure> kopiëren of verwijderen; de carrousel past zich vanzelf aan. -->
+  <section id="reviews" style="padding-top:0" aria-label="Ervaringen van atleten">
     <div class="wrap">
       <div class="section-head">
-        <div><p class="label reveal">Reviews</p><h2 class="reveal" style="margin-top:.8rem">Wat atleten <span class="accent">zeggen.</span></h2></div>
+        <div><p class="label reveal">Testimonials</p><h2 class="reveal" style="margin-top:.8rem">Wat atleten <span class="accent">zeggen.</span></h2></div>
+        <div class="t-nav reveal"><button type="button" class="t-btn" data-dir="-1" aria-label="Vorige ervaringen">←</button><button type="button" class="t-btn" data-dir="1" aria-label="Volgende ervaringen">→</button></div>
       </div>
-      <!-- PLACEHOLDER: vervang door echte reviews (met toestemming) -->
-      <div class="quotes">
-        <figure class="quote glass reveal"><blockquote>"Ik kon amper 400 meter crawlen. Tien maanden later stond ik aan de start van mijn eerste halve Ironman, en ik finishte met een glimlach."</blockquote><figcaption class="who"><div><b>Sarah D.</b><small>Multisport · eerste 70.3</small></div><span class="result">5:48:12</span></figcaption></figure>
-        <figure class="quote glass reveal"><blockquote>"Neal snapt dat ik een job en twee kinderen heb. Minder uren dan vroeger, maar ik ben sneller dan ooit."</blockquote><figcaption class="who"><div><b>Tom V.</b><small>Multisport · olympische afstand</small></div><span class="result">-14 min PR</span></figcaption></figure>
-        <figure class="quote glass reveal"><blockquote>"Ik wilde enkel beter leren lopen. Na een half jaar liep ik mijn eerste marathon, zonder één blessure."</blockquote><figcaption class="who"><div><b>Pieter M.</b><small>Single sport · lopen</small></div><span class="result">3:29:50</span></figcaption></figure>
+      <div class="t-track reveal" tabindex="0" aria-label="Ervaringen, sleep of swipe opzij voor meer">
+        <figure class="quote glass"><blockquote>"[Ervaring van atleet 1: wat was het doel, wat veranderde er, hoe voelde de begeleiding?]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
+        <figure class="quote glass"><blockquote>"[Ervaring van atleet 2]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
+        <figure class="quote glass"><blockquote>"[Ervaring van atleet 3]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
+        <figure class="quote glass"><blockquote>"[Ervaring van atleet 4]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
+        <figure class="quote glass"><blockquote>"[Ervaring van atleet 5]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
       </div>
+      <div class="t-dots" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -708,6 +730,34 @@
     });
     document.body.appendChild(bar);
   }
+
+  // Testimonials-carrousel: slepen met de muis, pijlknoppen, pijltjestoetsen en bolletjes die tonen waar je bent
+  (() => {
+    const track = document.querySelector('.t-track');
+    if (!track) return;
+    const cards = [...track.children], dots = document.querySelector('.t-dots'), btns = document.querySelectorAll('.t-btn');
+    const step = () => cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 16);
+    const perView = () => Math.max(1, Math.round(track.clientWidth / step()));
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth - 2;
+      btns[0].disabled = track.scrollLeft <= 2; btns[1].disabled = track.scrollLeft >= max;
+      const pages = Math.max(1, cards.length - perView() + 1), cur = Math.min(pages - 1, Math.round(track.scrollLeft / step()));
+      if (dots.children.length !== pages) dots.innerHTML = '<i></i>'.repeat(pages);
+      [...dots.children].forEach((d, i) => d.classList.toggle('on', i === cur));
+    };
+    btns.forEach(b => b.addEventListener('click', () => track.scrollBy({ left: step() * +b.dataset.dir })));
+    track.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); track.scrollBy({ left: step() * (e.key === 'ArrowRight' ? 1 : -1) }); } });
+    // Slepen met de muis (touch scrollt al vanzelf); bij loslaten klikt hij naar de dichtstbijzijnde kaart
+    let down = false, startX = 0, startL = 0, moved = false;
+    track.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; moved = false; startX = e.clientX; startL = track.scrollLeft; });
+    window.addEventListener('pointermove', e => { if (!down) return; const dx = e.clientX - startX; if (Math.abs(dx) > 4) { moved = true; track.classList.add('drag'); } track.scrollLeft = startL - dx; });
+    window.addEventListener('pointerup', () => { if (!down) return; down = false; track.classList.remove('drag'); if (moved) track.scrollTo({ left: Math.round(track.scrollLeft / step()) * step() }); });
+    track.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+    track.addEventListener('dragstart', e => e.preventDefault());
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
 </script>
 </body>
 </html>

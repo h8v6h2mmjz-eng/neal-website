@@ -162,6 +162,9 @@
   .t-track::-webkit-scrollbar { display: none; }
   .t-track > .quote { scroll-snap-align: start; min-height: 260px; user-select: none; transition: border-color .3s, transform .4s cubic-bezier(.2,.8,.2,1); }
   .t-track > .quote:hover { border-color: rgba(25,211,255,.45); }
+  .quote.has-photo { justify-content: flex-start; }
+  .quote .t-photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 30%; border-radius: calc(var(--radius) - 8px); filter: grayscale(.25) contrast(1.05); pointer-events: none; }
+  .quote.has-photo .who { margin-top: auto; }
   .t-track.drag { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; }
   .t-track.drag > .quote { transform: scale(.985); }
   .t-track:focus-visible { outline-offset: 6px; }
@@ -441,7 +444,8 @@
         <div class="t-nav reveal"><button type="button" class="t-btn" data-dir="-1" aria-label="Vorige ervaringen">←</button><button type="button" class="t-btn" data-dir="1" aria-label="Volgende ervaringen">→</button></div>
       </div>
       <div class="t-track reveal" tabindex="0" aria-label="Ervaringen, sleep of swipe opzij voor meer">
-        <figure class="quote glass"><blockquote>"[Ervaring van atleet 1: wat was het doel, wat veranderde er, hoe voelde de begeleiding?]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
+        <!-- Testimonial 1: tekst van de atleet (via Neal, 6 nov 2026), ingekort met "…" waar zinnen wegvielen. PLACEHOLDER: naam atleet nog invullen. -->
+        <figure class="quote glass has-photo"><img class="t-photo" src="photos/coaching/testimonial-1.jpg" width="1000" height="711" loading="lazy" alt="Podium van een wielerwedstrijd: de winnaar in de trui van provinciaal kampioen Antwerpen" draggable="false"><blockquote>"Na een break van twee jaar moest ik van nul opbouwen. Na een paar maanden reed ik meteen een top 10 in mijn eerste wedstrijd… Ik zou Neal omschrijven als een totaalpakket: coretraining, voeding, mentale coaching. Als je op zoek bent naar een coach die het beste in je naar boven haalt, zou ik niet twijfelen."</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Wielrennen · comeback na 2 jaar</small></div><span class="result">Provinciaal kampioen</span></figcaption></figure>
         <figure class="quote glass"><blockquote>"[Ervaring van atleet 2]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
         <figure class="quote glass"><blockquote>"[Ervaring van atleet 3]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
         <figure class="quote glass"><blockquote>"[Ervaring van atleet 4]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>

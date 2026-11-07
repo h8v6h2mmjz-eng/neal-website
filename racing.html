@@ -132,6 +132,14 @@
   .galerij img { transform: scale(var(--z, 1)); transform-origin: var(--o, 50% 50%); transition: transform .8s var(--ease), filter .4s; }
   .galerij figure:hover img { transform: scale(calc(var(--z, 1) * 1.05)); filter: none; }
   @media (min-width: 720px) { .galerij { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+  /* Ingeklapt: 2 rijen zichtbaar (4 foto's op gsm, 6 vanaf 720px), de rest via "Toon alle foto's" */
+  @media (max-width: 719px) { .galerij.dicht figure:nth-child(n+5) { display: none; } }
+  @media (min-width: 720px) { .galerij.dicht figure:nth-child(n+7) { display: none; } }
+  .more-wrap { display: flex; justify-content: center; margin-top: 28px; }
+  .more-photos { display: inline-flex; align-items: center; gap: .6rem; min-height: 46px; padding: .75rem 1.4rem; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,.06); color: var(--ink); font: 600 .9rem var(--body); cursor: pointer; transition: background .25s, color .25s, border-color .25s; }
+  .more-photos::after { content: '↓'; transition: transform .3s; }
+  .more-photos[aria-expanded="true"]::after { transform: rotate(180deg); }
+  .more-photos:hover { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 
   /* ---------- Mijn verhaal (tekst van Neal, e-mail 3 nov 2026) ---------- */
   .story-grid { display: grid; gap: 40px; }
@@ -535,7 +543,17 @@
         <figure class="ph reveal"><img src="photos/racing/galerij-07.jpg" alt="Close-up van Neal Van Vaerenbergh in volle inspanning tijdens het lopen" width="825" height="1032" loading="lazy" decoding="async"></figure>
         <figure class="ph reveal"><img src="photos/racing/galerij-08.jpg" alt="Neal Van Vaerenbergh op de fiets met blauwe helm" width="900" height="1126" loading="lazy" decoding="async"></figure>
         <figure class="ph reveal"><img style="--z:1.25; --o:100% 58%" src="photos/racing/galerij-09.jpg" alt="Neal Van Vaerenbergh loopt zij aan zij met een concurrent tussen de palmbomen" width="900" height="1125" loading="lazy" decoding="async"></figure>
+        <!-- Foto's 10–17 (via Neal, 7 nov 2026): standaard ingeklapt achter "Toon alle foto's". 13 en 14 © A. Lallout, 17 © Finishfoto.be (vermelding staat op de foto). -->
+        <figure class="ph reveal"><img src="photos/racing/galerij-10.jpg" alt="Neal Van Vaerenbergh in de trisuit van het Tri.GT Pro Team na een wedstrijd" width="910" height="1080" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img style="object-position:62% 50%" src="photos/racing/galerij-11.jpg" alt="Neal Van Vaerenbergh met witte Tri.GT-badmuts in het water bij de zwemstart van een T3 Series-wedstrijd" width="1800" height="1200" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-12.jpg" alt="Neal Van Vaerenbergh loopt voorop op een bospad in de trisuit van het Tri.GT Pro Team" width="1200" height="1600" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-13.jpg" alt="Neal Van Vaerenbergh fietst in de Belgische trisuit langs een boulevard met palmbomen" width="683" height="1024" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-14.jpg" alt="Neal Van Vaerenbergh loopt in de Belgische trisuit naast een Marokkaanse concurrent" width="683" height="1024" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img style="object-position:44% 50%" src="photos/racing/galerij-15.jpg" alt="Neal Van Vaerenbergh loopt in de Belgische trisuit langs het publiek tussen de palmbomen" width="1800" height="1200" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img src="photos/racing/galerij-16.jpg" alt="Neal Van Vaerenbergh komt met gele badmuts uit het water na het zwemmen" width="938" height="800" loading="lazy" decoding="async"></figure>
+        <figure class="ph reveal"><img style="object-position:60% 50%" src="photos/racing/galerij-17.jpg" alt="Neal Van Vaerenbergh in tijdritpositie op de fiets, gevolgd door motoren van de wedstrijd" width="600" height="399" loading="lazy" decoding="async"></figure>
       </div>
+      <div class="more-wrap"><button type="button" class="more-photos" aria-expanded="false" hidden>Toon alle foto's</button></div>
     </div>
   </section>
 
@@ -581,6 +599,20 @@
 <script src="logos.js?v=6"></script>
 <script>
   // Eerst de reveal: ook als logos.js niet laadt, blijft alles zichtbaar
+  // Galerij: standaard twee rijen, de knop toont of verbergt de rest (zonder JS blijven alle foto's gewoon zichtbaar)
+  const gal = document.querySelector('.galerij'), moreBtn = document.querySelector('.more-photos');
+  if (gal && moreBtn) {
+    const total = gal.children.length;
+    gal.classList.add('dicht');
+    moreBtn.hidden = false;
+    moreBtn.textContent = `Toon alle foto's (${total})`;
+    moreBtn.addEventListener('click', () => {
+      const open = gal.classList.toggle('dicht') === false;
+      moreBtn.setAttribute('aria-expanded', open);
+      moreBtn.textContent = open ? 'Toon minder foto\'s' : `Toon alle foto's (${total})`;
+      if (!open) gal.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(es => es.forEach(e => {
       if (!e.isIntersecting) return;

@@ -37,7 +37,7 @@
   "serviceType": "Triatloncoaching",
   "areaServed": { "@type": "Country", "name": "België" },
   "inLanguage": "nl",
-  "email": "neal@nealvanvaerenbergh.com",
+  "email": "neal@vectorendurance.com",
   "founder": { "@id": "https://nealvanvaerenbergh.com/#neal", "@type": "Person", "name": "Neal Van Vaerenbergh" },
   "sameAs": ["https://www.instagram.com/neal.vv/"]
 }
@@ -507,13 +507,13 @@
       <div>
         <p class="label reveal">Klaar om te starten?</p>
         <h2 class="reveal" style="margin-top:.8rem">Jouw finish<br>begint <span class="accent">hier.</span></h2>
-        <!-- PLACEHOLDER: dit adres op het domein moet nog aangemaakt worden -->
+        <!-- PLACEHOLDER: domein vectorendurance.com registreren en het adres neal@vectorendurance.com aanmaken -->
         <div class="contact-info reveal">
-          <a href="mailto:neal@nealvanvaerenbergh.com">✉ neal@nealvanvaerenbergh.com</a>
+          <a href="mailto:neal@vectorendurance.com">✉ neal@vectorendurance.com</a>
           <a href="https://nealvanvaerenbergh.com">⌂ nealvanvaerenbergh.com</a>
         </div>
       </div>
-      <form class="glass reveal" id="contactForm" method="post" action="mailto:neal@nealvanvaerenbergh.com" enctype="text/plain">
+      <form class="glass reveal" id="contactForm" method="post" action="mailto:neal@vectorendurance.com" enctype="text/plain">
         <h3>Vraag je gratis intake aan</h3>
         <div class="form-row">
           <label>Naam<input name="naam" required autocomplete="name"></label>
@@ -702,7 +702,7 @@
   }));
 
   // Versturen: via Web3Forms als er een key is, anders opent het e-mailprogramma met alles al ingevuld
-  const WEB3FORMS_KEY = ''; // PLACEHOLDER: gratis key van web3forms.com (naar neal@nealvanvaerenbergh.com)
+  const WEB3FORMS_KEY = ''; // PLACEHOLDER: gratis key van web3forms.com (naar neal@vectorendurance.com)
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const naam = f.naam.value.trim();
@@ -712,8 +712,8 @@
     if (!WEB3FORMS_KEY) {
       let body = `${msg.value}\n\n---\nNaam: ${naam}\nE-mail: ${f.email.value}${samenvatting ? '\n' + samenvatting : ''}`;
       if (body.length > 1800) body = body.slice(0, 1780) + '\n[…]';
-      location.href = `mailto:neal@nealvanvaerenbergh.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      form.querySelector('.form-ok').textContent = 'Je e-mailprogramma opent nu met je aanvraag klaar. Gebeurt er niets? Mail dan rechtstreeks naar neal@nealvanvaerenbergh.com.';
+      location.href = `mailto:neal@vectorendurance.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      form.querySelector('.form-ok').textContent = 'Je e-mailprogramma opent nu met je aanvraag klaar. Gebeurt er niets? Mail dan rechtstreeks naar neal@vectorendurance.com.';
       return;
     }
     const btn = form.querySelector('[type=submit]'), btnTekst = btn.textContent;
@@ -732,7 +732,7 @@
       p.className = 'muted'; p.textContent = 'Ik antwoord binnen 48 uur.';
       form.setAttribute('role', 'status'); form.replaceChildren(h, p); h.focus();
     } catch {
-      formErr.textContent = 'Versturen lukte niet. Probeer het opnieuw of mail naar neal@nealvanvaerenbergh.com.';
+      formErr.textContent = 'Versturen lukte niet. Probeer het opnieuw of mail naar neal@vectorendurance.com.';
       btn.disabled = false; btn.textContent = btnTekst; btn.focus();
     }
   });

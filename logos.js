@@ -110,11 +110,15 @@ function nvvLigatures(el, stops) {
   el.dataset.lig = '1';
   const colorAt = t => { const s = t * (stops.length - 1), i = Math.min(Math.floor(s), stops.length - 2), f = s - i; return 'rgb(' + stops[i].map((v, k) => Math.round(v + (stops[i + 1][k] - v) * f)).join(',') + ')'; };
   el.querySelectorAll('span').forEach(part => {
+    if (part.querySelector('span')) return; // omhullende span (bv. een regel met "Neal" en "Van"): enkel de binnenste spans krijgen letters
     const chars = [...part.textContent], up = chars.map(c => c.toUpperCase()), grad = part.hasAttribute('data-grad') && stops;
+    // data-grad="a,b" (optioneel): enkel dat stuk van het kleurverloop gebruiken, bv. "0,.3" voor de donkerste tinten
+    const [g0, g1] = (part.getAttribute('data-grad') || '0,1').split(',').map(Number);
+    const colorAtPart = t => colorAt(g0 + (g1 - g0) * t);
     // AE en VE: de linkse letter (A/V) ligt bovenop en de E schuift eronder uit; EA: de A schuift over de E heen
     const top = c => c === 'A' || c === 'V';
     // EN aan het begin van een woord (Endurance): de N schuift maar een heel klein beetje over de E (lig-nudge)
     const lig = i => (top(up[i]) && up[i + 1] === 'E') ? ' lig-top' : (up[i] === 'E' && top(up[i - 1])) ? ' lig-under' : (up[i] === 'A' && up[i - 1] === 'E') ? ' lig-over' : (i === 1 && up[i] === 'N' && up[0] === 'E') ? ' lig-nudge' : '';
-    part.innerHTML = chars.map((c, i) => `<span class="ch${c === ' ' ? ' sp' : ''}${lig(i)}" aria-hidden="true"${grad ? ` style="color:${colorAt(i / Math.max(chars.length - 1, 1))}"` : ''}>${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+    part.innerHTML = chars.map((c, i) => `<span class="ch${c === ' ' ? ' sp' : ''}${lig(i)}" aria-hidden="true"${grad ? ` style="color:${colorAtPart(i / Math.max(chars.length - 1, 1))}"` : ''}>${c === ' ' ? '&nbsp;' : c}</span>`).join('');
   });
 }

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js')</script>
+<title>Contact — Neal Van Vaerenbergh</title>
+<meta name="description" content="Een vraag voor Neal Van Vaerenbergh? Stuur ze hier. Coaching starten of partner worden kan ook rechtstreeks.">
+<link rel="canonical" href="https://nealvanvaerenbergh.com/contact">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nealvanvaerenbergh.com/contact">
+<meta property="og:site_name" content="Neal Van Vaerenbergh">
+<meta property="og:title" content="Contact — Neal Van Vaerenbergh">
+<meta property="og:description" content="Een vraag voor Neal Van Vaerenbergh? Stuur ze hier. Coaching starten of partner worden kan ook rechtstreeks.">
+<meta property="og:locale" content="nl_BE">
+<meta name="theme-color" content="#0a0b0c">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="logos.css?v=6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0b0c;
+    --bg-2: #111416;
+    --ink: #f2f6f7;
+    --muted: #9aa6ab;
+    --line: rgba(255,255,255,.12);
+    --glass: rgba(255,255,255,.06);
+    --accent: #19d3ff;
+    --teal: #0e6f86;
+    --accent-ink: #03141b;
+    --radius: 22px;
+    --display: 'Unbounded', system-ui, sans-serif;
+    --body: 'Inter', system-ui, sans-serif;
+    --ease: cubic-bezier(.2,.8,.2,1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .skip { position: absolute; left: 16px; top: -60px; z-index: 100; padding: .6rem 1rem; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+  .skip:focus { top: 16px; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column; }
+  main { flex: 1; }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+  .label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .grad { background: linear-gradient(90deg, var(--teal), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1; text-transform: uppercase; letter-spacing: -.03em; margin-top: .8rem; }
+  .lead { color: #c7d0d3; max-width: 520px; margin-top: 1rem; font-size: 1.02rem; }
+  .pill { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1.35rem; border-radius: 999px; font-weight: 600; font-size: .9rem; border: 0; cursor: pointer; font-family: inherit; transition: transform .2s, background .2s, color .2s; }
+  .pill:hover { transform: translateY(-2px); }
+  .pill-accent { background: var(--accent); color: var(--accent-ink); }
+  .pill-ghost { background: rgba(255,255,255,.07); border: 1px solid var(--line); color: var(--ink); }
+  .pill-ghost:hover { background: rgba(255,255,255,.14); }
+
+  /* Header */
+  header { padding: 16px 0; }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .brand { min-height: 40px; }
+  .nav-links { display: flex; gap: .35rem; }
+  .nav-links a { display: inline-flex; align-items: center; min-height: 40px; padding: .5rem .95rem; border-radius: 999px; font-size: .84rem; background: rgba(255,255,255,.07); border: 1px solid var(--line); transition: background .2s; }
+  .nav-links a:hover { background: rgba(255,255,255,.16); }
+  @media (max-width: 760px) { header .brand .lw small { display: none; } }
+  @media (max-width: 420px) { .nav { gap: .5rem; } .brand { min-width: 0; } .brand .lw { white-space: normal; max-width: 8.4em; font-size: .74rem; } .nav-links a { padding: .45rem .7rem; } }
+
+  /* Inhoud */
+  .contact { position: relative; padding: clamp(50px, 8vw, 100px) 0 clamp(70px, 10vw, 120px); }
+  .contact::before { content: ''; position: absolute; inset: -10% 0 auto; height: 520px; background: radial-gradient(50% 60% at 20% 30%, rgba(25,211,255,.12), transparent 70%); pointer-events: none; z-index: -1; }
+  .grid { display: grid; gap: 22px; margin-top: clamp(34px, 5vw, 54px); }
+  @media (min-width: 900px) { .grid { grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: start; } }
+  .card { background: var(--glass); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(22px, 3.4vw, 36px); }
+  .card h2 { font-family: var(--display); font-weight: 700; font-size: 1.15rem; text-transform: uppercase; letter-spacing: -.01em; line-height: 1.2; }
+  .card p { color: #c7d0d3; }
+
+  /* Formulier */
+  form { display: grid; gap: 16px; }
+  form h2 { margin-bottom: 2px; }
+  .row { display: grid; gap: 16px; }
+  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
+  label { display: grid; gap: 6px; font-size: .82rem; font-weight: 600; color: #dfe6e8; }
+  input, textarea { width: 100%; font: inherit; font-weight: 400; font-size: .95rem; color: var(--ink); background: rgba(0,0,0,.35); border: 1px solid var(--line); border-radius: 14px; padding: .8rem .95rem; transition: border-color .2s, background .2s; }
+  input:focus, textarea:focus { outline: none; border-color: var(--accent); background: rgba(0,0,0,.5); }
+  textarea { min-height: 170px; resize: vertical; }
+  ::placeholder { color: #6f7b80; }
+  form .pill { justify-self: start; margin-top: 4px; }
+  .form-err { color: #ff8a8a; font-size: .85rem; }
+  .form-ok { color: var(--accent); font-size: .85rem; }
+  .form-err:empty, .form-ok:empty { display: none; }
+  .note { font-size: .8rem; color: var(--muted); }
+  .note a { color: var(--accent); }
+
+  /* Rechterkolom: snelkoppelingen */
+  .side { display: grid; gap: 16px; }
+  .route { display: grid; gap: .55rem; position: relative; overflow: hidden; }
+  .route .pill { justify-self: start; margin-top: .5rem; }
+  .route-coach { background: linear-gradient(140deg, rgba(14,111,134,.45), rgba(25,211,255,.12)); border-color: rgba(25,211,255,.3); }
+  .direct { display: grid; gap: .35rem; font-size: .9rem; }
+  .direct a { color: #c7d0d3; display: inline-flex; align-items: center; gap: .55rem; min-height: 36px; transition: color .2s; }
+  .direct a:hover { color: var(--accent); }
+
+  footer { border-top: 1px solid var(--line); padding: 30px 0; color: var(--muted); font-size: .85rem; }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.2rem; }
+  .foot nav { display: flex; flex-wrap: wrap; gap: 0 1.3rem; }
+  .foot nav a { display: inline-flex; align-items: center; min-height: 40px; }
+  .foot nav a:hover { color: var(--accent); }
+
+  .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<a href="#inhoud" class="skip">Naar inhoud</a>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand" data-logo data-word="name" aria-label="Neal Van Vaerenbergh, naar de homepagina"><span class="lw lw-arrow">Neal Van Vaerenbergh<small>Triatleet · coach</small></span></a>
+    <nav class="nav-links" aria-label="Hoofdmenu">
+      <a href="racing.html">Racing</a>
+      <a href="coaching.html">Coaching</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhoud">
+  <section class="contact">
+    <div class="wrap">
+      <p class="label reveal">Contact</p>
+      <h1 class="reveal">Stel je <span class="grad">vraag.</span></h1>
+      <p class="lead reveal">Over een wedstrijd, over training of gewoon uit nieuwsgierigheid: laat je naam achter en stel je vraag. Ik antwoord zo snel mogelijk.</p>
+
+      <div class="grid">
+        <form class="card reveal" id="vraagForm" method="post" action="mailto:neal@nealvanvaerenbergh.com" enctype="text/plain" novalidate>
+          <h2>Jouw vraag</h2>
+          <div class="row">
+            <label>Naam<input name="naam" required autocomplete="name" placeholder="Voor- en achternaam"></label>
+            <label>E-mailadres<input type="email" name="email" required autocomplete="email" placeholder="zodat ik kan antwoorden"></label>
+          </div>
+          <label>Je vraag<textarea name="vraag" required placeholder="Typ hier je vraag of bericht…"></textarea></label>
+          <p class="form-err" role="alert"></p>
+          <p class="form-ok" role="status"></p>
+          <button type="submit" class="pill pill-accent">Verstuur je vraag →</button>
+          <p class="note">Ik gebruik je naam en e-mailadres enkel om je te antwoorden. <a href="privacy.html">Privacy</a></p>
+        </form>
+
+        <div class="side">
+          <div class="card route route-coach reveal">
+            <p class="label">Coaching</p>
+            <h2>Wil je starten met coaching?</h2>
+            <p>Vul het intakeformulier in: met je doel, niveau en beschikbare tijd kan ik je meteen gericht antwoorden.</p>
+            <a href="coaching.html#contact" class="pill pill-accent">Naar het intakeformulier →</a>
+          </div>
+          <div class="card route reveal">
+            <p class="label">Partners &amp; sponsors</p>
+            <h2>Samen naar de finish?</h2>
+            <p>Zichtbaarheid op wedstrijden, op mijn kledij en op sociale media. Ontdek wat een samenwerking kan inhouden.</p>
+            <a href="racing.html#partners" class="pill pill-ghost">Word partner →</a>
+          </div>
+          <div class="card reveal">
+            <p class="label">Liever rechtstreeks?</p>
+            <div class="direct" style="margin-top:.6rem">
+              <!-- PLACEHOLDER: dit adres op het domein moet nog aangemaakt worden (zelfde adres als op de coachingpagina) -->
+              <a href="mailto:neal@nealvanvaerenbergh.com">✉&nbsp; neal@nealvanvaerenbergh.com</a>
+              <a href="https://www.instagram.com/neal.vv/" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@neal.vv</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="index.html" class="brand" data-logo data-word="name" aria-label="Neal Van Vaerenbergh, naar de homepagina"><span class="lw lw-arrow">Neal Van Vaerenbergh<small>Triatleet · coach</small></span></a>
+    <nav aria-label="Footer"><a href="racing.html">Racing</a><a href="coaching.html">Coaching</a><a href="privacy.html">Privacy</a></nav>
+    <span>© <span id="year"></span> Neal Van Vaerenbergh · nealvanvaerenbergh.com</span>
+  </div>
+</footer>
+
+<script src="logos.js?v=7"></script>
+<script>
+  // Reveal bij scrollen (zonder JS of zonder IntersectionObserver blijft alles zichtbaar)
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+    els.forEach(el => io.observe(el));
+  } else els.forEach(el => el.classList.add('in'));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  if (typeof applyLogo === 'function') applyLogo('arrow');
+
+  // Versturen: zelfde werkwijze als het intakeformulier op de coachingpagina.
+  // Via Web3Forms als er een key is, anders opent het e-mailprogramma met alles al ingevuld.
+  const WEB3FORMS_KEY = ''; // PLACEHOLDER: dezelfde gratis key van web3forms.com als in coaching.html
+  const form = document.getElementById('vraagForm'), f = form.elements, err = form.querySelector('.form-err'), ok = form.querySelector('.form-ok');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    err.textContent = ''; ok.textContent = '';
+    const naam = f.naam.value.trim(), email = f.email.value.trim(), vraag = f.vraag.value.trim();
+    if (!naam) { err.textContent = 'Vul je naam in.'; f.naam.focus(); return; }
+    if (!email || !f.email.checkValidity()) { err.textContent = 'Vul een geldig e-mailadres in, zodat ik je kan antwoorden.'; f.email.focus(); return; }
+    if (!vraag) { err.textContent = 'Typ je vraag.'; f.vraag.focus(); return; }
+    const subject = `Vraag via de website – ${naam}`;
+    if (!WEB3FORMS_KEY) {
+      let body = `${vraag}\n\n---\nNaam: ${naam}\nE-mail: ${email}`;
+      if (body.length > 1800) body = body.slice(0, 1780) + '\n[…]';
+      location.href = `mailto:neal@nealvanvaerenbergh.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      ok.textContent = 'Je e-mailprogramma opent nu met je vraag klaar. Gebeurt er niets? Mail dan rechtstreeks naar neal@nealvanvaerenbergh.com.';
+      return;
+    }
+    const btn = form.querySelector('[type=submit]'), btnTekst = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Versturen…';
+    try {
+      const r = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ access_key: WEB3FORMS_KEY, subject, from_name: 'Website Neal Van Vaerenbergh', name: naam, email, message: vraag })
+      });
+      const res = await r.json().catch(() => ({}));
+      if (!r.ok || !res.success) throw new Error(res.message || r.status);
+      const h = document.createElement('h2'), p = document.createElement('p');
+      h.textContent = `Bedankt, ${naam}!`; h.tabIndex = -1;
+      p.textContent = 'Je vraag is goed aangekomen. Ik antwoord zo snel mogelijk.';
+      form.setAttribute('role', 'status'); form.replaceChildren(h, p); h.focus();
+    } catch {
+      err.textContent = 'Versturen lukte niet. Probeer het opnieuw of mail naar neal@nealvanvaerenbergh.com.';
+      btn.disabled = false; btn.textContent = btnTekst; btn.focus();
+    }
+  });
+</script>
+</body>
+</html>

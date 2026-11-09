@@ -232,6 +232,16 @@
   .levels ul { list-style: none; display: grid; gap: .45rem; font-size: .9rem; color: var(--muted); }
   .levels li { display: flex; gap: .6rem; }
   .levels li::before { content: ''; flex: none; width: 6px; height: 6px; margin-top: .55em; border-radius: 50%; background: var(--accent); }
+  /* Prijs op aanvraag: onderaan elke kaart, klikken = naar de intake met dit niveau al ingevuld */
+  .levels .step { display: flex; flex-direction: column; }
+  .levels ul { margin-bottom: 1.6rem; }
+  .price { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 48px; padding: .85rem 1.1rem; border-radius: 14px; border: 1px solid rgba(25,211,255,.35); background: rgba(25,211,255,.06); transition: background .25s, border-color .25s, transform .25s; }
+  .price span { display: grid; line-height: 1.25; }
+  .price small { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .price b { font-weight: 600; font-size: .95rem; color: var(--ink); }
+  .price i { font-style: normal; color: var(--accent); font-weight: 700; transition: transform .25s; }
+  .price:hover { background: rgba(25,211,255,.14); border-color: var(--accent); }
+  .price:hover i { transform: translateX(4px); }
   .ask { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2rem; margin-top: 16px; padding: 24px 26px; }
   .ask b { font-family: var(--display); font-size: 1.1rem; text-transform: uppercase; display: block; }
   .muted { color: var(--muted); }
@@ -430,9 +440,9 @@
       <!-- Begeleidingsniveaus Foundation / Progress / Peak, zonder prijs: die volgt na de intake. Teksten: e-mail van Neal, 3 nov 2026 -->
       <div class="levels-head reveal"><p class="label">Begeleiding</p><h2>Ontdek de begeleidingsmogelijkheden</h2></div>
       <div class="steps levels reveal">
-        <div class="step"><h3>Foundation</h3><p class="tag">Gerichte begeleiding op afstand.</p><ul><li>Persoonlijk trainingsschema via TrainingPeaks</li><li>Wekelijkse online opvolging en bijsturing</li><li>Analyse van trainingsdata</li><li>Testmomenten op afstand, geïntegreerd in de trainingen</li></ul></div>
-        <div class="step"><h3>Progress</h3><p class="tag">Nauwere opvolging. Meer persoonlijke afstemming.</p><ul><li>Alles uit Foundation</li><li>Persoonlijk contact en opvolging, indien nodig meerdere keren per week</li><li>Frequentere evaluatie en bijsturing</li><li>Minstens één fysieke inspanningstest per jaar</li><li>Kracht- en mobiliteitsschema's optioneel</li></ul></div>
-        <div class="step"><h3>Peak</h3><p class="tag">Intensieve begeleiding, tot in de praktijk.</p><ul><li>Alles uit Progress</li><li>Nauwe, persoonlijke samenwerking</li><li>Minstens één begeleide trainingssessie per week in persoon</li><li>Individuele kracht- en mobiliteitsschema's inbegrepen</li><li>Inspanningstesten op maat, wanneer nodig</li><li>Voortdurende afstemming van training, herstel en prestaties</li></ul></div>
+        <div class="step"><h3>Foundation</h3><p class="tag">Gerichte begeleiding op afstand.</p><ul><li>Persoonlijk trainingsschema via TrainingPeaks</li><li>Wekelijkse online opvolging en bijsturing</li><li>Analyse van trainingsdata</li><li>Testmomenten op afstand, geïntegreerd in de trainingen</li></ul><a class="price" href="#contact" data-level="Foundation"><span><small>Prijs</small><b>Op aanvraag</b></span><i aria-hidden="true">Gratis intake →</i></a></div>
+        <div class="step"><h3>Progress</h3><p class="tag">Nauwere opvolging. Meer persoonlijke afstemming.</p><ul><li>Alles uit Foundation</li><li>Persoonlijk contact en opvolging, indien nodig meerdere keren per week</li><li>Frequentere evaluatie en bijsturing</li><li>Minstens één fysieke inspanningstest per jaar</li><li>Kracht- en mobiliteitsschema's optioneel</li></ul><a class="price" href="#contact" data-level="Progress"><span><small>Prijs</small><b>Op aanvraag</b></span><i aria-hidden="true">Gratis intake →</i></a></div>
+        <div class="step"><h3>Peak</h3><p class="tag">Intensieve begeleiding, tot in de praktijk.</p><ul><li>Alles uit Progress</li><li>Nauwe, persoonlijke samenwerking</li><li>Minstens één begeleide trainingssessie per week in persoon</li><li>Individuele kracht- en mobiliteitsschema's inbegrepen</li><li>Inspanningstesten op maat, wanneer nodig</li><li>Voortdurende afstemming van training, herstel en prestaties</li></ul><a class="price" href="#contact" data-level="Peak"><span><small>Prijs</small><b>Op aanvraag</b></span><i aria-hidden="true">Gratis intake →</i></a></div>
       </div>
       <div class="ask glass reveal">
         <div><b>Ontdek welke aanpak bij jou past.</b><span class="muted">Tijdens een gratis en vrijblijvend intakegesprek bespreken we jouw doelen, verwachtingen en gewenste ondersteuning. Op basis daarvan ontvang je een persoonlijk voorstel met bijhorende prijs.</span></div>
@@ -692,6 +702,13 @@
   form.addEventListener('input', e => { if (e.target === msg) eigenTekst = msg.value.trim() !== ''; else schrijfBericht(); });
   form.addEventListener('change', e => { if (e.target === f.discipline) toonFocus(); if (e.target !== msg) schrijfBericht(); });
   toonFocus();
+
+  // Prijs op aanvraag aanklikken = dat begeleidingsniveau staat al klaar in het intakeformulier
+  document.querySelectorAll("[data-level]").forEach(a => a.addEventListener("click", () => {
+    f.begeleiding.value = a.dataset.level;
+    if (!f.type.value) f.type.value = "Coaching aanvragen";
+    schrijfBericht();
+  }));
 
   // Programmakaart aanklikken = die discipline staat al klaar in het formulier
   document.querySelectorAll('[data-program]').forEach(card => card.addEventListener('click', () => {

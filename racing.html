@@ -257,6 +257,7 @@
     .js .reveal, .js .race.reveal { opacity: 1; transform: none; }
   }
 </style>
+<link rel="stylesheet" href="eigen.css?v=1">
 </head>
 <body>
 <a href="#inhoud" class="skip">Naar inhoud</a>
@@ -282,7 +283,7 @@
       <div>
         <p class="label">Racing · Elite Men · België</p>
         <h1 id="naam" aria-label="Neal Van Vaerenbergh"><span><span>Neal</span> <span data-grad="0,.3">Van</span></span> <span data-grad>Vaerenbergh</span></h1>
-        <p class="tagline">Sinds 2013 <span class="grad">aan de start.</span></p>
+        <p class="tagline">Sinds 2013 aan de start.</p>
         <p class="lead">Van karting en Formule 4 naar triatlon. Sinds 2013 zwem, fiets en loop ik, en na een lange weg terug sta ik vandaag opnieuw op het podium van het Belgisch kampioenschap.</p>
         <a href="#mijn-verhaal" class="lead-more">Lees mijn verhaal <span aria-hidden="true">↓</span></a>
       </div>
@@ -305,8 +306,8 @@
   <section id="mijn-verhaal" class="story" aria-labelledby="verhaal-titel">
     <div class="wrap story-grid">
       <div class="story-head">
-        <p class="label reveal">Mijn verhaal</p>
-        <h2 id="verhaal-titel" class="reveal" style="margin-top:.8rem">Ambitie, tegenslag en <span class="grad">blijven groeien.</span></h2>
+
+        <h2 id="verhaal-titel" class="reveal">Mijn verhaal</h2>
         <p class="story-sub reveal">Een parcours van ambitie, tegenslagen en voortdurende ontwikkeling.</p>
         <nav class="story-nav reveal" aria-label="Hoofdstukken">
           <a href="#autosport">Van autosport naar triatlon</a>
@@ -367,10 +368,11 @@
        Categorie Elite Men, behalve 2015 (Junior Men). Afstand "sprint" enkel waar World Triathlon die vermeldt.
        PLACEHOLDER: afstand (sprint/standaard) van de overige races staat niet in de export — aanvullen indien gekend.
        Klassen per race: pod = podium (cyaan), top = top 10, dnf = niet gefinisht (gedempt). -->
+  <div class="route-divider" aria-hidden="true"><svg class="rd-line" viewBox="0 0 1200 70" preserveAspectRatio="none"><path class="rd-fill" d="M0,58 L50,57 L100,55 L150,56 L200,52 L250,50 L300,53 L350,49 L400,46 L450,48 L500,42 L550,36 L600,30 L650,22 L700,14 L744,8 L780,16 L820,26 L870,34 L920,38 L970,44 L1020,46 L1070,50 L1120,53 L1160,55 L1200,56 L1200,70 L0,70 Z"/><path class="rd-stroke" d="M0,58 L50,57 L100,55 L150,56 L200,52 L250,50 L300,53 L350,49 L400,46 L450,48 L500,42 L550,36 L600,30 L650,22 L700,14 L744,8 L780,16 L820,26 L870,34 L920,38 L970,44 L1020,46 L1070,50 L1120,53 L1160,55 L1200,56"/><path class="rd-base" d="M0,69.5 H1200"/></svg><svg class="rd-mark" viewBox="165 340 700 345" style="left:62%;top:11%"><polygon points="174,670 372,365 507,365 550,532 720,398 676,385 853,350 740,476 512,675 430,452 362,550"/></svg><span class="rd-km rd-a">km 0</span><span class="rd-km rd-b">km 40</span></div>
   <section id="races">
     <div class="narrow">
       <div class="cal-head">
-        <div><p class="label reveal">Racekalender</p><h2 class="reveal" style="margin-top:.8rem">Mijn <span class="grad">races.</span></h2></div>
+        <div><h2 class="reveal">Alle uitslagen</h2></div>
         <div class="reveal">
           <div class="stats">
             <div><b class="grad">3×</b><span>brons BK Olympic Distance</span></div>
@@ -398,10 +400,10 @@
           <li class="race dnf reveal"><time class="dt" datetime="2026-06-27"><b>27</b><span>jun</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Wels</h3><p>Wels, Oostenrijk</p></div><div class="rs"><b>DNF</b><span>—</span></div></li>
           <li class="race reveal"><time class="dt" datetime="2026-06-19"><b>19</b><span>jun</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Kitzbühel</h3><p>Kitzbühel, Oostenrijk</p></div><div class="rs"><b>52e</b><span>37:00</span></div></li>
           <li class="race top reveal"><time class="dt" datetime="2026-06-06"><b>6</b><span>jun</span></time><div class="ev"><span class="tag">Africa Cup</span><h3>Africa Triathlon Cup Yasmine Hammamet</h3><p>Hammamet, Tunesië</p></div><div class="rs"><b>5e</b><span>54:21</span></div></li>
-          <li class="race pod reveal"><time class="dt" datetime="2026-05-31"><b>31</b><span>mei</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap Olympic Distance</h3><p>Turnhout, België · 1e M24</p></div><div class="rs"><b>3e</b><span>1:51:38</span></div></li>
+          <li class="race pod reveal"><time class="dt" datetime="2026-05-31"><b>31</b><span>mei</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap Olympic Distance</h3><p>Turnhout, België · 1e M24</p><p class="splits"><span><i>Zwem</i> 19:33</span><span><i>Fiets</i> 59:11</span><span><i>Loop</i> 31:54</span></p></div><div class="rs"><b>3e</b><span>1:51:38</span></div></li>
           <!-- T3 Series Viersel: bron 3athlon.be, 3 mei 2026 (race za 2 mei), eerste individuele manche T3 Team Triatlon Series.
                750 m / 20 km / 5 km. Tijd 52:48 uit Triatlon Vlaanderen. -->
-          <li class="race top reveal"><time class="dt" datetime="2026-05-02"><b>2</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Viersel</h3><p>Viersel, België · sprint</p></div><div class="rs"><b>5e</b><span>52:48</span></div></li>
+          <li class="race top reveal"><time class="dt" datetime="2026-05-02"><b>2</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Viersel</h3><p>Viersel, België · sprint</p><p class="splits"><span><i>Zwem</i> 8:55</span><span><i>Fiets</i> 27:17</span><span><i>Loop</i> 15:15</span></p></div><div class="rs"><b>5e</b><span>52:48</span></div></li>
           <!-- BK ploegentriatlon Doornik: bron 3athlon.be 26 apr 2026 (zo 26 apr). TRIGT: Erwin Vanderplancke, Dries Matthys,
                Neal Van Vaerenbergh, Elie Combat, Gabriel Moreira. Tijd niet vermeld. Volgens Neal deel van de T3 Series. -->
           <li class="race pod reveal"><time class="dt" datetime="2026-04-26"><b>26</b><span>apr</span></time><div class="ev"><span class="tag">BK ploegen · T3 Series</span><h3>Belgisch kampioenschap ploegentriatlon</h3><p>Doornik, België · met TriGT · Belgisch kampioen</p></div><div class="rs"><b>1e</b><span>ploeg</span></div></li>
@@ -415,11 +417,11 @@
           <li class="race reveal"><time class="dt" datetime="2025-10-12"><b>12</b><span>okt</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Tenerife – Santa Cruz</h3><p>Tenerife, Spanje</p></div><div class="rs"><b>44e</b><span>52:43</span></div></li>
           <li class="race reveal"><time class="dt" datetime="2025-10-05"><b>5</b><span>okt</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Ceuta</h3><p>Ceuta, Spanje</p></div><div class="rs"><b>24e</b><span>55:35</span></div></li>
           <li class="race pod reveal"><time class="dt" datetime="2025-09-21"><b>21</b><span>sep</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap Olympic Distance</h3><p>Lacs de l'Eau d'Heure, België</p></div><div class="rs"><b>3e</b><span>2:00:55</span></div></li>
-          <li class="race reveal"><time class="dt" datetime="2025-08-17"><b>17</b><span>aug</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Steratlon</h3><p>Sint-Niklaas, België · eerste divisie</p></div><div class="rs"><b>13e</b><span>58:39</span></div></li>
-          <li class="race reveal"><time class="dt" datetime="2025-07-06"><b>6</b><span>jul</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Kinrooi, België · sprint</p></div><div class="rs"><b>17e</b><span>53:35</span></div></li>
-          <li class="race top reveal"><time class="dt" datetime="2025-06-14"><b>14</b><span>jun</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Willebroek</h3><p>Willebroek, België · supersprint · eerste divisie</p></div><div class="rs"><b>5e</b><span>22:41</span></div></li>
-          <li class="race reveal"><time class="dt" datetime="2025-06-01"><b>1</b><span>jun</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Beiaardtriatlon</h3><p>Dendermonde, België · eerste divisie</p></div><div class="rs"><b>17e</b><span>58:53</span></div></li>
-          <li class="race pod reveal"><time class="dt" datetime="2025-03-16"><b>16</b><span>mrt</span></time><div class="ev"><span class="tag">Triatlon</span><h3>Triatlon Poperinge</h3><p>Poperinge, België</p></div><div class="rs"><b>3e</b><span>57:02</span></div></li>
+          <li class="race reveal"><time class="dt" datetime="2025-08-17"><b>17</b><span>aug</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Steratlon</h3><p>Sint-Niklaas, België · eerste divisie</p><p class="splits"><span><i>Zwem</i> 9:56</span><span><i>Fiets</i> 30:08</span><span><i>Loop</i> 16:58</span></p></div><div class="rs"><b>13e</b><span>58:39</span></div></li>
+          <li class="race reveal"><time class="dt" datetime="2025-07-06"><b>6</b><span>jul</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Kinrooi, België · sprint</p><p class="splits"><span><i>Zwem</i> 9:52</span><span><i>Fiets</i> 26:11</span><span><i>Loop</i> 16:21</span></p></div><div class="rs"><b>17e</b><span>53:35</span></div></li>
+          <li class="race top reveal"><time class="dt" datetime="2025-06-14"><b>14</b><span>jun</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Willebroek</h3><p>Willebroek, België · supersprint · eerste divisie</p><p class="splits"><span><i>Zwem</i> 4:19</span><span><i>Fiets</i> 13:02</span><span><i>Loop</i> 4:51</span></p></div><div class="rs"><b>5e</b><span>22:41</span></div></li>
+          <li class="race reveal"><time class="dt" datetime="2025-06-01"><b>1</b><span>jun</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Beiaardtriatlon</h3><p>Dendermonde, België · eerste divisie</p><p class="splits"><span><i>Zwem</i> 11:02</span><span><i>Fiets</i> 29:17</span><span><i>Loop</i> 16:33</span></p></div><div class="rs"><b>17e</b><span>58:53</span></div></li>
+          <li class="race pod reveal"><time class="dt" datetime="2025-03-16"><b>16</b><span>mrt</span></time><div class="ev"><span class="tag">Triatlon</span><h3>Triatlon Poperinge</h3><p>Poperinge, België</p><p class="splits"><span><i>Zwem</i> 5:48</span><span><i>Fiets</i> 33:23</span><span><i>Loop</i> 17:04</span></p></div><div class="rs"><b>3e</b><span>57:02</span></div></li>
         </ol>
       </div>
 
@@ -432,12 +434,12 @@
           <!-- Flanders Triathlon Sports 14 jul 2024, sprint 750 m / 20 km / 5 km, Haacht: 2e na Pep Delvaux (58:40); bron ultratiming.live. -->
           <ol class="agenda">
             <li class="race reveal"><time class="dt" datetime="2024-10-27"><b>27</b><span>okt</span></time><div class="ev"><span class="tag">Europe Cup</span><h3>Europe Triathlon Cup Alanya</h3><p>Alanya, Turkije</p></div><div class="rs"><b>58e</b><span>54:27</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2024-09-22"><b>22</b><span>sep</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Kwarttriatlon Hulst</h3><p>Hengstdijk, Nederland · 1/8 · eerste divisie</p></div><div class="rs"><b>16e</b><span>58:32</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2024-09-14"><b>14</b><span>sep</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap Olympic Distance</h3><p>Hofstade, België</p></div><div class="rs"><b>15e</b><span>1:50:51</span></div></li>
-            <li class="race top reveal"><time class="dt" datetime="2024-08-31"><b>31</b><span>aug</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Grenstriatlon</h3><p>Sint-Laureins, België · sprint</p></div><div class="rs"><b>8e</b><span>57:33</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2024-09-22"><b>22</b><span>sep</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Kwarttriatlon Hulst</h3><p>Hengstdijk, Nederland · 1/8 · eerste divisie</p><p class="splits"><span><i>Zwem</i> 10:20</span><span><i>Fiets</i> 32:08</span><span><i>Loop</i> 15:03</span></p></div><div class="rs"><b>16e</b><span>58:32</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2024-09-14"><b>14</b><span>sep</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap Olympic Distance</h3><p>Hofstade, België</p><p class="splits"><span><i>Zwem</i> 21:00</span><span><i>Fiets</i> 54:03</span><span><i>Loop</i> 33:33</span></p></div><div class="rs"><b>15e</b><span>1:50:51</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2024-08-31"><b>31</b><span>aug</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Grenstriatlon</h3><p>Sint-Laureins, België · sprint</p><p class="splits"><span><i>Zwem</i> 6:35</span><span><i>Fiets</i> 33:00</span><span><i>Loop</i> 15:57</span></p></div><div class="rs"><b>8e</b><span>57:33</span></div></li>
             <li class="race pod reveal"><time class="dt" datetime="2024-07-14"><b>14</b><span>jul</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Flanders Triathlon Sports</h3><p>Tildonk (Haacht), België · sprint</p></div><div class="rs"><b>2e</b><span>58:57</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2024-07-07"><b>7</b><span>jul</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Maastriatlon</h3><p>Kinrooi, België · eerste divisie</p></div><div class="rs"><b>23e</b><span>55:27</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2024-06-02"><b>2</b><span>jun</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Beiaardtriatlon</h3><p>Dendermonde, België · eerste divisie</p></div><div class="rs"><b>14e</b><span>1:01:15</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2024-07-07"><b>7</b><span>jul</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Maastriatlon</h3><p>Kinrooi, België · eerste divisie</p><p class="splits"><span><i>Zwem</i> 10:09</span><span><i>Fiets</i> 26:30</span><span><i>Loop</i> 17:41</span></p></div><div class="rs"><b>23e</b><span>55:27</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2024-06-02"><b>2</b><span>jun</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Beiaardtriatlon</h3><p>Dendermonde, België · eerste divisie</p><p class="splits"><span><i>Zwem</i> 14:44</span><span><i>Fiets</i> 28:35</span><span><i>Loop</i> 17:01</span></p></div><div class="rs"><b>14e</b><span>1:01:15</span></div></li>
           </ol>
         </div>
 
@@ -477,19 +479,19 @@
                Viersel, Oudenaarde, BK sprint en T3 20 mei (= Boerekreektriatlon, supersprint), plus Bilzen111 en BK crossduatlon.
                Mechelen za 15 sep en Zwin 5 sep: bevestigd door Neal (8 nov 2026). -->
           <ol class="agenda">
-            <li class="race pod reveal"><time class="dt" datetime="2018-09-15"><b>15</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Kwarttriatlon Mechelen</h3><p>Mechelen, België · kwart</p></div><div class="rs"><b>3e</b><span>1:52:42</span></div></li>
-            <li class="race top reveal"><time class="dt" datetime="2018-09-05"><b>5</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Zwintriathlon</h3><p>Knokke-Heist, België · kwart · 1e belofte</p></div><div class="rs"><b>5e</b><span>1:51:05</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2018-09-15"><b>15</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Kwarttriatlon Mechelen</h3><p>Mechelen, België · kwart</p><p class="splits"><span><i>Zwem</i> 20:31</span><span><i>Fiets</i> 56:34</span><span><i>Loop</i> 33:37</span></p></div><div class="rs"><b>3e</b><span>1:52:42</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2018-09-05"><b>5</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Zwintriathlon</h3><p>Knokke-Heist, België · kwart · 1e belofte</p><p class="splits"><span><i>Zwem</i> 12:29</span><span><i>Fiets</i> 1:02:12</span><span><i>Loop</i> 33:53</span></p></div><div class="rs"><b>5e</b><span>1:51:05</span></div></li>
             <li class="race top reveal"><time class="dt" datetime="2018-08-26"><b>26</b><span>aug</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Viersel</h3><p>Viersel, België · sprint</p></div><div class="rs"><b>7e</b><span>54:55</span></div></li>
             <li class="race reveal"><time class="dt" datetime="2018-08-19"><b>19</b><span>aug</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Weiswampach</h3><p>Weiswampach, Luxemburg · sprintduatlon · ploegwinst met SP&amp;O</p></div><div class="rs"><b>11e</b><span>—</span></div></li>
-            <li class="race pod reveal"><time class="dt" datetime="2018-08-15"><b>15</b><span>aug</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap Olympic Distance</h3><p>Izegem, België · Belgisch kampioen beloften</p></div><div class="rs"><b>3e</b><span>1:47:13</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2018-08-15"><b>15</b><span>aug</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap Olympic Distance</h3><p>Izegem, België · Belgisch kampioen beloften</p><p class="splits"><span><i>Zwem</i> 16:59</span><span><i>Fiets</i> 57:13</span><span><i>Loop</i> 31:59</span></p></div><div class="rs"><b>3e</b><span>1:47:13</span></div></li>
             <li class="race pod reveal"><time class="dt" datetime="2018-07-15"><b>15</b><span>jul</span></time><div class="ev"><span class="tag">Eredivisie</span><h3>Eredivisie Klazienaveen</h3><p>Klazienaveen, Nederland</p></div><div class="rs"><b>2e</b><span>—</span></div></li>
-            <li class="race pod reveal"><time class="dt" datetime="2018-07-08"><b>8</b><span>jul</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Triatlon van Vlaanderen</h3><p>Oudenaarde, België · kwart</p></div><div class="rs"><b>1e</b><span>2:05:23</span></div></li>
-            <li class="race pod reveal"><time class="dt" datetime="2018-07-01"><b>1</b><span>jul</span></time><div class="ev"><span class="tag">1/3 triatlon</span><h3>Cave Triathlon</h3><p>Kanne, België · 1/3</p></div><div class="rs"><b>1e</b><span>2:19:47</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2018-07-08"><b>8</b><span>jul</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Triatlon van Vlaanderen</h3><p>Oudenaarde, België · kwart</p><p class="splits"><span><i>Zwem</i> 12:04</span><span><i>Fiets</i> 1:12:55</span><span><i>Loop</i> 37:20</span></p></div><div class="rs"><b>1e</b><span>2:05:23</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2018-07-01"><b>1</b><span>jul</span></time><div class="ev"><span class="tag">1/3 triatlon</span><h3>Cave Triathlon</h3><p>Kanne, België · 1/3</p><p class="splits"><span><i>Zwem</i> 18:13</span><span><i>Fiets</i> 1:20:40</span><span><i>Loop</i> 40:31</span></p></div><div class="rs"><b>1e</b><span>2:19:47</span></div></li>
             <li class="race pod reveal"><time class="dt" datetime="2018-06-10"><b>10</b><span>jun</span></time><div class="ev"><span class="tag">Eredivisie</span><h3>Eredivisie Amsterdam</h3><p>Amsterdam, Nederland · ook ploegwinst met Squadra</p></div><div class="rs"><b>1e</b><span>—</span></div></li>
-            <li class="race top reveal"><time class="dt" datetime="2018-06-03"><b>3</b><span>jun</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Vilvoorde, België · sprint · Belgisch kampioen beloften</p></div><div class="rs"><b>5e</b><span>56:11</span></div></li>
-            <li class="race top reveal"><time class="dt" datetime="2018-05-20"><b>20</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Boerekreektriatlon</h3><p>Sint-Laureins, België · supersprint</p></div><div class="rs"><b>9e</b><span>38:05</span></div></li>
-            <li class="race top reveal"><time class="dt" datetime="2018-05-13"><b>13</b><span>mei</span></time><div class="ev"><span class="tag">1/3 triatlon</span><h3>Bilzen111</h3><p>Bilzen, België · 1/3</p></div><div class="rs"><b>6e</b><span>3:14:13</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2018-03-11"><b>11</b><span>mrt</span></time><div class="ev"><span class="tag">BK crossduatlon</span><h3>Belgisch kampioenschap crossduatlon</h3><p>Retie, België · 4 km / 24 km mtb / 4 km · Belgisch kampioen beloften</p></div><div class="rs"><b>15e</b><span>1:27:04</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2018-06-03"><b>3</b><span>jun</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Vilvoorde, België · sprint · Belgisch kampioen beloften</p><p class="splits"><span><i>Zwem</i> 10:24</span><span><i>Fiets</i> 27:24</span><span><i>Loop</i> 17:08</span></p></div><div class="rs"><b>5e</b><span>56:11</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2018-05-20"><b>20</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Boerekreektriatlon</h3><p>Sint-Laureins, België · supersprint</p><p class="splits"><span><i>Zwem</i> 5:11</span><span><i>Fiets</i> 18:21</span><span><i>Loop</i> 11:58</span></p></div><div class="rs"><b>9e</b><span>38:05</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2018-05-13"><b>13</b><span>mei</span></time><div class="ev"><span class="tag">1/3 triatlon</span><h3>Bilzen111</h3><p>Bilzen, België · 1/3</p><p class="splits"><span><i>Zwem</i> 11:58</span><span><i>Fiets</i> 2:26:15</span><span><i>Loop</i> 36:00</span></p></div><div class="rs"><b>6e</b><span>3:14:13</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2018-03-11"><b>11</b><span>mrt</span></time><div class="ev"><span class="tag">BK crossduatlon</span><h3>Belgisch kampioenschap crossduatlon</h3><p>Retie, België · 4 km / 24 km mtb / 4 km · Belgisch kampioen beloften</p><p class="splits"><span><i>Loop</i> 12:41</span><span><i>MTB</i> 59:48</span><span><i>Loop</i> 14:34</span></p></div><div class="rs"><b>15e</b><span>1:27:04</span></div></li>
           </ol>
         </div>
 
@@ -502,16 +504,16 @@
                uit triatlon.vlaanderen (8 nov 2026). Herderen: 1/8 teamtriatlon, individuele plaats binnen de ploegenwedstrijd. -->
           <ol class="agenda">
             <li class="race reveal"><time class="dt" datetime="2017-10-08"><b>8</b><span>okt</span></time><div class="ev"><span class="tag">European Cup</span><h3>ETU Triathlon European Cup Final Melilla</h3><p>Melilla, Spanje</p></div><div class="rs"><b>24e</b><span>2:00:46</span></div></li>
-            <li class="race top reveal"><time class="dt" datetime="2017-09-17"><b>17</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Triatlon Mechelen</h3><p>Mechelen, België · kwart</p></div><div class="rs"><b>7e</b><span>1:54:56</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2017-09-09"><b>9</b><span>sep</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series La Roche</h3><p>La Roche-en-Ardenne, België · sprint</p></div><div class="rs"><b>11e</b><span>1:07:36</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2017-08-19"><b>19</b><span>aug</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Deinze</h3><p>Deinze, België · sprint</p></div><div class="rs"><b>18e</b><span>59:18</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2017-09-17"><b>17</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Triatlon Mechelen</h3><p>Mechelen, België · kwart</p><p class="splits"><span><i>Zwem</i> 19:43</span><span><i>Fiets</i> 57:03</span><span><i>Loop</i> 36:11</span></p></div><div class="rs"><b>7e</b><span>1:54:56</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2017-09-09"><b>9</b><span>sep</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series La Roche</h3><p>La Roche-en-Ardenne, België · sprint</p><p class="splits"><span><i>Zwem</i> 12:17</span><span><i>Fiets</i> 35:13</span><span><i>Loop</i> 20:05</span></p></div><div class="rs"><b>11e</b><span>1:07:36</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2017-08-19"><b>19</b><span>aug</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Deinze</h3><p>Deinze, België · sprint</p><p class="splits"><span><i>Zwem</i> 12:37</span><span><i>Fiets</i> 28:13</span><span><i>Loop</i> 16:12</span></p></div><div class="rs"><b>18e</b><span>59:18</span></div></li>
             <li class="race reveal"><time class="dt" datetime="2017-07-15"><b>15</b><span>jul</span></time><div class="ev"><span class="tag">Eredivisie · duatlon</span><h3>Eredivisie Rotterdam</h3><p>Rotterdam, Nederland · als duatlon · ploegwinst met Squadra</p></div><div class="rs"><b>12e</b><span>—</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2017-07-09"><b>9</b><span>jul</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Vilvoorde, België · sprint</p></div><div class="rs"><b>14e</b><span>58:35</span></div></li>
-            <li class="race top reveal"><time class="dt" datetime="2017-06-30"><b>30</b><span>jun</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Geraardsbergen</h3><p>Geraardsbergen, België · sprint</p></div><div class="rs"><b>9e</b><span>1:05:10</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2017-07-09"><b>9</b><span>jul</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Vilvoorde, België · sprint</p><p class="splits"><span><i>Zwem</i> 11:40</span><span><i>Fiets</i> 28:29</span><span><i>Loop</i> 17:09</span></p></div><div class="rs"><b>14e</b><span>58:35</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2017-06-30"><b>30</b><span>jun</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Geraardsbergen</h3><p>Geraardsbergen, België · sprint</p><p class="splits"><span><i>Zwem</i> 9:51</span><span><i>Fiets</i> 35:39</span><span><i>Loop</i> 18:42</span></p></div><div class="rs"><b>9e</b><span>1:05:10</span></div></li>
             <li class="race reveal"><time class="dt" datetime="2017-06-11"><b>11</b><span>jun</span></time><div class="ev"><span class="tag">European Cup</span><h3>ETU Triathlon European Cup Weert</h3><p>Weert, Nederland</p></div><div class="rs"><b>47e</b><span>2:00:59</span></div></li>
             <li class="race reveal"><time class="dt" datetime="2017-05-20"><b>20</b><span>mei</span></time><div class="ev"><span class="tag">African Cup</span><h3>ATU Sprint Triathlon African Cup Larache</h3><p>Larache, Marokko · sprint</p></div><div class="rs"><b>35e</b><span>59:48</span></div></li>
             <li class="race top reveal"><time class="dt" datetime="2017-04-01"><b>1</b><span>apr</span></time><div class="ev"><span class="tag">Duatlon</span><h3>RunBikeRun Series Geel</h3><p>Geel, België · 2e belofte · 3e ploeg met Squadra</p></div><div class="rs"><b>9e</b><span>—</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2017-03-19"><b>19</b><span>mrt</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series teamtriatlon Herderen</h3><p>Herderen, België · 1/8</p></div><div class="rs"><b>37e</b><span>1:05:38</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2017-03-19"><b>19</b><span>mrt</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series teamtriatlon Herderen</h3><p>Herderen, België · 1/8</p><p class="splits"><span><i>Zwem</i> 9:04</span><span><i>Fiets</i> 37:06</span><span><i>Loop</i> 17:51</span></p></div><div class="rs"><b>37e</b><span>1:05:38</span></div></li>
           </ol>
         </div>
 
@@ -523,10 +525,10 @@
           <!-- T3 2016 (ploegresultaten met SP&O-No Drugs, blog Neal 31 jul 2016): manche 1 Doornik (= BK ploegentriatlon) 3e; zo 1 mei 2016 (Neal: zondag het dichtst bij 1 mei);
                manche 2 Zwevegem aflossing 3e, "een kleine twee weken" na 16 mei. PLACEHOLDER: exacte dagen niet gekend. -->
           <ol class="agenda">
-            <li class="race top reveal"><time class="dt" datetime="2016-09-04"><b>4</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Triatlon Mechelen</h3><p>Mechelen, België · kwart</p></div><div class="rs"><b>9e</b><span>1:55:27</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2016-08-15"><b>15</b><span>aug</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap Olympic Distance</h3><p>België</p></div><div class="rs"><b>11e</b><span>1:54:11</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2016-09-04"><b>4</b><span>sep</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>Triatlon Mechelen</h3><p>Mechelen, België · kwart</p><p class="splits"><span><i>Zwem</i> 20:14</span><span><i>Fiets</i> 57:58</span><span><i>Loop</i> 35:41</span></p></div><div class="rs"><b>9e</b><span>1:55:27</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2016-08-15"><b>15</b><span>aug</span></time><div class="ev"><span class="tag">BK</span><h3>Belgisch kampioenschap Olympic Distance</h3><p>België</p><p class="splits"><span><i>Zwem</i> 17:58</span><span><i>Fiets</i> 57:36</span><span><i>Loop</i> 35:13</span></p></div><div class="rs"><b>11e</b><span>1:54:11</span></div></li>
             <li class="race top reveal"><time class="dt" datetime="2016-06-12"><b>12</b><span>jun</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Gullegem, België · sprint · 3e belofte</p></div><div class="rs"><b>9e</b><span>1:00:19</span></div></li>
-            <li class="race pod reveal"><time class="dt" datetime="2016-06-05"><b>5</b><span>jun</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Roeselare</h3><p>Roeselare, België · sprint</p></div><div class="rs"><b>1e</b><span>58:26</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2016-06-05"><b>5</b><span>jun</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Roeselare</h3><p>Roeselare, België · sprint</p><p class="splits"><span><i>Zwem</i> 9:05</span><span><i>Fiets</i> 31:49</span><span><i>Loop</i> 17:32</span></p></div><div class="rs"><b>1e</b><span>58:26</span></div></li>
             <li class="race pod reveal"><time class="dt" datetime="2016-05-29"><b>29</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Zwevegem, teamrelay</h3><p>Zwevegem, België · met SP&amp;O</p></div><div class="rs"><b>3e</b><span>ploeg</span></div></li>
             <li class="race pod reveal"><time class="dt" datetime="2016-05-01"><b>1</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Doornik, BK ploegentriatlon</h3><p>Doornik, België · met SP&amp;O</p></div><div class="rs"><b>3e</b><span>ploeg</span></div></li>
           </ol>
@@ -538,13 +540,13 @@
                Zwevegem 31 mei 2015 teamrelay 3e (blog Neal 1 jun 2015).
                Lille, Mechelen en La Roche 111 aangevuld uit triatlon.vlaanderen (8 nov 2026). Lille: individuele plaats in de teamrelay. -->
           <ol class="agenda">
-            <li class="race reveal"><time class="dt" datetime="2015-09-27"><b>27</b><span>sep</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Lille, teamrelay</h3><p>Lille, België · supersprint</p></div><div class="rs"><b>43e</b><span>1:02:50</span></div></li>
-            <li class="race top reveal"><time class="dt" datetime="2015-09-20"><b>20</b><span>sep</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Mechelen</h3><p>Mechelen, België · sprint</p></div><div class="rs"><b>5e</b><span>58:24</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2015-09-27"><b>27</b><span>sep</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Lille, teamrelay</h3><p>Lille, België · supersprint</p><p class="splits"><span><i>Zwem</i> 10:54</span><span><i>Fiets</i> 33:21</span><span><i>Loop</i> 16:49</span></p></div><div class="rs"><b>43e</b><span>1:02:50</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2015-09-20"><b>20</b><span>sep</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Mechelen</h3><p>Mechelen, België · sprint</p><p class="splits"><span><i>Zwem</i> 9:23</span><span><i>Fiets</i> 29:52</span><span><i>Loop</i> 17:02</span></p></div><div class="rs"><b>5e</b><span>58:24</span></div></li>
             <li class="race top reveal"><time class="dt" datetime="2015-09-13"><b>13</b><span>sep</span></time><div class="ev"><span class="tag">BK junioren</span><h3>Belgisch kampioenschap triatlon junioren</h3><p>België · Junior Men</p></div><div class="rs"><b>4e</b><span>1:02:38</span></div></li>
             <li class="race dnf reveal"><time class="dt" datetime="2015-07-04"><b>4</b><span>jul</span></time><div class="ev"><span class="tag">Junior European Cup</span><h3>ETU Triathlon Junior European Cup Holten</h3><p>Holten, Nederland · Junior Men</p></div><div class="rs"><b>DNF</b><span>blessure</span></div></li>
-            <li class="race pod reveal"><time class="dt" datetime="2015-06-14"><b>14</b><span>jun</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>La Roche 111</h3><p>La Roche-en-Ardenne, België · kwart</p></div><div class="rs"><b>2e</b><span>1:47:26</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2015-06-14"><b>14</b><span>jun</span></time><div class="ev"><span class="tag">Kwarttriatlon</span><h3>La Roche 111</h3><p>La Roche-en-Ardenne, België · kwart</p><p class="splits"><span><i>Zwem</i> 11:50</span><span><i>Fiets</i> 49:39</span><span><i>Loop</i> 27:03</span></p></div><div class="rs"><b>2e</b><span>1:47:26</span></div></li>
             <li class="race pod reveal"><time class="dt" datetime="2015-05-31"><b>31</b><span>mei</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Zwevegem, teamrelay</h3><p>Zwevegem, België · met SP&amp;O</p></div><div class="rs"><b>3e</b><span>ploeg</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2015-04-26"><b>26</b><span>apr</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Doornik, ploegentriatlon</h3><p>Doornik, België · sprint · 3e ploeg in de daguitslag met SP&amp;O</p></div><div class="rs"><b>31e</b><span>1:05:38</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2015-04-26"><b>26</b><span>apr</span></time><div class="ev"><span class="tag">T3 Series</span><h3>T3 Series Doornik, ploegentriatlon</h3><p>Doornik, België · sprint · 3e ploeg in de daguitslag met SP&amp;O</p><p class="splits"><span><i>Zwem</i> 9:24</span><span><i>Fiets</i> 35:36</span><span><i>Loop</i> 20:36</span></p></div><div class="rs"><b>31e</b><span>1:05:38</span></div></li>
           </ol>
         </div>
 
@@ -553,18 +555,18 @@
           <div class="s-head"><p class="s-yr">2014<small>junioren</small></p><p class="s-sum">6 races · <em>2 podiums</em> · <em>winst Zwevegem</em></p></div>
           <ol class="agenda">
             <li class="race reveal"><time class="dt" datetime="2014-08-30"><b>30</b><span>aug</span></time><div class="ev"><span class="tag">Jeugdtriatlon</span><h3>Triatlon Viersel, jeugd A</h3><p>Viersel, België · sprint</p></div><div class="rs"><b>12e</b><span>1:02:44</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2014-08-09"><b>9</b><span>aug</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Lille, België · sprint</p></div><div class="rs"><b>37e</b><span>1:02:06</span></div></li>
-            <li class="race pod reveal"><time class="dt" datetime="2014-06-15"><b>15</b><span>jun</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Retie</h3><p>Retie, België · sprint</p></div><div class="rs"><b>3e</b><span>1:03:18</span></div></li>
-            <li class="race top reveal"><time class="dt" datetime="2014-06-09"><b>9</b><span>jun</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Euregio Limburgse Triatlon</h3><p>België · sprint</p></div><div class="rs"><b>10e</b><span>1:02:02</span></div></li>
-            <li class="race pod reveal"><time class="dt" datetime="2014-06-01"><b>1</b><span>jun</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Zwevegem</h3><p>Zwevegem, België · sprint</p></div><div class="rs"><b>1e</b><span>1:02:30</span></div></li>
-            <li class="race reveal"><time class="dt" datetime="2014-05-04"><b>4</b><span>mei</span></time><div class="ev"><span class="tag">Flanders Cup</span><h3>Flanders Cup drafting triatlon</h3><p>Lille, België · sprint</p></div><div class="rs"><b>25e</b><span>59:21</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2014-08-09"><b>9</b><span>aug</span></time><div class="ev"><span class="tag">BK sprint</span><h3>Belgisch kampioenschap sprinttriatlon</h3><p>Lille, België · sprint</p><p class="splits"><span><i>Zwem</i> 9:57</span><span><i>Fiets</i> 35:39</span><span><i>Loop</i> 16:30</span></p></div><div class="rs"><b>37e</b><span>1:02:06</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2014-06-15"><b>15</b><span>jun</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Retie</h3><p>Retie, België · sprint</p><p class="splits"><span><i>Zwem</i> 7:14</span><span><i>Fiets</i> 37:09</span><span><i>Loop</i> 18:56</span></p></div><div class="rs"><b>3e</b><span>1:03:18</span></div></li>
+            <li class="race top reveal"><time class="dt" datetime="2014-06-09"><b>9</b><span>jun</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Euregio Limburgse Triatlon</h3><p>België · sprint</p><p class="splits"><span><i>Zwem</i> 9:18</span><span><i>Fiets</i> 34:12</span><span><i>Loop</i> 18:32</span></p></div><div class="rs"><b>10e</b><span>1:02:02</span></div></li>
+            <li class="race pod reveal"><time class="dt" datetime="2014-06-01"><b>1</b><span>jun</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Zwevegem</h3><p>Zwevegem, België · sprint</p><p class="splits"><span><i>Zwem</i> 11:28</span><span><i>Fiets</i> 33:31</span><span><i>Loop</i> 17:30</span></p></div><div class="rs"><b>1e</b><span>1:02:30</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2014-05-04"><b>4</b><span>mei</span></time><div class="ev"><span class="tag">Flanders Cup</span><h3>Flanders Cup drafting triatlon</h3><p>Lille, België · sprint</p><p class="splits"><span><i>Zwem</i> 11:39</span><span><i>Fiets</i> 29:50</span><span><i>Loop</i> 17:53</span></p></div><div class="rs"><b>25e</b><span>59:21</span></div></li>
           </ol>
         </div>
 
         <div class="season">
           <div class="s-head"><p class="s-yr">2013<small>jeugd A</small></p><p class="s-sum">2 races · eerste triatlons</p></div>
           <ol class="agenda">
-            <li class="race reveal"><time class="dt" datetime="2013-09-15"><b>15</b><span>sep</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Mechelen</h3><p>Mechelen, België · sprint</p></div><div class="rs"><b>27e</b><span>1:03:02</span></div></li>
+            <li class="race reveal"><time class="dt" datetime="2013-09-15"><b>15</b><span>sep</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Mechelen</h3><p>Mechelen, België · sprint</p><p class="splits"><span><i>Zwem</i> 11:26</span><span><i>Fiets</i> 29:42</span><span><i>Loop</i> 18:46</span></p></div><div class="rs"><b>27e</b><span>1:03:02</span></div></li>
             <li class="race reveal"><time class="dt" datetime="2013-05-12"><b>12</b><span>mei</span></time><div class="ev"><span class="tag">Sprinttriatlon</span><h3>Triatlon Geel</h3><p>Geel, België · sprint</p></div><div class="rs"><b>26e</b><span>1:23:15</span></div></li>
           </ol>
         </div>
@@ -583,10 +585,11 @@
   </div>
 
   <!-- ===== GALERIJ ===== -->
+  <div class="route-divider" aria-hidden="true"><svg class="rd-line" viewBox="0 0 1200 70" preserveAspectRatio="none"><path class="rd-fill" d="M0,56 L60,54 L120,50 L180,44 L240,34 L300,24 L360,10 L400,18 L440,28 L500,38 L560,40 L620,46 L680,44 L740,48 L800,46 L860,50 L920,52 L980,49 L1040,53 L1100,55 L1150,54 L1200,57 L1200,70 L0,70 Z"/><path class="rd-stroke" d="M0,56 L60,54 L120,50 L180,44 L240,34 L300,24 L360,10 L400,18 L440,28 L500,38 L560,40 L620,46 L680,44 L740,48 L800,46 L860,50 L920,52 L980,49 L1040,53 L1100,55 L1150,54 L1200,57"/><path class="rd-base" d="M0,69.5 H1200"/></svg><svg class="rd-mark" viewBox="165 340 700 345" style="left:30%;top:14%"><polygon points="174,670 372,365 507,365 550,532 720,398 676,385 853,350 740,476 512,675 430,452 362,550"/></svg><span class="rd-km rd-a">km 0</span><span class="rd-km rd-b">km 20</span></div>
   <section id="beeld" aria-label="Foto's van Neal">
     <div class="wrap">
-      <p class="label reveal">In beeld</p>
-      <h2 class="reveal" style="margin-top:.8rem">Van zwemstart tot <span class="grad">podium.</span></h2>
+
+      <h2 class="reveal">Foto's van onderweg</h2>
       <div class="galerij">
         <!-- Volgorde: afwisseling lopen / zwemmen / fietsen. 13 en 14 © A. Lallout, 17 © Finishfoto.be (staat op de foto). -->
         <figure class="ph reveal"><img src="photos/racing/galerij-12.jpg" alt="Neal Van Vaerenbergh loopt voorop op een bospad in de trisuit van het Tri.GT Pro Team" width="1200" height="1600" loading="lazy" decoding="async"></figure>
@@ -612,13 +615,14 @@
   </section>
 
   <!-- ===== PARTNERS ===== -->
+  <div class="route-divider" aria-hidden="true"><svg class="rd-line" viewBox="0 0 1200 70" preserveAspectRatio="none"><path class="rd-fill" d="M0,57 L70,56 L140,53 L210,54 L280,50 L350,51 L420,47 L490,48 L560,44 L630,45 L700,40 L770,36 L840,30 L900,22 L960,9 L1010,18 L1060,30 L1110,42 L1160,50 L1200,54 L1200,70 L0,70 Z"/><path class="rd-stroke" d="M0,57 L70,56 L140,53 L210,54 L280,50 L350,51 L420,47 L490,48 L560,44 L630,45 L700,40 L770,36 L840,30 L900,22 L960,9 L1010,18 L1060,30 L1110,42 L1160,50 L1200,54"/><path class="rd-base" d="M0,69.5 H1200"/></svg><svg class="rd-mark" viewBox="165 340 700 345" style="left:80%;top:13%"><polygon points="174,670 372,365 507,365 550,532 720,398 676,385 853,350 740,476 512,675 430,452 362,550"/></svg><span class="rd-km rd-a">km 0</span><span class="rd-km rd-b">km 90</span></div>
   <section id="partners">
     <div class="wrap partners">
-      <p class="label reveal">Partners &amp; sponsors</p>
-      <h2 class="reveal" style="margin-top:.8rem">Samen naar de <span class="grad">finish.</span></h2>
+
+      <h2 class="reveal">Partners</h2>
       <!-- PLACEHOLDER: Neal moet nog bevestigen wat hij partners echt aanbiedt -->
       <p class="reveal">Ik bied zichtbaarheid op wedstrijden, op mijn kledij, op mijn sociale media en op deze website, en eerlijke content over je product tijdens mijn eigen trainingen.</p>
-      <a href="mailto:neal@nealvanvaerenbergh.com?subject=Partnership" class="pill pill-accent reveal">Word partner →</a>
+      <a href="mailto:neal@nealvanvaerenbergh.com?subject=Partnership" class="pill pill-accent reveal">Word partner</a>
       <!-- PLACEHOLDER: partnerlogo's hier terugzetten zodra er echte partners zijn
            (vervang "Jouw logo hier" door een <img> met het logo; CSS hieronder terug in <style> zetten)
       <div class="slots reveal" aria-label="Partnerlogo's">
@@ -636,7 +640,7 @@
     <div class="wrap">
       <div class="to-coach reveal">
         <div><h2>Zelf sneller worden?</h2><p>Wat ik in mijn eigen races geleerd heb, zit in elk schema van Vector Endurance.</p></div>
-        <a href="coaching.html" class="pill">Ontdek coaching →</a>
+        <a href="coaching.html" class="pill">Ontdek coaching</a>
       </div>
     </div>
   </section>

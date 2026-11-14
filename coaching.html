@@ -178,6 +178,8 @@
   .t-track:focus-visible { outline-offset: 6px; }
   @media (min-width: 640px) { .t-track { --cols: 2; } }
   @media (min-width: 900px) { .t-track { --cols: 3; } }
+  /* Minder kaarten dan kolommen (bv. 2 testimonials): de kaarten vullen de breedte, pijlen en bolletjes verdwijnen */
+  @media (min-width: 900px) { .t-track[data-count="2"] { --cols: 2; } .t-track[data-count="1"] { --cols: 1; } }
   .t-nav { display: flex; gap: .5rem; }
   .t-btn { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: var(--glass); color: var(--ink); font: 600 1.1rem var(--body); cursor: pointer; transition: background .25s, color .25s, border-color .25s, opacity .25s; }
   .t-btn:hover:not(:disabled) { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
@@ -242,6 +244,16 @@
   .price i { font-style: normal; color: var(--accent); font-weight: 700; transition: transform .25s; }
   .price:hover { background: rgba(25,211,255,.14); border-color: var(--accent); }
   .price:hover i { transform: translateX(4px); }
+  /* ---------- Je coach ---------- */
+  .coach { display: grid; gap: 26px; align-items: center; padding: clamp(18px, 3vw, 28px); margin-bottom: clamp(56px, 8vw, 90px); border-radius: 28px; }
+  @media (min-width: 760px) { .coach { grid-template-columns: minmax(220px, 300px) 1fr; gap: clamp(28px, 4vw, 52px); } }
+  .coach-ph { border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 5; max-width: 340px; }
+  .coach-ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .coach-txt h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: 1.05; font-size: clamp(1.5rem, 3.4vw, 2.3rem); margin: .6rem 0 1rem; letter-spacing: -.02em; }
+  .coach-txt p:not(.label) { color: #c7d0d3; margin-bottom: .9rem; max-width: 620px; }
+  .coach-link { display: inline-flex; align-items: center; gap: .45rem; min-height: 40px; color: var(--accent); font-weight: 600; text-decoration: none; }
+  .coach-link i { font-style: normal; transition: transform .25s; }
+  .coach-link:hover i { transform: translateX(4px); }
   .ask { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2rem; margin-top: 16px; padding: 24px 26px; }
   .ask b { font-family: var(--display); font-size: 1.1rem; text-transform: uppercase; display: block; }
   .muted { color: var(--muted); }
@@ -392,13 +404,24 @@
         <!-- Standaard alles dicht; zodra de sectie in beeld is gaan ze één voor één vanzelf open, tot je er zelf op klikt. Tekst: Neal, 9 nov 2026 -->
         <div class="principles reveal" id="principles">
           <div class="pr"><button type="button" aria-controls="pr-1" aria-expanded="false">Iedere atleet is uniek. Iedere training heeft een doel.</button><div class="pr-body" id="pr-1"><div><p>Iedere atleet heeft zijn eigen ambities, mogelijkheden en uitdagingen. Daarom geloof ik in een persoonlijke aanpak, waarbij elke training een duidelijk doel heeft binnen een doordacht langetermijnplan.</p><p>Door rekening te houden met je capaciteiten, herstel en omstandigheden buiten de sport, stemmen we de trainingsbelasting af op wat voor jou haalbaar en effectief is. Zo bouwen we op een efficiënte en verantwoorde manier aan consistente vooruitgang, ongeacht je niveau of beschikbare tijd.</p></div></div></div>
-          <div class="pr"><button type="button" aria-controls="pr-2" aria-expanded="false">Je potentieel kent geen vast eindpunt.</button><div class="pr-body" id="pr-2"><div><p>Ik geloof dat potentieel niet vaststaat, maar voortdurend verder ontwikkeld kan worden. Wat vandaag je grens lijkt, hoeft dat morgen niet meer te zijn.</p><p>Als atleet en coach probeer ik zelf steeds de lat hoger te leggen. Niet door simpelweg meer of harder te werken, maar door kritisch te blijven, bij te leren en te zoeken naar manieren om beter te worden. Die ingesteldheid vormt ook de basis van mijn coaching.</p></div></div></div>
+          <div class="pr"><button type="button" aria-controls="pr-2" aria-expanded="false">Je potentieel kent geen vast eindpunt.</button><div class="pr-body" id="pr-2"><div><p>Ik geloof dat potentieel niet vaststaat, maar voortdurend verder ontwikkeld kan worden. Wat vandaag de grens lijkt, hoeft dat morgen niet meer te zijn.</p><p>Als atleet en coach probeer ik zelf steeds de lat hoger te leggen. Niet door simpelweg meer of harder te werken, maar door kritisch te blijven, bij te leren en te zoeken naar manieren om beter te worden. Die ingesteldheid vormt ook de basis van mijn coaching.</p></div></div></div>
           <div class="pr"><button type="button" aria-controls="pr-3" aria-expanded="false">Meer dan prestaties alleen.</button><div class="pr-body" id="pr-3"><div><p>Het najagen van ambities is een proces waarin je voortdurend keuzes maakt, ontdekt wat werkt en leert uit wat anders loopt dan verwacht. Wie daarvoor openstaat, kan uit die ervaringen inzichten halen die ook op andere vlakken van het leven waardevol zijn.</p><p>Hoeveel plaats sport inneemt, verschilt van persoon tot persoon. Voor een topsporter kan die terecht de hoogste prioriteit hebben, terwijl anderen hun trainingen combineren met werk, gezin of andere verantwoordelijkheden. In beide gevallen wil ik een aanpak vinden die jouw ambities maximaal ondersteunt en tegelijk op lange termijn haalbaar blijft.</p></div></div></div>
           <p class="philo-close">Dat is Beyond Performance.</p>
           <button type="button" class="pr-toggle" aria-pressed="false" hidden>Automatisch wisselen pauzeren</button>
         </div>
       </div>
       <!-- Eigen foto's uit photos/coaching/ (multisport: stockfoto). Teksten: e-mail van Neal, 3 nov 2026 -->
+      <!-- Je coach: korte voorstelling met link naar het volledige verhaal op de racingpagina. Foto: photos/racing/galerij-10.jpg (Neal) -->
+      <div class="coach glass reveal" id="coach">
+        <figure class="coach-ph"><img src="photos/racing/galerij-10.jpg?v=2" width="644" height="805" loading="lazy" alt="Neal Van Vaerenbergh in de trisuit van het Tri.GT Pro Team"></figure>
+        <div class="coach-txt">
+          <p class="label">Je coach</p>
+          <h2>Neal <span class="accent">Van Vaerenbergh</span></h2>
+          <p>Ik ben elite-triatleet en race zelf op Europees niveau. Trainingsschema's maak ik al sinds 2014, eerst voor vrienden en familie, later voor atleten van elk niveau.</p>
+          <p>In 2019 hield een overtrainingssyndroom me bijna vier jaar weg uit de internationale wedstrijden. Ik vond mijn weg terug en stond in 2025 en 2026 opnieuw op het podium van het Belgisch kampioenschap. Die weg leerde me meer over training, herstel en geduld dan eender welk boek. Samen met mijn trainersopleidingen en studies kinesitherapie bepaalt dat hoe ik vandaag coach: doordacht, persoonlijk en met oog voor wat haalbaar is.</p>
+          <a href="racing.html#mijn-verhaal" class="coach-link">Lees mijn volledige verhaal <i>→</i></a>
+        </div>
+      </div>
       <div class="levels-head reveal" style="margin-top:0"><p class="label">Programma's</p><h2>Kies jouw discipline</h2></div>
       <div class="programs">
         <a class="program program-multi reveal" href="#contact" data-program="Multisport">
@@ -441,7 +464,7 @@
       <div class="levels-head reveal"><p class="label">Begeleiding</p><h2>Ontdek de begeleidingsmogelijkheden</h2></div>
       <div class="steps levels reveal">
         <div class="step"><h3>Foundation</h3><p class="tag">Gerichte begeleiding op afstand.</p><ul><li>Persoonlijk trainingsschema via TrainingPeaks</li><li>Wekelijkse online opvolging en bijsturing</li><li>Analyse van trainingsdata</li><li>Testmomenten op afstand, geïntegreerd in de trainingen</li></ul><a class="price" href="#contact" data-level="Foundation"><span><small>Prijs</small><b>Op aanvraag</b></span><i aria-hidden="true">Gratis intake →</i></a></div>
-        <div class="step"><h3>Progress</h3><p class="tag">Nauwere opvolging. Meer persoonlijke afstemming.</p><ul><li>Alles uit Foundation</li><li>Persoonlijk contact en opvolging, indien nodig meerdere keren per week</li><li>Frequentere evaluatie en bijsturing</li><li>Minstens één fysieke inspanningstest per jaar</li><li>Kracht- en mobiliteitsschema's optioneel</li></ul><a class="price" href="#contact" data-level="Progress"><span><small>Prijs</small><b>Op aanvraag</b></span><i aria-hidden="true">Gratis intake →</i></a></div>
+        <div class="step"><h3>Progress</h3><p class="tag">Nauwere opvolging. Meer persoonlijke afstemming.</p><ul><li>Alles uit Foundation</li><li>Persoonlijk contact en opvolging, indien nodig meerdere keren per week</li><li>Frequentere evaluatie en bijsturing</li><li>Minstens één inspanningstest per jaar</li><li>Kracht- en mobiliteitsschema's optioneel</li></ul><a class="price" href="#contact" data-level="Progress"><span><small>Prijs</small><b>Op aanvraag</b></span><i aria-hidden="true">Gratis intake →</i></a></div>
         <div class="step"><h3>Peak</h3><p class="tag">Intensieve begeleiding, tot in de praktijk.</p><ul><li>Alles uit Progress</li><li>Nauwe, persoonlijke samenwerking</li><li>Minstens één begeleide trainingssessie per week in persoon</li><li>Individuele kracht- en mobiliteitsschema's inbegrepen</li><li>Inspanningstesten op maat, wanneer nodig</li><li>Voortdurende afstemming van training, herstel en prestaties</li></ul><a class="price" href="#contact" data-level="Peak"><span><small>Prijs</small><b>Op aanvraag</b></span><i aria-hidden="true">Gratis intake →</i></a></div>
       </div>
       <div class="ask glass reveal">
@@ -477,9 +500,11 @@
           <p>Dankzij zijn begeleiding stond ik op de dag van de marathon in uitstekende conditie aan de start. Het resultaat? De volledige marathon met een glimlach kunnen lopen en finishen in 3u10!</p>
           <p>Voor mijn volgende sportieve uitdaging zou ik zonder twijfel opnieuw voor Neal kiezen. Een absolute aanrader!"</p>
         </blockquote><button type="button" class="t-more" aria-expanded="false" aria-controls="t-text-2">Lees meer</button><figcaption class="who"><div><b>Yari L.</b><small>Lopen · van nul naar marathon in 7 maanden</small></div><span class="result">3u10</span></figcaption></figure>
+        <!-- PLACEHOLDER-kaarten verborgen tot er echte ervaringen zijn (haal de commentaartekens weg en vul in):
         <figure class="quote glass"><blockquote>"[Ervaring van atleet 3]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
         <figure class="quote glass"><blockquote>"[Ervaring van atleet 4]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
         <figure class="quote glass"><blockquote>"[Ervaring van atleet 5]"</blockquote><figcaption class="who"><div><b>Naam atleet</b><small>Discipline · doel</small></div><span class="result">Resultaat</span></figcaption></figure>
+        -->
       </div>
       <div class="t-dots" aria-hidden="true"></div>
     </div>
@@ -777,6 +802,8 @@
     const track = document.querySelector('.t-track');
     if (!track) return;
     const cards = [...track.children], dots = document.querySelector('.t-dots'), btns = document.querySelectorAll('.t-btn');
+    track.dataset.count = cards.length;
+    const nav = document.querySelector('.t-nav');
     const step = () => cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 16);
     const perView = () => Math.max(1, Math.round(track.clientWidth / step()));
     const update = () => {
@@ -784,6 +811,7 @@
       btns[0].disabled = track.scrollLeft <= 2; btns[1].disabled = track.scrollLeft >= max;
       const pages = Math.max(1, cards.length - perView() + 1), cur = Math.min(pages - 1, Math.round(track.scrollLeft / step()));
       if (dots.children.length !== pages) dots.innerHTML = '<i></i>'.repeat(pages);
+      dots.style.display = pages === 1 ? 'none' : ''; if (nav) nav.style.visibility = pages === 1 ? 'hidden' : '';
       [...dots.children].forEach((d, i) => d.classList.toggle('on', i === cur));
     };
     btns.forEach(b => b.addEventListener('click', () => track.scrollBy({ left: step() * +b.dataset.dir })));

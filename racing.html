@@ -257,7 +257,7 @@
     .js .reveal, .js .race.reveal { opacity: 1; transform: none; }
   }
 </style>
-<link rel="stylesheet" href="eigen.css?v=5">
+<link rel="stylesheet" href="eigen.css?v=6">
 </head>
 <body>
 <a href="#inhoud" class="skip">Naar inhoud</a>
@@ -692,7 +692,15 @@
 
   document.getElementById('year').textContent = new Date().getFullYear();
   const header = document.querySelector('header');
-  const updHeader = () => header.classList.toggle('scrolled', scrollY > 40);
+  // Balk verdwijnt bij naar beneden scrollen en komt terug bij de kleinste beweging naar boven
+  let lastY = scrollY;
+  const updHeader = () => {
+    const y = scrollY, menuOpen = document.querySelector('.mobile-menu.open');
+    header.classList.toggle('scrolled', y > 40);
+    if (y > 120 && y > lastY + 2 && !menuOpen && !header.querySelector(':focus-visible')) header.classList.add('nav-hide');
+    else if (y < lastY || y <= 120) header.classList.remove('nav-hide');
+    lastY = y;
+  };
   addEventListener('scroll', updHeader, { passive: true }); updHeader();
 
   if (typeof applyLogo === 'function') applyLogo('arrow');

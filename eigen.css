@@ -9,8 +9,8 @@
 
 /* Menu bovenaan: tekstlinks, geen bubbels. Onderlijn in de accentkleur bij hover */
 .nav-links { gap: 1.7rem !important; align-items: center; }
-.nav-links a { background: none !important; border: 0 !important; border-radius: 0 !important; padding: 0 !important; min-height: 40px; font-size: .78rem !important; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #c7d0d3; box-shadow: inset 0 -2px 0 transparent; transition: color .2s, box-shadow .2s; }
-.nav-links a:hover, .nav-links a:focus-visible { color: var(--ink); box-shadow: inset 0 -2px 0 var(--accent); }
+.nav-links a { background: none !important; border: 0 !important; border-radius: 0 !important; padding: 0 !important; min-height: 40px; font-size: .78rem !important; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #c7d0d3; transition: color .2s; }
+.nav-links a:hover, .nav-links a:focus-visible { color: var(--accent); }
 @media (max-width: 480px) { .nav-links { gap: 1.1rem !important; } }
 
 /* Knoppen: hoekig en strak, geen sprongetje */
@@ -45,8 +45,8 @@
 .route-divider .rd-b { right: 0; }
 
 /* Homepage (lichte achtergrond): Contact als tekstlink in plaats van een bubbel */
-.topbar nav a { border: 0 !important; border-radius: 0 !important; padding: 0 !important; background: none !important; color: #0a0b0c !important; text-transform: uppercase; letter-spacing: .1em; font-size: .76rem; box-shadow: inset 0 -2px 0 transparent; transition: box-shadow .2s; }
-.topbar nav a:hover, .topbar nav a:focus-visible { box-shadow: inset 0 -2px 0 #0a0b0c; }
+.topbar nav a { border: 0 !important; border-radius: 0 !important; padding: 0 !important; background: none !important; color: #0a0b0c !important; text-transform: uppercase; letter-spacing: .1em; font-size: .76rem; transition: color .2s; }
+.topbar nav a:hover, .topbar nav a:focus-visible { color: #0e8fae !important; }
 
 /* Formulieren: velden even strak als de knoppen */
 input, textarea, select { border-radius: 4px !important; }
@@ -80,3 +80,14 @@ input, textarea, select { border-radius: 4px !important; }
 
 /* Galerijknop en "Lees meer": zelfde strakke stijl als de andere knoppen */
 .more-photos { border-radius: 3px !important; text-transform: uppercase; letter-spacing: .1em; font-size: .74rem !important; font-weight: 700; }
+
+/* Routes: kilometerpunten langs het spoor en een finishvlagje */
+.route-map .rm-track { stroke-linejoin: round; }
+.route-map .rm-road { stroke-linejoin: round; }
+.route-map .rm-tick { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #f2f6f7; transform: translate(-50%, -50%); }
+.route-map .rm-tick em { position: absolute; left: 50%; top: 9px; transform: translateX(-50%); font: 600 .56rem/1 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-style: normal; color: #7d898e; letter-spacing: .04em; }
+.route-map .rm-flag { position: absolute; width: 16px; height: 20px; transform: translate(-2px, -100%); }
+.route-map .rm-flag svg { display: block; width: 100%; height: 100%; }
+
+/* Wat meer lucht onder de scheidingslijnen (de km-labels hangen eronder) */
+.route-divider, .route-map { margin-bottom: 52px; }

@@ -648,16 +648,18 @@
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 
-  // Filosofie: standaard alles dicht, daarna één principe tegelijk open. Ze wisselen elke 5s zolang de sectie in beeld is,
+  // Filosofie: standaard alles dicht, daarna één principe tegelijk open. Elk blijft open zolang een vlotte lezer nodig heeft (zie leestijd), zolang de sectie in beeld is,
   // pauzeren zolang muis of focus erin zit, en klikken stopt het automatisch wisselen definitief.
   const principles = document.getElementById('principles'), prBtns = [...principles.querySelectorAll('button')];
   let prIdx = -1, prTimer = null, prStart = null, prSeen = false, prHover = false, prFocus = false, prStopped = false;
   const openPr = i => { prIdx = i; prBtns.forEach((b, k) => b.setAttribute('aria-expanded', k === i)); };
   const autoPr = () => {
     const on = prSeen && !prHover && !prFocus && !prStopped;
-    clearInterval(prTimer); clearTimeout(prStart); principles.classList.toggle('auto', on);
+    clearTimeout(prTimer); clearTimeout(prStart); principles.classList.toggle('auto', on);
     if (!on) return;
-    const loop = () => prTimer = setInterval(() => openPr((prIdx + 1) % prBtns.length), 5000);
+    // Leestijd per blokje: tempo van een vlotte lezer (± 250 woorden per minuut) + 2,5 s om het blokje te openen en te starten
+    const leestijd = i => { const body = document.getElementById(prBtns[i].getAttribute('aria-controls')); const woorden = (body ? body.textContent : '').trim().split(/\s+/).length; return Math.max(8000, 2500 + woorden / 250 * 60000); };
+    const loop = () => { prTimer = setTimeout(() => { openPr((prIdx + 1) % prBtns.length); loop(); }, leestijd(Math.max(prIdx, 0))); };
     // Nog niets open: eerst kort alles dicht laten, dan het eerste principe openen
     if (prIdx < 0) prStart = setTimeout(() => { openPr(0); loop(); }, 1500); else loop();
   };

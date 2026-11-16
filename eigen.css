@@ -130,3 +130,6 @@ header.nav-hide { transform: translateY(-100%); }
 
 /* Knop "Gratis intake" in de balk: in verhouding met de menulinks */
 .nav-cta { padding: .6rem 1rem !important; font-size: .7rem !important; min-height: 0 !important; line-height: 1.2; align-self: center; }
+
+.levels-note p + p { margin-top: .45rem; }
+.levels-note b { color: var(--ink); font-weight: 600; }

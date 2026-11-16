@@ -93,8 +93,8 @@ input, textarea, select { border-radius: 4px !important; }
 .route-divider, .route-map { margin-bottom: 52px; }
 
 /* Bovenste balk: verdwijnt bij naar beneden scrollen, komt terug bij naar boven scrollen */
-header { transition: transform .35s cubic-bezier(.2,.8,.2,1), background .3s !important; will-change: transform; }
-header.nav-hide { transform: translateY(-100%); }
+header { transition: transform .4s cubic-bezier(.2,.8,.2,1), opacity .35s ease, background .3s !important; will-change: transform, opacity; }
+header.nav-hide { transform: translateY(-100%); opacity: 0; }
 @media (prefers-reduced-motion: reduce) { header { transition: none !important; } }
 
 /* Coaching: korte, concrete zin onder Beyond Performance */

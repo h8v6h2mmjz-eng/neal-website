@@ -33,12 +33,12 @@
 .rs span { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
 
 /* ---------- Hoogteprofiel tussen secties, met de N als top ---------- */
-.route-divider { position: relative; width: min(1240px, 100% - 32px); height: 58px; margin: 6px auto 30px; pointer-events: none; }
+.route-divider { position: relative; width: min(1240px, 100% - 32px); height: 76px; margin: 6px auto 30px; pointer-events: none; }
 .route-divider .rd-line { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .route-divider .rd-fill { fill: rgba(25,211,255,.045); }
 .route-divider .rd-stroke { fill: none; stroke: rgba(255,255,255,.26); stroke-width: 1.3; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
 .route-divider .rd-base { stroke: rgba(255,255,255,.08); stroke-width: 1; vector-effect: non-scaling-stroke; }
-.route-divider .rd-mark { position: absolute; width: 30px; height: auto; transform: translate(-50%, -112%); }
+.route-divider .rd-mark { position: absolute; width: 30px; height: 15px; transform: translate(-50%, -125%); }
 .route-divider .rd-mark polygon { fill: var(--accent); }
 .route-divider .rd-km { position: absolute; bottom: -20px; font: 600 .6rem/1 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; letter-spacing: .12em; text-transform: uppercase; color: #5f6b70; }
 .route-divider .rd-a { left: 0; }

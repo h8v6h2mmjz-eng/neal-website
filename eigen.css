@@ -133,3 +133,7 @@ header.nav-hide { transform: translateY(-100%); }
 
 .levels-note p + p { margin-top: .45rem; }
 .levels-note b { color: var(--ink); font-weight: 600; }
+
+/* Zwemroute (open water, in meters): zachter spoor met een brede waterband eronder */
+.route-map.rm-swim .rm-road { stroke: rgba(25,211,255,.09); stroke-width: 16; }
+.route-map.rm-swim .rm-track { stroke: rgba(150,230,255,.9); stroke-width: 1.4; stroke-dasharray: 5 3; }

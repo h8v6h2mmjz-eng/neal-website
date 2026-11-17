@@ -137,3 +137,63 @@ header.nav-hide { transform: translateY(-100%); opacity: 0; }
 /* Zwemroute (open water, in meters): zachter spoor met een brede waterband eronder */
 .route-map.rm-swim .rm-road { stroke: rgba(25,211,255,.09); stroke-width: 16; }
 .route-map.rm-swim .rm-track { stroke: rgba(150,230,255,.9); stroke-width: 1.4; stroke-dasharray: 5 3; }
+
+/* ================= Mobiel (telefoons) =================
+   Alles hieronder maakt de site prettiger op een telefoon: leesbaar zonder inzoomen,
+   knoppen en links die je met je duim raakt, en een balk bovenaan die altijd past. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+a, button, summary, label, input, select, textarea { -webkit-tap-highlight-color: rgba(25,211,255,.18); touch-action: manipulation; }
+
+@media (max-width: 760px) {
+  /* Balk bovenaan (racing/contact): alleen de belangrijkste links tonen en de naam nooit letter per letter laten afbreken */
+  header .nav-links a:not(.keep) { display: none !important; }
+  header .brand { flex: 0 1 auto; min-width: 0; }
+  header .brand .lw { white-space: nowrap !important; max-width: none !important; }
+  header .nav-links { flex: none; }
+  header .nav-links a, .topbar nav a { min-height: 44px !important; }
+
+  /* Formulieren: 16px voorkomt dat iPhones inzoomen bij het aantikken van een veld */
+  input, select, textarea { font-size: 16px !important; }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]), select { min-height: 48px; }
+  form .pill, form button[type="submit"] { width: 100%; justify-content: center; min-height: 52px; }
+
+  /* Klikvlakken minstens 44px hoog */
+  .pill { min-height: 48px; }
+  .nav-cta { min-height: 40px !important; }
+  .t-more, .pr-toggle, .lead-more, .more-photos { min-height: 44px !important; display: inline-flex; align-items: center; }
+  .t-more { margin-top: -.6rem; gap: .35em; }
+  .story-nav a { min-height: 44px; align-items: center !important; }
+  .direct a { min-height: 44px !important; }
+  footer a { display: inline-flex; align-items: center; min-height: 44px; }
+  footer p a { display: inline; min-height: 0; }
+  .faq summary { min-height: 52px; align-items: center; }
+  .mobile-menu a { min-height: 48px; display: flex; align-items: center; }
+  .back { display: inline-flex; align-items: center; min-height: 44px; }
+
+  /* Pakketten: prijs en "Gratis intake" netjes naast elkaar, pijl op dezelfde regel */
+  .price { gap: .75rem; }
+  .price > :last-child { white-space: nowrap; flex: none; }
+
+  /* Getuigenissen: naam en resultaat onder elkaar in plaats van in elkaar gedrukt */
+  .quote .who { flex-direction: column; align-items: flex-start !important; gap: .35rem; }
+
+  /* Kleine lettertjes iets groter voor de leesbaarheid */
+  .splits { font-size: .8rem; gap: .2rem 1rem; }
+  .splits i { font-size: .68rem; }
+  .tl-stops b, .story-nav a b { font-size: .8rem; }
+  footer small, .src { font-size: .8rem; }
+}
+
+/* Heel smalle telefoons (tot 380px): logo en naam iets compacter zodat de links ernaast passen */
+@media (max-width: 380px) {
+  header .brand .lw { font-size: .66rem !important; }
+  header .brand .logo-mark { width: 30px !important; height: 30px !important; }
+  .nav-links { gap: .85rem !important; }
+  .nav-links a { font-size: .72rem !important; letter-spacing: .06em; }
+}
+
+/* Smalste telefoons (tot 350px): op pagina's met tekstlinks in de balk alleen het N-logo tonen, zodat niets overlapt */
+@media (max-width: 350px) {
+  header .nav:has(.nav-links a.keep) .brand .lw { display: none; }
+  header .brand .lw { font-size: .6rem !important; }
+}

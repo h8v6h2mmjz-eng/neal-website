@@ -167,6 +167,29 @@
   .lead-more:hover { text-decoration: underline; text-underline-offset: 4px; }
   @media (min-width: 900px) { .story-grid { grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; } .story-head { position: sticky; top: 110px; max-height: calc(100vh - 120px); overflow-y: auto; } }
 
+  /* ---------- Mobiel: hoofdstukken en seizoenen inklappen (tik om te openen) ---------- */
+  .tik-kop { cursor: pointer; -webkit-user-select: none; user-select: none; }
+  .tik-kop:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .tik-pijl { flex: none; display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); color: var(--accent); font-size: .95rem; transition: transform .3s var(--ease); }
+  .open > .tik-kop .tik-pijl, .open > h3.tik-kop .tik-pijl { transform: rotate(180deg); }
+  /* Hoofdstukken */
+  .chapter.inklap { padding: 14px 0; border-top: 1px solid var(--line); }
+  .chapter.inklap + .chapter.inklap { margin-top: 0; }
+  .chapter.inklap:last-of-type { border-bottom: 1px solid var(--line); }
+  .chapter.inklap .tl-yr { margin-bottom: .3rem; }
+  .chapter.inklap h3 { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 0; min-height: 44px; }
+  .chapter.inklap.open h3 { margin-bottom: .9rem; }
+  .chapter.inklap:not(.open) > :not(.tl-yr):not(h3) { display: none; }
+  /* Seizoenen */
+  .season.inklap { padding: 0; border-top: 1px solid var(--line); }
+  .season.inklap .s-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 1rem; margin: 0; padding: 16px 0; min-height: 44px; }
+  .season.inklap .s-head > p { grid-column: 1; }
+  .season.inklap .s-head > .tik-pijl { grid-column: 2; grid-row: 1 / span 2; }
+  .season.inklap.open .agenda { padding-bottom: 14px; }
+  .season.inklap:not(.open) .agenda { display: none; }
+  .season.inklap .s-yr { font-size: 2rem; }
+  .story-quote.na-inklap { margin-top: 28px; }
+
   /* ---------- Racekalender ---------- */
   .cal-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1.4rem 2rem; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
   .stats { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; gap: 14px 28px; }
@@ -266,7 +289,7 @@
     .js .reveal, .js .race.reveal { opacity: 1; transform: none; }
   }
 </style>
-<link rel="stylesheet" href="eigen.css?v=17">
+<link rel="stylesheet" href="eigen.css?v=18">
 </head>
 <body>
 <a href="#inhoud" class="skip">Naar inhoud</a>
@@ -736,6 +759,54 @@
   addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) zetMenu(false, true); });
   document.addEventListener('click', e => { if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) zetMenu(false); });
   menu.addEventListener('focusout', e => { if (e.relatedTarget && !menu.contains(e.relatedTarget) && e.relatedTarget !== burger) zetMenu(false); });
+
+  // Mobiel: hoofdstukken van "Mijn verhaal" en de seizoenen in de uitslagen zijn ingeklapt; tik op een kop om te openen.
+  (() => {
+    const mqVerhaal = matchMedia('(max-width: 899px)'), mqSeizoen = matchMedia('(max-width: 719px)');
+    const sets = [
+      { mq: mqVerhaal, items: [...document.querySelectorAll('.chapter')], kop: el => el.querySelector('h3') },
+      { mq: mqSeizoen, items: [...document.querySelectorAll('.season')], kop: el => el.querySelector('.s-head') }
+    ];
+    const zet = (el, open) => {
+      el.classList.toggle('open', open);
+      const k = el._kop; if (k) k.setAttribute('aria-expanded', open);
+    };
+    const wissel = el => {
+      const open = !el.classList.contains('open'); zet(el, open);
+      if (!open && el._kop.getBoundingClientRect().top < 0) el.scrollIntoView({ block: 'start' });
+    };
+    const pas = set => {
+      const aan = set.mq.matches;
+      set.items.forEach(el => {
+        const k = set.kop(el); if (!k) return; el._kop = k;
+        el.classList.toggle('inklap', aan);
+        k.classList.toggle('tik-kop', aan);
+        let pijl = k.querySelector(':scope > .tik-pijl');
+        if (aan) {
+          k.setAttribute('role', 'button'); k.tabIndex = 0; zet(el, false);
+          if (!pijl) { pijl = document.createElement('span'); pijl.className = 'tik-pijl'; pijl.setAttribute('aria-hidden', 'true'); pijl.textContent = '↓'; k.appendChild(pijl); }
+        } else {
+          k.removeAttribute('role'); k.removeAttribute('tabindex'); k.removeAttribute('aria-expanded');
+          el.classList.remove('open'); if (pijl) pijl.remove();
+        }
+      });
+      const q = document.querySelector('.story-quote'); if (q) q.classList.toggle('na-inklap', mqVerhaal.matches);
+    };
+    sets.forEach(set => {
+      set.items.forEach(el => {
+        const k = set.kop(el); if (!k) return;
+        // Bij een hoofdstuk mag ook het jaartal erboven aangetikt worden
+        const doelen = [k, el.querySelector(':scope > .tl-yr')].filter(Boolean);
+        doelen.forEach(d => d.addEventListener('click', e => { if (el.classList.contains('inklap') && !e.target.closest('a')) wissel(el); }));
+        k.addEventListener('keydown', e => { if (el.classList.contains('inklap') && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); wissel(el); } });
+      });
+      pas(set); set.mq.addEventListener('change', () => pas(set));
+    });
+    // Links naar een hoofdstuk (inhoudstafel) openen dat hoofdstuk meteen
+    const openDoel = id => { const el = id && document.getElementById(id); if (el && el.classList.contains('inklap')) zet(el, true); };
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => openDoel(a.getAttribute('href').slice(1))));
+    if (location.hash) openDoel(location.hash.slice(1));
+  })();
 
   if (typeof applyLogo === 'function') applyLogo('arrow');
   if (typeof nvvLigatures === 'function') nvvLigatures(document.getElementById('naam'), [[19, 137, 163], [25, 211, 255]]);

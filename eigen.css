@@ -211,3 +211,13 @@ a, button, summary, label, input, select, textarea { -webkit-tap-highlight-color
   footer .brand { min-width: 0; }
   footer .brand .lw { white-space: nowrap !important; max-width: none !important; }
 }
+
+/* Scheidingslijnen precies in het midden tussen twee secties:
+   de secties eromheen geven geen eigen ruimte meer, de lijn zelf krijgt evenveel boven als onder
+   (onder iets minder, omdat de km-labels er nog onder hangen) */
+section:has(+ .route-divider), section:has(+ .route-map) { padding-bottom: 0 !important; }
+.route-divider + section, .route-map + section { padding-top: 0 !important; }
+.route-divider, .route-map { margin: var(--div-gap, clamp(64px, 8vw, 104px)) auto calc(var(--div-gap, clamp(64px, 8vw, 104px)) + 14px); }
+@media (max-width: 760px) {
+  .route-divider, .route-map { --div-gap: 52px; margin: var(--div-gap) auto calc(var(--div-gap) + 12px); }
+}

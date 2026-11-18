@@ -23,6 +23,8 @@
 .lw-name .lig-top { z-index: 2; text-shadow: .035em 0 var(--logo-bg), .035em -.02em var(--logo-bg), .035em .02em var(--logo-bg), .05em 0 var(--logo-bg); }
 .lw-name .lig-under { z-index: 1; margin-left: -.24em; }
 .lw-name .lig-over { z-index: 2; margin-left: -.12em; text-shadow: -.035em 0 var(--logo-bg), -.035em -.02em var(--logo-bg), -.035em .02em var(--logo-bg), -.05em 0 var(--logo-bg); }
+/* EA (NEAL): het bovenste streepje van de E loopt door tot onder de A, zodat er geen gat is */
+.lw-name .lig-ext::after { content: ''; display: inline-block; vertical-align: baseline; position: relative; top: -.565em; width: .26em; height: .185em; margin-left: -0.028em; margin-right: -0.232em; background: currentColor; }
 .lw-name .lig-nudge { z-index: 2; margin-left: -.06em; text-shadow: -.025em 0 var(--logo-bg), -.025em -.015em var(--logo-bg), -.025em .015em var(--logo-bg); }
 .lw-name small { margin-top: 3px; }
 .lw { line-height: 1.12; font-size: .9rem; font-weight: 600; color: var(--logo-fg); white-space: nowrap; }

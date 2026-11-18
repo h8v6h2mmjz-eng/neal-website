@@ -38,7 +38,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="logos.css?v=7">
+<link rel="stylesheet" href="logos.css?v=8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -121,8 +121,9 @@
   .intro h1 .ch { display: inline-block; position: relative; }
   .intro h1 .ch.sp { width: .2em; }
   .intro h1 .lig-top { z-index: 2; text-shadow: .035em 0 var(--bg), .035em -.02em var(--bg), .035em .02em var(--bg), .05em 0 var(--bg); }
-  .intro h1 .lig-under { z-index: 1; margin-left: -.24em; }
-  .intro h1 .lig-over { z-index: 2; margin-left: -.12em; text-shadow: -.035em 0 var(--bg), -.035em -.02em var(--bg), -.035em .02em var(--bg), -.05em 0 var(--bg); }
+  .intro h1 .lig-under { z-index: 1; margin-left: -.28em; }
+  .intro h1 .lig-ext::after { content: ''; display: inline-block; vertical-align: baseline; position: relative; top: -.565em; width: .26em; height: .185em; margin-left: -0.068em; margin-right: -0.192em; background: currentColor; }
+  .intro h1 .lig-over { z-index: 2; margin-left: -.16em; text-shadow: -.035em 0 var(--bg), -.035em -.02em var(--bg), -.035em .02em var(--bg), -.05em 0 var(--bg); }
   .tagline { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: clamp(1rem, 2vw, 1.3rem); letter-spacing: -.01em; margin-top: 1.6rem; }
   .tagline .grad { background-image: linear-gradient(90deg, #1389a3, var(--accent)); }
   .intro p.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: #c7d0d3; max-width: 540px; margin-top: .7rem; }
@@ -702,7 +703,7 @@
   </div>
 </footer>
 
-<script src="logos.js?v=7"></script>
+<script src="logos.js?v=8"></script>
 <script>
   // Eerst de reveal: ook als logos.js niet laadt, blijft alles zichtbaar
   // Galerij: standaard twee rijen, de knop toont of verbergt de rest (zonder JS blijven alle foto's gewoon zichtbaar)

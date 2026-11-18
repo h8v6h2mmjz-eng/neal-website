@@ -118,7 +118,7 @@ function nvvLigatures(el, stops) {
     // AE en VE: de linkse letter (A/V) ligt bovenop en de E schuift eronder uit; EA: de A schuift over de E heen
     const top = c => c === 'A' || c === 'V';
     // EN aan het begin van een woord (Endurance): de N schuift maar een heel klein beetje over de E (lig-nudge)
-    const lig = i => (top(up[i]) && up[i + 1] === 'E') ? ' lig-top' : (up[i] === 'E' && top(up[i - 1])) ? ' lig-under' : (up[i] === 'A' && up[i - 1] === 'E') ? ' lig-over' : (i === 1 && up[i] === 'N' && up[0] === 'E') ? ' lig-nudge' : '';
+    const lig = i => (top(up[i]) && up[i + 1] === 'E') ? ' lig-top' : (up[i] === 'E' && top(up[i - 1])) ? ' lig-under' : (up[i] === 'A' && up[i - 1] === 'E') ? ' lig-over' : (i === 1 && up[i] === 'N' && up[0] === 'E') ? ' lig-nudge' : (up[i] === 'E' && up[i + 1] === 'A') ? ' lig-ext' : '';
     part.innerHTML = chars.map((c, i) => `<span class="ch${c === ' ' ? ' sp' : ''}${lig(i)}" aria-hidden="true"${grad ? ` style="color:${colorAtPart(i / Math.max(chars.length - 1, 1))}"` : ''}>${c === ' ' ? '&nbsp;' : c}</span>`).join('');
   });
 }

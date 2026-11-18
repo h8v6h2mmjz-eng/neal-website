@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://nealvanvaerenbergh.com/photos/home/racing.jpg">
 <meta name="theme-color" content="#0a0b0c">
-<link rel="stylesheet" href="logos.css?v=7">
+<link rel="stylesheet" href="logos.css?v=8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -85,6 +85,7 @@
      lig-over is de rechtse letter die over de linkse heen schuift en dus links snijdt. */
   .name .lig-top { z-index: 2; text-shadow: .035em 0 var(--paper), .035em -.02em var(--paper), .035em .02em var(--paper), .05em 0 var(--paper); }
   .name .lig-under { z-index: 1; margin-left: -.24em; }
+  .name .lig-ext::after { content: ''; display: inline-block; vertical-align: baseline; position: relative; top: -.565em; width: .26em; height: .185em; margin-left: -0.028em; margin-right: -0.232em; background: currentColor; }
   .name .lig-over { z-index: 2; margin-left: -.12em; text-shadow: -.035em 0 var(--paper), -.035em -.02em var(--paper), -.035em .02em var(--paper), -.05em 0 var(--paper); }
   @keyframes up { to { opacity: 1; transform: none; } }
   /* Hover op logo of naam: een hartslag. De N klopt twee keer (groot, terug, iets kleiner groot, terug),
@@ -247,7 +248,7 @@
   </div>
 </footer>
 
-<script src="logos.js?v=7"></script>
+<script src="logos.js?v=8"></script>
 <script>
   // Eerst de reveal: ook als logos.js niet laadt, blijven de kaarten zichtbaar
   if ('IntersectionObserver' in window) {
@@ -265,7 +266,7 @@
   nameEl.querySelectorAll('.first, .last').forEach(part => {
     const chars = [...part.textContent], grad = part.classList.contains('last');
     // Letter 1 en 2 haken in elkaar: de A ligt telkens bovenop, in NEAL schuift ze over de E, in VAERENBERGH de E eronder
-    const lig = i => grad ? (i === 1 ? ' lig-top' : i === 2 ? ' lig-under' : '') : (i === 2 ? ' lig-over' : '');
+    const lig = i => grad ? (i === 1 ? ' lig-top' : i === 2 ? ' lig-under' : '') : (i === 1 ? ' lig-ext' : i === 2 ? ' lig-over' : '');
     part.innerHTML = chars.map((c, i) => `<span class="ch${c === ' ' ? ' sp' : ''}${lig(i)}" aria-hidden="true" style="--i:${n++}${grad ? `;color:${colorAt(i / (chars.length - 1))}` : ''}">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
   });
 
